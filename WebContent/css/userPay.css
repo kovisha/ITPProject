@@ -1,0 +1,103 @@
+@charset "ISO-8859-1";
+
+.card{
+    width: 40%;
+    border-radius: 10px;
+}
+.card-header{
+    color: #ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 19px;
+}
+.card-title{
+    font-size: 16px;
+    margin-left: -10%;
+}
+.card-body{
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.form-check{
+    font-size: 15px;
+}
+#nxtBtn{
+    margin-left: 68%;
+    width: 8%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#dpayDesc{
+    margin-left: -10%;
+}
+#inDpay{
+    width: 45%;
+    font-size: 15px;
+    margin-left: 20%;
+}
+.disConInstall{
+    text-align: left;
+    margin-left: 15%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.confInstall{
+    text-align: left;
+    margin-top: -31%;
+    margin-left: 70%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.paySumDis{
+    text-align: left;
+    margin-left: 5%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.paySumAmount{
+    text-align: left;
+    margin-top: -41%;
+    margin-left: 82%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#inCardNo{
+    width: 45%;
+    font-size: 15px;
+    margin-left: 0%;
+}
+#inCardMM{
+    width: 15%;
+    font-size: 15px;
+    margin-left: 0%;
+}
+#inCardYYYY{
+    width: 25%;
+    font-size: 15px;
+    margin-left: 20%;
+}
+#CVC{
+    width: 45%;
+    font-size: 15px;
+    margin-left: 0%;
+}
+#confBtn{
+    margin-left: 45%;
+    width: 10%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#payTable{
+	width:50%;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	border-radius:3px;
+}
+#payTable tr th{
+	font-size:18px;
+}
+#payTable tr td{
+	font-size:18px;
+}
+#tableH{
+	width:49.963%;
+	font-size:24px;
+}
+#payBtn{
+    margin-left: 0%;
+    width: 20%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius:8px;
+}
