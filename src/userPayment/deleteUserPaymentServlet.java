@@ -34,13 +34,15 @@ public class deleteUserPaymentServlet extends HttpServlet {
 		if (isTrue == true) {
 			List<userPayment> uPayDet = userPaymentDButil.getUserPaymentDetails();
 	      	request.setAttribute("uPayDetail", uPayDet);
-			
-			RequestDispatcher dis = request.getRequestDispatcher("DisplayUserPayment.jsp");
+			session.setAttribute("result","successDeleteUserPay");
+	      	
+			RequestDispatcher dis = request.getRequestDispatcher("adminAlertBoxes.jsp");
 			dis.forward(request, response);
 		}
 		else 
 		{	
-			RequestDispatcher dis2 = request.getRequestDispatcher("failRegistration.jsp");
+			session.setAttribute("result","failDeleteUserPay");
+			RequestDispatcher dis2 = request.getRequestDispatcher("adminAlertBoxes.jsp");
 			dis2.forward(request, response);
 		}
 	}

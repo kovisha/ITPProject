@@ -27,36 +27,37 @@ public class userPayServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String payType = request.getParameter("payType");
 		String installType = request.getParameter("installType");
+		HttpSession session = request.getSession();
+		double totAmount = (double) session.getAttribute("totAmount");
+		
 		
 		if(installType == null) {
 			installType = "NotUsing";
 		}
 		
 		if(payType.equals("card")) {
-			if(installType.equals("install")) {
-				HttpSession session = request.getSession();	    
+			if(installType.equals("install")) {    
 		        session.setAttribute("pType",payType);
 		        session.setAttribute("insType",installType);
 				RequestDispatcher dis = request.getRequestDispatcher("userCardInput.jsp");
 				dis.forward(request, response);
 			}
-			else if(installType.equals("normal")){
-				HttpSession session = request.getSession();	    
+			else if(installType.equals("normal")){	   
 		        session.setAttribute("pType",payType);
 		        session.setAttribute("insType",installType);
 				RequestDispatcher dis = request.getRequestDispatcher("userCardInput.jsp");
 				dis.forward(request, response);
 			}
-			else {
-				HttpSession session = request.getSession();	    
-		        session.setAttribute("pType",payType);
+			else {    
+			
+				session.setAttribute("insType","notInstall");
+				session.setAttribute("pType",payType);
 				RequestDispatcher dis = request.getRequestDispatcher("userCardInput.jsp");
 				dis.forward(request, response);
 			}
 		}
 		else if(payType.equals("cash")) {
-			if(installType.equals("install")) {
-				HttpSession session = request.getSession();	    
+			if(installType.equals("install")) {	    
 		        session.setAttribute("pType",payType);
 		        session.setAttribute("insType",installType);
 		        
@@ -71,18 +72,22 @@ public class userPayServlet extends HttpServlet {
 				RequestDispatcher dis = request.getRequestDispatcher("userInstall01.jsp");
 				dis.forward(request, response);
 			}
-			else if(installType.equals("normal")){
-				HttpSession session = request.getSession();	    
+			else if(installType.equals("normal")){	
+				double installmentValue = (double) session.getAttribute("installvalue");
+				
 		        session.setAttribute("pType",payType);
 		        session.setAttribute("insType",installType);
-				RequestDispatcher dis = request.getRequestDispatcher("userInstall01.jsp");
-				dis.forward(request, response);
+		        request.setAttribute("totAmount", totAmount);
+		        session.setAttribute("payInstall", installmentValue);
+		        response.sendRedirect("calculatePaymentServlet");
 			}
-			else{
-				HttpSession session = request.getSession();	    
+			else{    
+				double installmentValue = 99;
+				
 		        session.setAttribute("pType",payType);
-				RequestDispatcher dis = request.getRequestDispatcher("userPaySummary.jsp");
-				dis.forward(request, response);
+		        session.setAttribute("payInstall", installmentValue);
+		        request.setAttribute("totAmount", totAmount);
+		        response.sendRedirect("calculatePaymentServlet");
 			}
 		}
 	}

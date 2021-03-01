@@ -32,15 +32,17 @@ public class deleteOfferServlet extends HttpServlet {
 		isTrue = offerDButil.deleteOfferDetails(id);
 	
 		if (isTrue == true) {
-			List<Offer> offerDet = offerDButil.getOfferDetails();
-	      	 request.setAttribute("offerDetail", offerDet);
-			
-			RequestDispatcher dis = request.getRequestDispatcher("DisplayOffers.jsp");
+			List<Offer> offerDet = offerDButil.getOfferDetails(response);
+	      	request.setAttribute("offerDetail", offerDet);
+	      	session.setAttribute("result","successDeleteOffer");
+	      	 
+			RequestDispatcher dis = request.getRequestDispatcher("adminAlertBoxes.jsp");
 			dis.forward(request, response);
 		}
 		else 
 		{	
-			RequestDispatcher dis2 = request.getRequestDispatcher("failRegistration.jsp");
+			session.setAttribute("result","failDeleteOffer");
+			RequestDispatcher dis2 = request.getRequestDispatcher("adminAlertBoxes.jsp");
 			dis2.forward(request, response);
 		}
 	}

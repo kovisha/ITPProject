@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class deliveryDetailUpdateServlet
@@ -18,25 +19,31 @@ public class deliveryDetailUpdateServlet extends HttpServlet {
        
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		HttpSession session = request.getSession();
+		
 		String id = request.getParameter("id");
 		String uID = request.getParameter("uID");
 //		String deliveryID = request.getParameter("deliveryID");
+		String delDate = request.getParameter("delDate");
 		String status = request.getParameter("status");
  		Double amount = Double.parseDouble(request.getParameter("amount"));
 		
 		boolean isTrue;
 		
-		isTrue = DeliveryDBUtil.updateDeliveryDetails(uID, id, status, amount);
+		isTrue = DeliveryDBUtil.updateDeliveryDetails(uID, id, status, amount, delDate);
 
 		if(isTrue == true){
-			RequestDispatcher dis = request.getRequestDispatcher("ApointDeliveryStaff.jsp");
+			session.setAttribute("result","successUpdateDeliveryDetails");
+			RequestDispatcher dis = request.getRequestDispatcher("DeliveryAlertBox.jsp");
 			dis.forward(request, response);
 		}
 		
 		else {
-			RequestDispatcher dis2 = request.getRequestDispatcher("unsuccess.jsp");
-			dis2.forward(request, response);
+			session.setAttribute("result","failedUpdateDeliveryDetails");
+			RequestDispatcher dis = request.getRequestDispatcher("DeliveryAlertBox.jsp");
+			dis.forward(request, response);
 		}
+		
 	}
 
 }

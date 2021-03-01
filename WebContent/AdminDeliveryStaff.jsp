@@ -28,75 +28,73 @@
 <body>
      
     <div class="wrapper">
-  		<!--#################Side Bar start#######################-->  
-    	<nav id="sidebar">
-        	<!--###############Side Bar header start###############-->  
+        <!--Side Bar start-->  
+      <nav id="sidebar">
+        <!--Side Bar header start-->  
           <div class="sidebar-header">
                 <h3>               
-	                <div class="profile clearfix" style="align-content: center">
-	                	<div class="profile_pic">
-	                    	<img src="images/UDS_2.jpg" alt="..."  class="rounded-circle" width="100px" height="100px" >
-	                	</div>
-		                <div class="profile_info">
-		                    <!-- <p>online</p> -->
-		                    <!-- <span>Welcome,</span> -->
-		                    <!-- <h2>John Doe</h2> -->
-		                </div>
-	                </div>
+                <div class="profile clearfix" style="align-content: center">
+                    <div class="profile_pic">
+                        <img src="images/UDS_2.jpg" alt="..."  class="rounded-circle" width="100px" height="100px" >
+                    </div>
+                <div class="profile_info">
+                    <!-- <p>online</p> -->
+                    <!-- <span>Welcome,</span> -->
+                    <!-- <h2>John Doe</h2> -->
+                </div>
+                </div>
                 </h3>
-                <strong>
-                	<img src="images/UDS_2.jpg" alt="..."  class="rounded-circle" width="50px" height="50px" >
-                </strong>
+                <strong><img src="images/UDS_2.jpg" alt="..."  class="rounded-circle" width="50px" height="50px" ></strong>
                  
-         	</div>
-        	<!--#################Side Bar header end############-->
-            <!-- ################Main start list unstyled componenets###########-->
+           </div>
+        <!--Side Bar header end-->
+            <!-- Main start list unstyled componenets -->
             <ul class="list-unstyled components">
                 <li>
-	                <li>
-	                    <!--Major A has no drop downs-->
-	                    <!--Link to page Major A-->
-	                    <a href="">
-	                        <!-- Font awsome icons -->
-	                        <i class="fas fa-tachometer-alt"></i>
-	                        Dash Board
-	                    </a>
-	                </li>            
-	                
-                	<!--################ Customer start####### -->
-	                <li>
-	                	<a href="#Customers" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-	                    	<!--Major B with drop downs-->
-	                   		<i class="fas fa-users"></i>
-	                       Customers
-	                    </a>
-	                    
-	                    <!--########### Subtitles and links to those############ -->
-	                    <!--########### ID should be identical for each Submenu########-->
-	                    
-	                    <ul class="collapse list-unstyled" id="Customers">
-	                        <li>
-	                            <a href="#">
-	                                <i class="fas fa-plus-circle"></i>
-	                                Add
-	                            </a>
-	                        </li>
-	                        <li>
-	                            <a href="#">
-	                                <i class="fas fa-eye"></i>
-	                                View
-	                            </a>
-	                        </li>
-	                        <li>
-	                            <a href="#">
-	                                <i class="fas fa-file-alt"></i>
-	                                Reports
-	                            </a>
-	                        </li>
-	                    </ul>
-	                    <!-- End subtitiles -->
-	
-	                </li>
+
+                <li>
+                    <!--Major A has no drop downs-->
+                    <!--Link to page Major A-->
+                    <a href="">
+                        <!-- Font awsome icons -->
+                        <i class="fas fa-tachometer-alt"></i>
+                        Dash Board
+                    </a>
+                </li>
+                
+             
+                <!-- Customer start -->
+                <li>
+                    <a href="#Customers" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <!--Major B with drop downs-->
+                   <i class="fas fa-users"></i>
+                       Customers
+                    </a>
+                    <!-- Subtitles and links to those -->
+                    <!-- ID should be identical for each Submenu -->
+                    <ul class="collapse list-unstyled" id="Customers">
+                        <!-- <li>
+                            <a href="#">
+                                <i class="fas fa-plus-circle"></i>
+                                Add
+                            </a>
+                        </li> -->
+                        <li>
+                            <a href="viewUsers.jsp">
+                                <i class="fas fa-eye"></i>
+                                View
+                            </a>
+                        </li>
+                        <li>
+                            <a href="customerReport.jsp">
+                                <i class="fas fa-file-alt"></i>
+                                Reports
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End subtitiles -->
+
+                </li>
                 <!-- Customer end -->
 
 
@@ -113,13 +111,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Category">
                         <li>
-                            <a href="#">
+                            <a href="insertCategory.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewCategory.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -149,19 +147,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Stock">
                         <li>
-                            <a href="#">
+                            <a href="insertNewStock.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewStock.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="StockReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -186,19 +184,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Item">
                         <li>
-                            <a href="#">
+                            <a href="InsertNewItem.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewItems.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ItemReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -222,20 +220,20 @@
                     <!-- Subtitles and links to those -->
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Orders">
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="#">
+                            <a href="orders_view.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="Orderreport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -245,10 +243,56 @@
 
                 </li>
                 <!-- Orders end -->
+                
+                <!-- Delivery start -->
+                <li>
+                    <a href="#Delivery" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <!--Major B with drop downs-->
+                   <i class="fas fa-truck"></i>
+                       Delivery
+                    </a>
+                    <!-- Subtitles and links to those -->
+                    <!-- ID should be identical for each Submenu -->
+                    <ul class="collapse list-unstyled" id="Delivery">
+                        <li>
+                            <a href="ApointDeliveryStaff.jsp">
+                                <i class="fas fa-hands-helping"></i>
+                                Assign Delivery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminDeliveryType.jsp">
+                                <i class="fas fa-motorcycle"></i>
+                                Delivery Type
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminDeliveryStaff.jsp">
+                                <i class="fas fa-people-carry"></i>
+                                Delivery Staff
+                            </a>
+                        </li>
+                        <li>
+                            <a href="DeliveryReport.jsp">
+                                <i class="fas fa-file-alt"></i>
+                                Reports
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Suggestions.jsp">
+                                <i class="fas fa-smile-beam"></i>
+                                Suggestions
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End subtitiles -->
+
+                </li>
+                <!-- Delivery end -->
 
 
 
-                                <!-- Orders start -->
+                                <!-- Offers start -->
                 <li>
                     <a href="#Offers" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <!--Major B with drop downs-->
@@ -259,13 +303,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Offers">
                         <li>
-                            <a href="#">
+                            <a href="insertOffer.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="retrieveOffer">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -290,19 +334,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Suppliers">
                         <li>
-                            <a href="#">
+                            <a href="SupplierInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewSupplier.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="SupplierReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -325,19 +369,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Staff">
                         <li>
-                            <a href="#">
+                            <a href="StaffInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="StaffList.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="SalaryDashBoard.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -362,7 +406,7 @@
                     <ul class="collapse list-unstyled" id="UserPayment">
                         
                         <li>
-                            <a href="#">
+                            <a href="retrieveUsPay">
                                <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -387,13 +431,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="SupplyPayment">
                         <li>
-                            <a href="#">
+                            <a href="SupplierPaymentInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewSupplierPayment.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -424,13 +468,13 @@
                             </a>
                         </li> -->
                         <li>
-                            <a href="#">
+                            <a href="retrieveInstall">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="installReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -453,7 +497,7 @@
 
             
         </nav>
-        <!--Side Bar end-->    
+        <!--Side Bar end-->   
 
         <!-- Page Content  Start-->
        
@@ -515,7 +559,7 @@
 
 
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control mr-sm-2" id ="myInput" type="text" placeholder="Search" aria-label="Search" onkeyup="myFunction()">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 
     </form>
@@ -623,7 +667,7 @@
 <br><br>
 
 <!-- ############################ START OF TABLE ####################### -->
-<table class="table table table-hover table-dark table-bordered table-sm text-center table-stripped">
+<table id ="myTable" class="table table table-hover table-dark table-bordered table-sm text-center table-stripped">
 	<thead>
 	    <tr>
 	        <th>Staff ID</th>
@@ -685,7 +729,7 @@
 <!-- 	                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 <!-- 	                </div> -->
 <!--                 </td> -->
-                <td class="tr1"	>	
+                <!-- <td class="tr1"	>	
                 	<div class = "tableRowww">
                     	<button type="button" class="btn btn-outline-danger btn-sm"> 
                         	<a href="#">
@@ -693,7 +737,7 @@
                             </a>
                         </button>
                 	</div>	
-            	</td>	
+            	</td> -->	
         	</tr>      
     	</c:forEach>
 	</tbody>
@@ -722,6 +766,27 @@
             });
         });
     </script>
+    <script type="text/javascript">
+		
+	    function myFunction() {
+			var input, filter, table, tr, td, i, txtValue;
+		  input = document.getElementById("myInput");
+		  filter = input.value.toUpperCase();
+		  table = document.getElementById("myTable");
+		  tr = table.getElementsByTagName("tr");
+		  for (i = 0; i < tr.length; i++) {
+		    td = tr[i].getElementsByTagName("td")[1];
+		    if (td) {
+		      txtValue = td.textContent || td.innerText;
+		      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		        tr[i].style.display = "";
+		      } else {
+		        tr[i].style.display = "none";
+		      }
+		    }       
+		  }
+		}
+		</script>
 
 </body>
 

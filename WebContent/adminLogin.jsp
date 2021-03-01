@@ -13,8 +13,9 @@
     <!-- Bootstrap CSS CDN -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> 
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="admin_css/style.css">
 
@@ -417,7 +418,7 @@
 <!--                                 <i class="fas fa-plus-circle"></i> -->
 <!--                                 Add -->
 <!--                             </a> -->
-<!--                         </li> --> -->
+<!--                         </li> -->
 <!--                         <li> -->
 <!--                             <a href="#"> -->
 <!--                                 <i class="fas fa-eye"></i> -->
@@ -579,7 +580,7 @@
 <div class = "container">
 		<div class = "card text-light special-card mb-3">  <!--Outer form grid -->
 			<div class = "card-body">
-			<form action="adminloginServlet" method ="post">
+			<form action="adminLogin" method ="post">
 
 	
 	<div class="form-group "> 
@@ -597,6 +598,26 @@
  	<div class="form-group">
     <label for="customerID">Password</label>
     <input type="password" class="form-control" id="customerName" name = "pw">
+     				<span style=" position: absolute; color: #7a797e; right:5%; transform: translate(0,-50%); top: 46.5%; cursor: pointer;">
+				        <i class="fa fa-eye" id="eye" onclick="toggle()">
+				        </i>
+				    </span>
+				    
+				    <script>
+					    var state= false;
+					    function toggle(){
+					        if(state){
+					    	document.getElementById("customerName").setAttribute("type","password");
+					    	document.getElementById("eye").style.color='#7a797e';
+					    	state = false;
+					         }
+					         else{
+					    	document.getElementById("customerName").setAttribute("type","text");
+					    	document.getElementById("eye").style.color='#1aa3ff';
+					    	state = true;
+					         }
+					    }
+				    </script>
  	</div>
  	
  	<center><div class="foot-lnk">

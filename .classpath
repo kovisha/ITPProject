@@ -14,10 +14,10 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="G:/SLIIT/2nd year/1st Semester/OOP/ASSIGNMENT/OOPPROJECT/Esentials/JAR/JAR Files/javax.servlet-3.1.jar"/>
-	<classpathentry kind="lib" path="G:/SLIIT/2nd year/1st Semester/OOP/ASSIGNMENT/OOPPROJECT/Esentials/JAR/JAR Files/jstl-1.2.jar"/>
-	<classpathentry kind="lib" path="G:/SLIIT/2nd year/1st Semester/OOP/ASSIGNMENT/OOPPROJECT/Esentials/JAR/JAR Files/jstl-api-1.2.jar"/>
-	<classpathentry kind="lib" path="G:/SLIIT/2nd year/1st Semester/OOP/ASSIGNMENT/OOPPROJECT/Esentials/JAR/JAR Files/mysql-connector-java-5.1.48.jar"/>
-	<classpathentry kind="lib" path="G:/SLIIT/2nd year/1st Semester/OOP/ASSIGNMENT/OOPPROJECT/Esentials/JAR/JAR Files/servlet-api.jar"/>
+	<classpathentry kind="lib" path="F:/SLIIT/2nd year/1st Semester/OOP/ASSIGNMENT/OOPPROJECT/Esentials/JAR/JAR Files/javax.servlet-3.1.jar"/>
+	<classpathentry kind="lib" path="F:/SLIIT/2nd year/1st Semester/OOP/ASSIGNMENT/OOPPROJECT/Esentials/JAR/JAR Files/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="F:/SLIIT/2nd year/1st Semester/OOP/ASSIGNMENT/OOPPROJECT/Esentials/JAR/JAR Files/mysql-connector-java-5.1.48.jar"/>
+	<classpathentry kind="lib" path="F:/SLIIT/2nd year/1st Semester/OOP/ASSIGNMENT/OOPPROJECT/Esentials/JAR/JAR Files/mysql-connector-java-5.1.48-bin.jar"/>
+	<classpathentry kind="lib" path="F:/SLIIT/2nd year/1st Semester/OOP/ASSIGNMENT/OOPPROJECT/Esentials/JAR/JAR Files/servlet-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

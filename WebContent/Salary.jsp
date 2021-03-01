@@ -1,3 +1,4 @@
+<%@page import="Staff.Staff"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
      <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -28,7 +29,7 @@
 <body>
      
     <div class="wrapper">
-        <!--Side Bar start-->  
+         <!--Side Bar start-->  
       <nav id="sidebar">
         <!--Side Bar header start-->  
           <div class="sidebar-header">
@@ -55,7 +56,7 @@
                 <li>
                     <!--Major A has no drop downs-->
                     <!--Link to page Major A-->
-                    <a href="">
+                    <a href="AdminDashBoard.jsp">
                         <!-- Font awsome icons -->
                         <i class="fas fa-tachometer-alt"></i>
                         Dash Board
@@ -73,20 +74,20 @@
                     <!-- Subtitles and links to those -->
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Customers">
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="#">
+                            <a href="viewUsers.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="customerReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -111,13 +112,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Category">
                         <li>
-                            <a href="#">
+                            <a href="insertCategory.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewCategory.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -147,19 +148,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Stock">
                         <li>
-                            <a href="#">
+                            <a href="insertNewStock.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewStock.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="StockReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -184,19 +185,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Item">
                         <li>
-                            <a href="#">
+                            <a href="InsertNewItem.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewItems.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ItemReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -220,16 +221,56 @@
                     <!-- Subtitles and links to those -->
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Orders">
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="#">
+                            <a href="orders_view.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Orderreport.jsp">
+                                <i class="fas fa-file-alt"></i>
+                                Reports
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End subtitiles -->
+
+                </li>
+                <!-- Orders end -->
+                
+                <!-- Delivery start -->
+                <li>
+                    <a href="#Delivery" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <!--Major B with drop downs-->
+                   <i class="fas fa-truck"></i>
+                       Delivery
+                    </a>
+                    <!-- Subtitles and links to those -->
+                    <!-- ID should be identical for each Submenu -->
+                    <ul class="collapse list-unstyled" id="Delivery">
+                        <li>
+                            <a href="ApointDeliveryStaff.jsp">
+                                <i class="fas fa-hands-helping"></i>
+                                Assign Delivery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminDeliveryType.jsp">
+                                <i class="fas fa-motorcycle"></i>
+                                Delivery Type
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminDeliveryStaff.jsp">
+                                <i class="fas fa-people-carry"></i>
+                                Delivery Staff
                             </a>
                         </li>
                         <li>
@@ -242,11 +283,11 @@
                     <!-- End subtitiles -->
 
                 </li>
-                <!-- Orders end -->
+                <!-- Delivery end -->
 
 
 
-                                <!-- Orders start -->
+                                <!-- Offers start -->
                 <li>
                     <a href="#Offers" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <!--Major B with drop downs-->
@@ -257,13 +298,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Offers">
                         <li>
-                            <a href="#">
+                            <a href="insertOffer.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="retrieveOffer">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -288,19 +329,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Suppliers">
                         <li>
-                            <a href="#">
+                            <a href="SupplierInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewSupplier.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="SupplierReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -323,19 +364,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Staff">
                         <li>
-                            <a href="#">
+                            <a href="StaffInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="StaffList.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="SalaryDashBoard.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -360,7 +401,7 @@
                     <ul class="collapse list-unstyled" id="UserPayment">
                         
                         <li>
-                            <a href="#">
+                            <a href="retrieveUsPay">
                                <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -385,13 +426,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="SupplyPayment">
                         <li>
-                            <a href="#">
+                            <a href="SupplierPaymentInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewSupplierPayment.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -422,13 +463,13 @@
                             </a>
                         </li> -->
                         <li>
-                            <a href="#">
+                            <a href="retrieveInstall">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="installReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -440,7 +481,7 @@
                 <!-- Installment end -->
                   
 
-               
+                </li>
 
 
 
@@ -451,7 +492,7 @@
 
             
         </nav>
-        <!--Side Bar end-->    
+        <!--Side Bar end-->   
 
         <!-- Page Content  Start-->
        
@@ -538,25 +579,17 @@
 
   </div>
 </nav>
-        <!-- <header>
-                <nav class="navbar navbar-expand-md navbar-dark" style="background-color: tomato">
-                    <div>
-                        <a href="#" class="navbar-brand">Book List</a>
-                    </div>
-
-                </nav>
-            </header> -->
-
 
                <!-- navbar -->
  
     <!-- end of navbar -->
+	<!-- Start card to select month and year of salary -->
 <div class = "container">
 
 	
 		<div class = "card special-card text-light">
 			<div class = "card-body">
-					<form action="#" method ="post" >
+					<form action="salaryRetrieve" method ="post" >
 					
 						<div class = "row">
 						<div class="form-group col-md-3">
@@ -565,44 +598,62 @@
 						<div class="form-group col-md-9">
    
 					  
-						<select name="categoryRel" class="form-control bd-dark" required >
+						<select name="categoryMonth" class="form-control bd-dark" required >
 						 <option value="" disabled selected hidden>Select a month</option>
-						 <option>January</option>
-						 <option>February</option>
-						 <option>March</option>
-						 <option>April</option>
-						 <option>May</option>
-						 <option>June</option>
-						 <option>July</option>
-						 <option>August</option>
-						 <option>September</option>
-						 <option>October</option>
-						 <option>November</option>
-						 <option>December</option>
+						 <option value = "1">January</option>
+						 <option value = "2">February</option>
+						 <option value = "3">March</option>
+						 <option value = "4">April</option>
+						 <option value = "5">May</option>
+						 <option value = "6">June</option>
+						 <option value = "7">July</option>
+						 <option value = "8">August</option>
+						 <option value = "9">September</option>
+						 <option value = "10">October</option>
+						 <option value = "11">November</option>
+						 <option value = "12">December</option>
+						 </select>
 						 
-					    <%-- <c:forEach items="${listCategory}" var="category">
-					        <option value="${category.categoryNum}"> ${category.categoryNum}</option>
-					    </c:forEach> --%>
-					    
-						</select>
-					</div>
+					   
+						</div>
+						</div>
+						<div class = "row">
+						<div class = "col-md-3">
+							<label for="Month">Select Year</label>
+						</div>
+						<div class="form-group col-md-9">
+   
+					  
+							<select name="categoryYear" class="form-control bd-dark" required >
+							 <option value="" disabled selected hidden>Select an Year</option>
+							 
+							 <option value = "2019">2019</option>
+							 <option value = "2020">2020</option>
+							 <option value = "2021">2021</option>
+							
+							</select>
+						</div>
+						</div>
 
-</div>
 
 
 
 					<div class = "row">				 
 					<div class = "form-group col-lg-4">
 					
-						
+						<button  type="submit" name ="updateStaff" value = "Update profile" class="btn-sm btn-primary btn-block "><i class="fas fa-file-alt"></i> Generate Salary</button>
 					</div>
 					<div class = "form-group col-lg-4">
-						<button  type="submit" name ="updateStaff" value = "Update profile" class="btn-sm btn-primary btn-block "><i class="fas fa-file-alt"></i> Generate Salary</button>		
+								
 					</div>
 					<div class = "form-group col-lg-4">
+						<button  type="submit" name ="updateStaff" value = "Update profile" class="btn-sm btn-primary btn-block "><a href="SalaryReportSelect.jsp"><i class="fas fa-download"></i>Salary Reports</a></button>
 						
 					</div>
-		
+						
+						
+						
+						
 						
 					</div>	
 					</form>
@@ -612,6 +663,7 @@
 
 
 </div>   
+	<!-- End card to select month and year of salary -->
 
 <div class = "container">
 
@@ -619,98 +671,244 @@
 
 
 <!-- View Table -->
-<style>
-        
-               
- table, td, th {
-            border: 1px solid black;
-            width: 300px;
-            height: 0px;
-         }
- 
 
- 
-}
- </style>
-
-
- <br>
- <table class="table table table-hover table-dark table-bordered table-sm text-center table-stripped">
- 
-                        <thead>
+		<!--Start Table to display final salary of employees -->
+         <table class = "table table-hover table-dark table-bordered table-sm text-center table-stripped" id = "table">
+         
+         			 <thead>
                             <tr>
-                                <th>Staff ID</th>
                                 <th>First Name</th>
                                 <th>Last Name</th>
-                                <th>NIC</th>
-                                <th>EPF number</th>
+                                <th>Staff ID</th>
                                 <th>Basic Salary</th>
-                                <th>Bonus</th>
-                                <th>OT Amount</th>
-                                <th>Leave deductions</th>
+                                <th>(EPF) Employer</th>
+                                <th>(EPF) Employee</th>
                                 <th>EPF</th>
                                 <th>ETF</th>
-                                <th>Total Salary</th>
+                                <th>OT Hours</th>
+                                <th>OT Rate</th> 
+                                <th>OT Amount</th>
+                                <th>Leaves</th>
+                                <th>Leave deducts</th>
+                                <th>Halfdays</th>
+                                <th>Halfday deducts</th>
+                                <th>Salary</th>
+                                 
+                                
                                    
                             </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        </tr>
-                        <tr>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        </tr>
-                        <tr>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        	<td>XX</td>
-                        </tr>
-                        
-                           
-                        </tbody>
-         </table> 
+       
+         
+         
+         <!-- Retieve Details from the servlet StaffSalaryListServlet -->
+         <c:forEach var="staffSalary" items="${listStaffSalary}">
+					<tbody>
+					
+					
+					
+					
+								
+  		<c:url value = "SalaryReport.jsp" var = "staffSalaryReport">
+			<c:param name="staffFirstName" value = "${staffSalary.staffFirstName}"/>
+			<c:param name="staffLastName" value = "${staffSalary.staffLastName}"/>
+			<c:param name="staffID" value = "${staffSalary.staffID}"/>
+			<c:param name="staffBasicSalary" value = "${staffSalary.staffBasicSalary}"/>
+			<c:param name="epfEmployerContribution" value = "${staffSalary.epfEmployerContribution}"/>
+			<c:param name="epfEmployeeContribution" value = "${staffSalary.epfEmployeeContribution}"/>
+			
+			
+		</c:url>					
+					
+					
+					
+					
+					
+					
+                                <tr class = "tableRow">
+                                 	<td>
+                                        <div class = "tableRowww">
+                                               ${staffSalary.staffFirstName}
+                                        </div>    
+                                    </td>
+                                    <td>
+                                        <div class = "tableRowww">
+                                               ${staffSalary.staffLastName}
+                                        </div>    
+                                    </td>
+                                    <td>
+                                        <div class = "tableRowww">
+                                            ${staffSalary.staffID}
+                                        </div>    
+                                    </td>
+                                    
+                                    
+                                    <td>
+                                        <div class = "tableRowww">
+                                               ${staffSalary.staffBasicSalary}
+                                        </div>    
+                                    </td>
+                                    
+                                    <td>
+                                        <div class = "tableRowww">
+                                               ${staffSalary.epfEmployerContribution}
+                                                <c:set var="totalEPFemployer" value="${totalEPFemployer + staffSalary.epfEmployerContribution}" />
+                                        </div>    
+                                    </td>
+                                    <td>
+                                        <div class = "tableRowww">
+                                               ${staffSalary.epfEmployeeContribution}
+                                        </div>    
+                                    </td>
+                                    <td>
+                                        <div class = "tableRowww">
+                                               ${staffSalary.epf}
+                                        </div>    
+                                    </td>
+                                    <td>
+                                        <div class = "tableRowww">
+                                               ${staffSalary.etf}
+                                               <c:set var="totalETF" value="${totalETF + staffSalary.etf}" />
+                                        </div>    
+                                    </td>
+                                    <td>
+                                        <div class = "tableRowww">
+                                               ${staffSalary.totOThours}
+                                        </div>    
+                                    </td>
+                                    <td>
+                                        <div class = "tableRowww">
+                                               ${staffSalary.otRate}
+                                        </div>    
+                                    </td> 
+                                    <td>
+                                        <div class = "tableRowww">
+                                               ${staffSalary.otAmount}
+                                        </div>    
+                                    </td>
+                                    <td>
+                                        <div class = "tableRowww">
+                                               ${staffSalary.totLeaveDays}
+                                        </div>    
+                                    </td> 
+                                    <td>
+                                        <div class = "tableRowww">
+                                               ${staffSalary.leaveDeductAmnt}
+                                        </div>    
+                                    </td> 
+                                    <td>
+                                        <div class = "tableRowww">
+                                               ${staffSalary.totHalfDays}
+                                        </div>    
+                                    </td>
+                                    <td>
+                                        <div class = "tableRowww">
+                                               ${staffSalary.halfdayDeductAmnt}
+                                        </div>    
+                                    </td> 
+                                    <td>
+                                        <div class = "tableRowww">
+                                               ${staffSalary.salary}
+                                                <c:set var="salaryTotal" value="${salaryTotal + staffSalary.salary}" />
+                                        </div>    
+                                    </td> 
+                                     
+                                    
+                                  
+		
+ 								</tr>
+ 					
+ 					</tbody>
+ 					</c:forEach>
+ 					
+   			</table>
+   			<!--End Table to display final salary of employees -->
+   			
+   			<div class = "container">
+   				<div class = "row">
+   					<div class = "col-lg-4">
+   					<!--Button to display total EPF  -->
+   					 <button type="button" class = "btn btn-secondary btn-block btn-sm" onclick="totalEPFemployerCalc()">View Total (EPF)Employer Contribution</button>
 
+						<p id="value_epf_e"></p> 
+   					</div>
+   					<div class = "col-lg-4">
+   					<!--Button to display total ETF  -->
+   						<button type="button" class = "btn btn-secondary btn-block btn-sm" onclick="totalETFCalc()">View Total ETF</button>
+
+						<p id="value_etf"></p> 
+   					</div>
+   					<div class = "col-lg-4">
+   					<!--Button to display total Salary  -->
+   						<button type="button" class = "btn btn-secondary btn-block btn-sm" onclick="totalSalaryCalc()">View Total Salary</button>
+
+						<p id="value_salary_sum"></p>
+   					</div>
+   				</div>
+   		
+   			</div>
+
+
+<button type="button" class = "btn btn-secondary btn-block btn-sm" onclick="grossOutFlow()">View Gross Out Flow</button>
+
+						<p class = "value_outflow" id="value_outflow"></p>
+<style>
+
+p{
+	font-size: 20px;
+	font-family: Calibri;
+	color: white;
+	align-content: center;
+	text-align: center;
+}
+
+
+.value_outflow{
+font-size: 25px;
+	font-family: Calibri;
+	color: white;
+	background-color : rgb(230, 6, 6,0.4);;
+	align-content: center;
+	text-align: center;
+}
+
+</style>
+
+
+
+<script>
+/* Salary total calculation */
+function totalSalaryCalc() {
+  document.getElementById("value_salary_sum").innerHTML = ${salaryTotal}.toFixed(2);
+}
+
+/* EPF total calculation */
+ function totalEPFemployerCalc() {
+	  document.getElementById("value_epf_e").innerHTML = ${totalEPFemployer}.toFixed(2);
+	}
+ 
+ /* ETF total calculation */ 
+ function totalETFCalc() {
+	  document.getElementById("value_etf").innerHTML = ${totalETF}.toFixed(2);
+	}
+ 
+ /* Gross out flow total calculation */
+ function grossOutFlow() {
+	 
+	 var grossOutFlow = ${totalETF} + ${totalEPFemployer} + ${salaryTotal};
+	 
+	  document.getElementById("value_outflow").innerHTML = grossOutFlow.toFixed(2);
+	}
+
+ 
+ 
+ 
+
+</script>
 
                     <br><br>
-<button type="submit" class="btn btn-success
- btn-block">
-	<a href="insertCategory.jsp">
-	<i class="fas fa-download"></i>
-	Dowload Salary Report</a>
-</button>
-
+                 <!-- Button to download the report	 -->   
+			
 
                                     <!--End Page main content / Tables and Forms -->
 </div>

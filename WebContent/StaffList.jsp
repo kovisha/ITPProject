@@ -28,7 +28,7 @@
 <body>
      
     <div class="wrapper">
-        <!--Side Bar start-->  
+            <!--Side Bar start-->  
       <nav id="sidebar">
         <!--Side Bar header start-->  
           <div class="sidebar-header">
@@ -55,7 +55,7 @@
                 <li>
                     <!--Major A has no drop downs-->
                     <!--Link to page Major A-->
-                    <a href="">
+                    <a href="AdminDashBoard.jsp">
                         <!-- Font awsome icons -->
                         <i class="fas fa-tachometer-alt"></i>
                         Dash Board
@@ -73,20 +73,20 @@
                     <!-- Subtitles and links to those -->
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Customers">
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="#">
+                            <a href="viewUsers.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="customerReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -111,13 +111,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Category">
                         <li>
-                            <a href="#">
+                            <a href="insertCategory.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewCategory.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -147,19 +147,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Stock">
                         <li>
-                            <a href="#">
+                            <a href="insertNewStock.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewStock.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="StockReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -184,19 +184,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Item">
                         <li>
-                            <a href="#">
+                            <a href="InsertNewItem.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewItems.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ItemReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -220,16 +220,56 @@
                     <!-- Subtitles and links to those -->
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Orders">
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="#">
+                            <a href="orders_view.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Orderreport.jsp">
+                                <i class="fas fa-file-alt"></i>
+                                Reports
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End subtitiles -->
+
+                </li>
+                <!-- Orders end -->
+                
+                <!-- Delivery start -->
+                <li>
+                    <a href="#Delivery" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <!--Major B with drop downs-->
+                   <i class="fas fa-truck"></i>
+                       Delivery
+                    </a>
+                    <!-- Subtitles and links to those -->
+                    <!-- ID should be identical for each Submenu -->
+                    <ul class="collapse list-unstyled" id="Delivery">
+                        <li>
+                            <a href="ApointDeliveryStaff.jsp">
+                                <i class="fas fa-hands-helping"></i>
+                                Assign Delivery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminDeliveryType.jsp">
+                                <i class="fas fa-motorcycle"></i>
+                                Delivery Type
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminDeliveryStaff.jsp">
+                                <i class="fas fa-people-carry"></i>
+                                Delivery Staff
                             </a>
                         </li>
                         <li>
@@ -242,11 +282,11 @@
                     <!-- End subtitiles -->
 
                 </li>
-                <!-- Orders end -->
+                <!-- Delivery end -->
 
 
 
-                                <!-- Orders start -->
+                                <!-- Offers start -->
                 <li>
                     <a href="#Offers" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <!--Major B with drop downs-->
@@ -257,13 +297,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Offers">
                         <li>
-                            <a href="#">
+                            <a href="insertOffer.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="retrieveOffer">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -288,19 +328,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Suppliers">
                         <li>
-                            <a href="#">
+                            <a href="SupplierInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewSupplier.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="SupplierReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -323,19 +363,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Staff">
                         <li>
-                            <a href="#">
+                            <a href="StaffInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="StaffList.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="SalaryDashBoard.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -360,7 +400,7 @@
                     <ul class="collapse list-unstyled" id="UserPayment">
                         
                         <li>
-                            <a href="#">
+                            <a href="retrieveUsPay">
                                <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -385,13 +425,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="SupplyPayment">
                         <li>
-                            <a href="#">
+                            <a href="SupplierPaymentInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewSupplierPayment.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -422,13 +462,13 @@
                             </a>
                         </li> -->
                         <li>
-                            <a href="#">
+                            <a href="retrieveInstall">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="installReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -440,7 +480,7 @@
                 <!-- Installment end -->
                   
 
-               
+                </li>
 
 
 
@@ -451,8 +491,7 @@
 
             
         </nav>
-        <!--Side Bar end-->    
-
+        <!--Side Bar end-->   
         <!-- Page Content  Start-->
        
         <div id="content">
@@ -513,7 +552,7 @@
 
 
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" id = "myInput" onkeyup="myFunction()">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 
     </form>
@@ -575,10 +614,9 @@
             <div>
                 <div class = "container">
                     <div class = "row">
-                        <div class = "col-lg-3"></div>
-                        <div class = "col-lg-6">
-                                    <ul>
-				                        <li><a href="<%=request.getContextPath()%>/StaffListServlet">
+                        <div class = "col-lg-4">
+                        	<ul>
+								<li><a href="<%=request.getContextPath()%>/StaffListServlet">
 				                        <button type="" class="btn btn-secondary btn-block btn-sm">
 				                        View Staff List
 				                        <i class="fas fa-eye"></i> 
@@ -586,8 +624,22 @@
 				                        </button>
 				                        </li>
 				                    </ul>
+                        
                         </div>
-                        <div class = "col-lg-3"></div>
+                        <div class = "col-lg-4"></div>
+                        <div class = "col-lg-4">
+                        	
+                        		<ul>
+									<li><a href="<%=request.getContextPath()%>/StaffListDeletedServlet">
+				                        <button type="" class="btn btn-secondary btn-block btn-sm">
+				                        View Deleted Staff
+				                        <i class="fas fa-eye"></i> 
+				                        </a>
+				                        </button>
+				                        </li>
+				                    </ul>
+                        	
+                        </div>
                     </div>
                 </div>
             </div><!-- End of button VIEW -->
@@ -600,7 +652,7 @@
 <!--  <input type="submit"  value="Click here to view the Categories" >-->
  </form>  --%>
  <br>
- <table class="table table table-hover table-dark table-bordered table-sm text-center table-stripped">
+ <table class="table table table-hover table-dark table-bordered table-sm text-center table-stripped" id = "myTable">
                         <thead>
                             <tr>
                                
@@ -630,12 +682,7 @@
                             <!--   for (Todo todo: todos) {  -->
                             <c:forEach var="staff" items="${listStaff}">
                             
-                            <c:set var = "id" value = "${staff.id}"/>
-                            
-                           
-  <!-- //staffID,staffFirstName,staffLastName,staffUserName,staffPassword,staffAddress,staffemailAddress,dob,staffNIC,categoryRel,staffGender,staffEPF,joinedDate,categoryJob,staffBasicSalary,mobNo,homNo
-				 -->                          
-                            
+                            <c:set var = "id" value = "${staff.id}"/>                            
 							<c:set var = "staffID" value = "${staff.staffID}"/>
 							<c:set var = "staffFirstName" value = "${staff.staffFirstName}"/>
 							<c:set var = "staffLastName" value = "${staff.staffLastName}"/>
@@ -653,10 +700,11 @@
 							<c:set var = "categoryJob" value = "${staff.categoryJob}"/>
 							<c:set var = "staffBasicSalary" value = "${staff.staffBasicSalary}"/>
 							
-							
+							<c:set var = "image" value = "${staff.image}"/>
 							<c:set var = "mobNo" value = "${staff.mobNo}"/>
 							<c:set var = "homNo" value = "${staff.homNo}"/>
-							<c:set var = "filename" value = "${staff.filename}"/>
+							
+							
 				
 				
   		<c:url value = "StaffProfile.jsp" var = "staffprofile">
@@ -674,13 +722,13 @@
 			<c:param name="staffGender" value = "${staffGender}"/>
 			
 			<c:param name="staffEPF" value = "${staffEPF}"/>
-			<c:param name="joinedDate" value = "${joinedDate}"/>
+			<c:param name="joinedDate" value = "${joinedDate}"/>	
 			<c:param name="categoryJob" value = "${categoryJob}"/>
 			<c:param name="staffBasicSalary" value = "${staffBasicSalary}"/>
-			
+			<c:param name="image" value = "${image}"/>
 			<c:param name="mobNo" value = "${mobNo}"/>
 			<c:param name="homNo" value = "${homNo}"/>
-			<c:param name="filename" value = "${filename}"/>
+			
 		</c:url>							
 	
 		 <c:url value = "StaffUpdate.jsp" var = "staffupdate">
@@ -701,10 +749,10 @@
 			<c:param name="joinedDate" value = "${joinedDate}"/>
 			<c:param name="categoryJob" value = "${categoryJob}"/>
 			<c:param name="staffBasicSalary" value = "${staffBasicSalary}"/>
-			
+			<c:param name="image" value = "${image}"/>
 			<c:param name="mobNo" value = "${mobNo}"/>
 			<c:param name="homNo" value = "${homNo}"/>
-			<c:param name="filename" value = "${filename}"/>
+			
 		</c:url>
 		
 		<c:url value = "StaffDelete.jsp" var = "staffdelete">
@@ -725,10 +773,10 @@
 			<c:param name="joinedDate" value = "${joinedDate}"/>
 			<c:param name="categoryJob" value = "${categoryJob}"/>
 			<c:param name="staffBasicSalary" value = "${staffBasicSalary}"/>
-			
+			<c:param name="image" value = "${image}"/>
 			<c:param name="mobNo" value = "${mobNo}"/>
 			<c:param name="homNo" value = "${homNo}"/>
-			<c:param name="filename" value = "${filename}"/>
+			
 		</c:url>
 
 
@@ -737,28 +785,29 @@
                                     
                                     <td>
                                     <div class = "tableRowww">
-										<c:out value="${staff.staffID}" /> 
+										${staff.staffID}
 									</div>	
                                     </td>
                                     <td>
                                     <div class = "tableRowww">
-										<c:out value="${staff.staffFirstName}" /> 
+										${staff.staffFirstName}
+										
 									</div>	
                                     </td>
                                     <td>
                                     <div class = "tableRowww">
-										<c:out value="${staff.staffLastName}" /> 
+										${staff.staffLastName}
 									</div>	
                                     </td>
                                     <td>
                                     <div class = "tableRowww">
-										<c:out value="${staff.staffUserName}" /> 
+										${staff.staffUserName}
 									</div>	
                                     </td>
                                     
                                     <td>
                                     <div class = "tableRowww">
-										<c:out value="${staff.staffAddress}" /> 
+										${staff.staffAddress}
 									</div>	
                                     </td>
                                     
@@ -767,37 +816,37 @@
                                     
                                     <td>
                                     <div class = "tableRowww">
-										<c:out value="${staff.categoryJob}" /> 
+										${staff.categoryJob}
 									</div>	
                                     </td>
                                     <td>
                                     <div class = "tableRowww">
-										<c:out value="${staff.staffBasicSalary}" /> 
+										${staff.staffBasicSalary}
 									</div>	
                                     </td>
                                     <td>
                                     <div class = "tableRowww">
-										 <image src = "images/<c:out value="${staff.filename}" />" width = "80", height = "130"/> 
+                                  
+  									  <%-- <img src="data:image/jpeg;base64,${​staff.image}​"  width="10" height="60"/>  --%>
+  									  
+  									  <img alt="img" src="data:image/jpeg;base64,${staff.image}" width="90" height="100"/>
+  									  <%--  <img src="${​staff.image}​" id = "#" width="10" height="60"/>   --%>
+  									
 									</div>	
                                     </td>
                                     
                                     <td>
                                     <div class = "tableRowww">
-										<c:out value="${staff.mobNo}" /> 
+										${staff.mobNo}
 									</div>	
                                     </td>
                                     <td>
                                     <div class = "tableRowww">
-										<c:out value="${staff.homNo}" /> 
+										${staff.homNo}
 										 
 									</div>	
                                     </td>
                                     
-                                    
-                              <%--       <td>
- 										<image src = "images/<c:out value="${book.filename}" />" width = "80", height = "130"/> 
-                                    </td>   --%>
-                                
 
                                    <td class="tr1">
                                    <div class = "tableRowww">
@@ -838,6 +887,162 @@
                                 
                             </c:forEach>
                             <!-- } -->
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                              <c:forEach var="staff" items="${listDeleteStaff}">
+                            
+                            <c:set var = "id" value = "${staff.id}"/>                            
+							<c:set var = "staffID" value = "${staff.staffID}"/>
+							<c:set var = "staffFirstName" value = "${staff.staffFirstName}"/>
+							<c:set var = "staffLastName" value = "${staff.staffLastName}"/>
+							<c:set var = "staffUserName" value = "${staff.staffUserName}"/>
+							<c:set var = "staffPassword" value = "${staff.staffPassword}"/>
+							<c:set var = "staffAddress" value = "${staff.staffAddress}"/>
+							<c:set var = "staffemailAddress" value = "${staff.staffemailAddress}"/>
+							<c:set var = "dob" value = "${staff.dob}"/>
+							<c:set var = "staffNIC" value = "${staff.staffNIC}"/>
+							<c:set var = "categoryRel" value = "${staff.categoryRel}"/>
+							<c:set var = "staffGender" value = "${staff.staffGender}"/>
+							
+							<c:set var = "staffEPF" value = "${staff.staffEPF}"/>
+							<c:set var = "joinedDate" value = "${staff.joinedDate}"/>
+							<c:set var = "categoryJob" value = "${staff.categoryJob}"/>
+							<c:set var = "staffBasicSalary" value = "${staff.staffBasicSalary}"/>
+							
+							<c:set var = "image" value = "${staff.image}"/>
+							<c:set var = "mobNo" value = "${staff.mobNo}"/>
+							<c:set var = "homNo" value = "${staff.homNo}"/>
+							
+							
+				
+				
+  		<c:url value = "StaffReinsert.jsp" var = "StaffReinsert">
+			<c:param name="id" value = "${id}"/>
+			<c:param name="staffID" value = "${staffID}"/>
+			<c:param name="staffFirstName" value = "${staffFirstName}"/>
+			<c:param name="staffLastName" value = "${staffLastName}"/>
+			<c:param name="staffUserName" value = "${staffUserName}"/>
+			<c:param name="staffPassword" value = "${staffPassword}"/>
+			<c:param name="staffAddress" value = "${staffAddress}"/>
+			<c:param name="staffemailAddress" value = "${staffemailAddress}"/>
+			<c:param name="dob" value = "${dob}"/>
+			<c:param name="staffNIC" value = "${staffNIC}"/>
+			<c:param name="categoryRel" value = "${categoryRel}"/>
+			<c:param name="staffGender" value = "${staffGender}"/>
+			
+			<c:param name="staffEPF" value = "${staffEPF}"/>
+			<c:param name="joinedDate" value = "${joinedDate}"/>	
+			<c:param name="categoryJob" value = "${categoryJob}"/>
+			<c:param name="staffBasicSalary" value = "${staffBasicSalary}"/>
+			<c:param name="image" value = "${image}"/>
+			<c:param name="mobNo" value = "${mobNo}"/>
+			<c:param name="homNo" value = "${homNo}"/>
+			
+		</c:url>							
+	
+		
+
+ 
+                                <tr class = "tableRow">
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+										${staff.staffID}
+									</div>	
+                                    </td>
+                                    <td>
+                                    <div class = "tableRowww">
+										${staff.staffFirstName}
+										
+									</div>	
+                                    </td>
+                                    <td>
+                                    <div class = "tableRowww">
+										${staff.staffLastName}
+									</div>	
+                                    </td>
+                                    <td>
+                                    <div class = "tableRowww">
+										${staff.staffUserName}
+									</div>	
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+										${staff.staffAddress}
+									</div>	
+                                    </td>
+                                    
+                                    
+                                  
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+										${staff.categoryJob}
+									</div>	
+                                    </td>
+                                    <td>
+                                    <div class = "tableRowww">
+										${staff.staffBasicSalary}
+									</div>	
+                                    </td>
+                                    <td>
+                                    <div class = "tableRowww">
+                                  
+  									  <%-- <img src="data:image/jpeg;base64,${​staff.image}​"  width="10" height="60"/>  --%>
+  									  
+  									  <img alt="img" src="data:image/jpeg;base64,${staff.image}" width="90" height="100"/>
+  									  <%--  <img src="${​staff.image}​" id = "#" width="10" height="60"/>   --%>
+  									
+									</div>	
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+										${staff.mobNo}
+									</div>	
+                                    </td>
+                                    <td>
+                                    <div class = "tableRowww">
+										${staff.homNo}
+										 
+									</div>	
+                                    </td>
+                                    
+
+                                   <td class="tr1">
+                                   <div class = "tableRowww">
+                                   
+                                    	<button type="button" class="btn btn-outline-light btn-sm">
+                                    	<a href="${StaffReinsert}">
+                                     	 <i class="fas fa-plus-circle"></i>Confirm Staff Re-Insert
+                                    	</a> 
+                                    	</button>
+                                    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </div>
+                                    </td>
+                           
+                                
+                                    
+                                </tr>
+                                
+                            </c:forEach>
+                            <!-- } -->
+                            
+                            
+                            
+                            
+                            
+                            
                         </tbody>
 
                     </table> 
@@ -873,6 +1078,29 @@
             });
         });
     </script>
+    
+    
+     <script type="text/javascript">
+       
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }      
+          }
+        }
+        </script>
 
 </body>
 

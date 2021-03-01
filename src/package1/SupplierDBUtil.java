@@ -11,6 +11,8 @@ import package1.Supplier;
 
 import package1.Supplier;
 
+import package1.SupplierIDGenerator;
+
 import package1.DBConnect;
 
 public class SupplierDBUtil {
@@ -22,9 +24,12 @@ public class SupplierDBUtil {
 	private static ResultSet rs = null;
 	private static ResultSet rs1 = null;
 	
-	
-	public static boolean insertsupplier(String supplierid, String name, String status, String address, String email, String phone1, String phone2, String description) {
+	/*Supplier Insert Method*/
+	public static boolean insertsupplier(String name, String status, String address, String email, String phone1, String phone2, String description) {
 		boolean isSuccess = false;
+		
+		SupplierIDGenerator sid = new SupplierIDGenerator();
+		String supplierid = sid.supplierIDgenerator();
 		
 		try {
 			con = DBConnect.getConnection();
@@ -47,48 +52,8 @@ public class SupplierDBUtil {
 		}
 		return isSuccess;
 	}
-	
-//	public static List<Supplier> displaysupplier() {
-//		
-//		ArrayList<Supplier> supplier = new ArrayList<>();
-//		
-//		try {
-//			
-//			con = DBConnect.getConnection();
-//			stmt = con.createStatement();
-//			
-//			String sql = "select * from supplier";
-////			String sql2 = "select sp.supplierID,sp.phone1,sp.phone2 from supplierphone sp, supplier s where s.supplierID=sp.supplierID";
-////			, supplierphone sp where s.supplierID = sp.supplierID
-//			
-//			rs = stmt.executeQuery(sql);
-//			
-//			while(rs.next()) {
-//				
-//				int id = rs.getInt(1);
-//				String supplierID = rs.getString(2);
-//				String name = rs.getString(3);
-//				String status = rs.getString(4);
-//				String address = rs.getString(5);
-//				String email = rs.getString(6);
-////				String phone1 = rs1.getString(3);
-////				String phone2 = rs1.getString(4);
-//				String description = rs.getString(7);
-//				
-//				
-//				Supplier s = new Supplier(id, supplierID, name, status, address, email, description);
-//				supplier.add(s);
-//				
-//			}
-//			
-//		}
-//		catch(Exception e) {
-//			e.printStackTrace();
-//		}
-//		return supplier;
-//	}
-	
-	
+		
+	/* Display All Suppliers-Method*/
 	public static List<Supplier> displaysupplier1() {
 		
 		ArrayList<Supplier> supplier = new ArrayList<>();
@@ -98,15 +63,11 @@ public class SupplierDBUtil {
 			con = DBConnect.getConnection();
 			stmt = con.createStatement();
 			
-			String sql = "select s.supplierID, s.suppliername, s.status, s.address, s.email, sp.phone1, sp.phone2, s.description from supplier s, supplierphone sp where s.supplierID=sp.supplierID";
-//			String sql2 = "select sp.supplierID,sp.phone1,sp.phone2 from supplierphone sp, supplier s where s.supplierID=sp.supplierID";
-//			, supplierphone sp where s.supplierID = sp.supplierID
-			
+			String sql = "select s.supplierID, s.suppliername, s.status, s.address, s.email, sp.phone1, sp.phone2, s.description from udssuper.supplier s, udssuper.supplierphone sp where s.supplierID=sp.supplierID";			
 			rs = stmt.executeQuery(sql);
 			
 			while(rs.next()) {
 				
-			
 				String supplierID = rs.getString(1);
 				String name = rs.getString(2);
 				String status = rs.getString(3);
@@ -116,8 +77,7 @@ public class SupplierDBUtil {
 				String phone2 = rs.getString(7);
 				String description = rs.getString(8);
 				
-				
-				Supplier s = new Supplier(supplierID, name, status, address, email, phone1, phone2, description);
+				Supplier s = new Supplier(supplierID, name , status , address, email, phone1, phone2, description);
 				supplier.add(s);
 				
 			}
@@ -129,7 +89,124 @@ public class SupplierDBUtil {
 		return supplier;
 	}
 	
+	/* Display Stocks For The Suppliers-Method*/
+	public static List<Supplier> displaysupplierstock(String ID) {
+		
+		ArrayList<Supplier> supplier = new ArrayList<>();
+		
+		try {
+			
+			con = DBConnect.getConnection();
+			stmt = con.createStatement();
+			
+			String sql = "select sp.suppliername, st.stockname, st.stocksize from supplier sp, stock st where sp.supplierID = st.supplierdid and sp.supplierID = '"+ID+"'";
+				
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				
+			
+				
+				String name = rs.getString(1);
+				String stockname = rs.getString(2);
+				float stocksize = rs.getFloat(3);
+				
+				
+				Supplier s = new Supplier(name,stockname,stocksize);
+				supplier.add(s);
+				
+			}
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return supplier;
+	}
 	
+	public static List<Supplier> displaysupplier2() {
+	  
+	  ArrayList<Supplier> supplier = new ArrayList<>();
+	  
+	  try {
+	  
+		  con = DBConnect.getConnection(); 
+		  stmt = con.createStatement();
+		  
+		  String sql = "select s.supplierID, s.suppliername, st.stockname, st.stocksize,s.status, s.address, s.email, sp.phone1, sp.phone2, s.description from supplier s, supplierphone sp, stock st  where s.supplierID=sp.supplierID and s.supplierID = st.supplierdid";
+		  
+	  
+		  rs = stmt.executeQuery(sql);
+	  
+	  while(rs.next()) {
+	  
+	  
+		  String supplierID = rs.getString(1); 
+		  String name = rs.getString(2); 
+		  String stockname = rs.getString(3); 
+		  float stocksize = rs.getFloat(4);
+		  String status = rs.getString(5);
+		  String address= rs.getString(6); 
+		  String email = rs.getString(7); 
+		  String phone1 =rs.getString(8); 
+		  String phone2 = rs.getString(9); 
+		  String description =rs.getString(10);
+	  
+	  
+		  Supplier s = new Supplier(supplierID, name, stockname, stocksize,status, address, email, phone1, phone2, description);
+		  supplier.add(s);
+	  
+	  }
+	  
+	  } catch(Exception e) { 
+		  e.printStackTrace(); 
+		  
+	  } 
+	  return supplier; 
+	  }
+	 
+		public static List<Supplier> displaysupplier3() {
+			
+			ArrayList<Supplier> supplier = new ArrayList<>();
+			
+			try {
+				
+				con = DBConnect.getConnection();
+				stmt = con.createStatement();
+				
+				String sql = "select s.supplierID, s.suppliername, st.stockname, st.stocksize, s.status, s.address, s.email, sp.phone1, sp.phone2, s.description from supplier s  LEFT JOIN stock st ON s.supplierID = st.supplierdid INNER JOIN supplierphone sp ON s.supplierID=sp.supplierID";
+			
+				
+				rs = stmt.executeQuery(sql);
+				
+				while(rs.next()) {
+					
+				
+					String supplierID = rs.getString(1);
+					String name = rs.getString(2);
+					String stockname = rs.getString(3);
+					float stocksize = rs.getFloat(4);
+					String status = rs.getString(5);
+					String address = rs.getString(6);
+					String email = rs.getString(7);
+					String phone1 = rs.getString(8);
+					String phone2 = rs.getString(9);
+					String description = rs.getString(10);
+					
+					
+					Supplier s = new Supplier(supplierID, name, stockname, stocksize,status, address, email, phone1, phone2, description);
+					supplier.add(s);
+					
+				}
+				
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
+			return supplier;
+		}
+		
+	/* Update Supplier Method*/
 	public static boolean updateSupplier(String supplierID , String name , String status , String address , String email, String phone1, String phone2, String description) {
 		
 		boolean isSuccess = false;
@@ -159,44 +236,9 @@ public class SupplierDBUtil {
 		return isSuccess;
 	}
 	
-//	public static List<Supplier> displayUpdateSupplier(String supplierID) {
-//		
-////		int convertedID = Integer.parseInt(supplierID);
-//	
-//		ArrayList<Supplier> supplier = new ArrayList<>();
-//		
-//		try {
-//			
-//			con = DBConnect.getConnection();
-//			stmt = con.createStatement();
-//			
-//			String sql = "select * from supplier where supplierID='"+supplierID+"'";
-//			rs = stmt.executeQuery(sql);
-//			
-//			while(rs.next()) {
-//				int id = rs.getInt(1);
-//				String supplierid = rs.getString(2);
-//				String name = rs.getString(3);
-//				String status = rs.getString(4);
-//				String address = rs.getString(5);
-//				String email = rs.getString(6);
-//				String description = rs.getString(7);
-//				
-//			
-//			
-//				Supplier s = new Supplier(id, supplierid, name, status, address, email, description);
-//				supplier.add(s);
-//			}
-//		}
-//		catch(Exception e) {
-//			e.printStackTrace();
-//		}
-//		
-//		return supplier;
-//	}
-	
-	public static boolean deleteSupplier(String supplierID, String name, String status) {
-		
+	/* Delete Supplier Method*/
+	public static boolean deleteSupplier(String supplierID) {
+
 		boolean isSuccess = false;
 		
 		try {
@@ -223,4 +265,73 @@ public class SupplierDBUtil {
 		return isSuccess;
 	}
 	
+	/* Display All Deleted Suppliers-Method*/
+	public static List<Supplier> displayDeletedsupplier1() {
+		
+		ArrayList<Supplier> supplier = new ArrayList<>();
+		
+		try {
+			
+			con = DBConnect.getConnection();
+			stmt = con.createStatement();
+			
+			String sql = "select s.supplierID, s.suppliername, s.status, s.address, s.email, sp.phone1, sp.phone2, s.description from supplierlog s, supplierphonelog sp where s.supplierID=sp.supplierID";
+
+			
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				
+			
+				String supplierID = rs.getString(1);
+				String name = rs.getString(2);
+				String status = rs.getString(3);
+				String address = rs.getString(4);
+				String email = rs.getString(5);
+				String phone1 = rs.getString(6);
+				String phone2 = rs.getString(7);
+				String description = rs.getString(8);
+				
+				
+				Supplier s = new Supplier(supplierID, name , status , address, email, phone1, phone2, description);
+				supplier.add(s);
+				
+			}
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return supplier;
+	}
+	
+	/* Re-Insert All The Deleted Suppliers-Method*/
+	public static boolean ReinsertSupplier(String supplierID) {
+
+		boolean isSuccess = false;
+		
+		try {
+			
+			con = DBConnect.getConnection();
+			stmt = con.createStatement();
+			
+			String sql1 = "DELETE FROM supplierlog WHERE supplierID='"+supplierID+"'";
+			String sql = "DELETE FROM supplierphonelog WHERE supplierID='"+supplierID+"'";
+			
+			
+			
+			int rs = stmt.executeUpdate(sql);
+			int rs1 = stmt.executeUpdate(sql1);
+			
+			if(rs > 0  && rs1 > 0) {
+				isSuccess = true;
+			} else {
+				isSuccess = false;
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return isSuccess;
+	}
 }

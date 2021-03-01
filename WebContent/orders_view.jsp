@@ -220,20 +220,15 @@
                     <!-- Subtitles and links to those -->
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Orders">
+                       
                         <li>
-                            <a href="#">
-                                <i class="fas fa-plus-circle"></i>
-                                Add
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
+                            <a href="orders_view.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="OrderReportEx.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -513,8 +508,8 @@
 
 
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" type="text"  placeholder="Search" aria-label="Search">
+       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> 
 
     </form>
 
@@ -607,6 +602,8 @@
             });
         });
     </script>
+    
+    
 
 </body>
 

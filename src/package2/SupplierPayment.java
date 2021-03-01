@@ -4,16 +4,44 @@ public class SupplierPayment {
 	
 	private int id;
 	private String suppPayID;
-	private String stockid;
-	private double totalAmount;
-	private String discID;
-	private double paidAmount;
-	private String lastPayDate;
-	private int chequeNo;
+	private String suppliername;
+	private String stockname;
+	private float stocksize;
+	private String supplieddate;
 	private String invoiceNo;
+	private String lastPayDate;
+	private String stockid;
 	private String type;
 	private float discpercent;
+	private double totalAmount;
+	private int chequeNo;
+	private double paidAmount;
 	
+	private double netAmount;
+	private double dueAmount;
+	private String discID;
+	
+	/*********************************************************************Constructors***********************************************************/
+	
+	public SupplierPayment(String suppPayID, String suppliername, String stockname, float stocksize,
+			String supplieddate, String invoiceNo, String lastPayDate, String stockid, String type, float discpercent,
+			double totalAmount, int chequeNo, double paidAmount) {
+		super();
+		this.suppPayID = suppPayID;
+		this.suppliername = suppliername;
+		this.stockname = stockname;
+		this.stocksize = stocksize;
+		this.supplieddate = supplieddate;
+		this.invoiceNo = invoiceNo;
+		this.lastPayDate = lastPayDate;
+		this.stockid = stockid;
+		this.type = type;
+		this.discpercent = discpercent;
+		this.totalAmount = totalAmount;
+		this.chequeNo = chequeNo;
+		this.paidAmount = paidAmount;
+	}
+
 	public SupplierPayment(int id, String suppPayID, String stockid, double totalAmount, String discID,
 			double paidAmount, String lastPayDate, int chequeNo, String invoiceNo, String type, float discpercent) {
 		super();
@@ -30,8 +58,6 @@ public class SupplierPayment {
 		this.discpercent = discpercent;
 	}
 	
-	
-
 	public SupplierPayment(String suppPayID, String stockid, double totalAmount, double paidAmount, String lastPayDate,
 			String invoiceNo, String type, float discpercent) {
 		super();
@@ -45,7 +71,12 @@ public class SupplierPayment {
 		this.discpercent = discpercent;
 	}
 
-
+	/*********************************************************************Getters & Setters***********************************************************/
+	
+	public SupplierPayment(double paidAmount) {
+		super();
+		this.paidAmount = paidAmount;
+	}
 
 	public int getId() {
 		return id;
@@ -91,7 +122,34 @@ public class SupplierPayment {
 		return discpercent;
 	}
 
-	
-	
-	
+	public double getNetAmount() {
+		
+		netAmount = totalAmount * ((100 - discpercent) / 100);
+		String str = String.format("%1.2f", netAmount);
+		netAmount = Double.valueOf(str);
+		return netAmount;
+		
+	}
+
+	public double getDueAmount() {
+		dueAmount = netAmount - paidAmount;
+		return dueAmount;
+	}
+
+	public String getSuppliername() {
+		return suppliername;
+	}
+
+	public String getStockname() {
+		return stockname;
+	}
+
+	public String getSupplieddate() {
+		return supplieddate;
+	}
+
+	public float getStocksize() {
+		return stocksize;
+	}
+
 }

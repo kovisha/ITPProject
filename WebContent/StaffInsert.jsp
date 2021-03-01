@@ -36,7 +36,7 @@
      
 
     <div class="wrapper">
-        <!--Side Bar start-->  
+             <!--Side Bar start-->  
       <nav id="sidebar">
         <!--Side Bar header start-->  
           <div class="sidebar-header">
@@ -63,7 +63,7 @@
                 <li>
                     <!--Major A has no drop downs-->
                     <!--Link to page Major A-->
-                    <a href="">
+                    <a href="AdminDashBoard.jsp">
                         <!-- Font awsome icons -->
                         <i class="fas fa-tachometer-alt"></i>
                         Dash Board
@@ -81,20 +81,20 @@
                     <!-- Subtitles and links to those -->
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Customers">
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="#">
+                            <a href="viewUsers.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="customerReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -119,13 +119,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Category">
                         <li>
-                            <a href="#">
+                            <a href="insertCategory.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewCategory.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -155,19 +155,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Stock">
                         <li>
-                            <a href="#">
+                            <a href="insertNewStock.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewStock.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="StockReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -192,19 +192,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Item">
                         <li>
-                            <a href="#">
+                            <a href="InsertNewItem.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewItems.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ItemReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -228,16 +228,56 @@
                     <!-- Subtitles and links to those -->
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Orders">
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="#">
+                            <a href="orders_view.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Orderreport.jsp">
+                                <i class="fas fa-file-alt"></i>
+                                Reports
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End subtitiles -->
+
+                </li>
+                <!-- Orders end -->
+                
+                <!-- Delivery start -->
+                <li>
+                    <a href="#Delivery" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <!--Major B with drop downs-->
+                   <i class="fas fa-truck"></i>
+                       Delivery
+                    </a>
+                    <!-- Subtitles and links to those -->
+                    <!-- ID should be identical for each Submenu -->
+                    <ul class="collapse list-unstyled" id="Delivery">
+                        <li>
+                            <a href="ApointDeliveryStaff.jsp">
+                                <i class="fas fa-hands-helping"></i>
+                                Assign Delivery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminDeliveryType.jsp">
+                                <i class="fas fa-motorcycle"></i>
+                                Delivery Type
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminDeliveryStaff.jsp">
+                                <i class="fas fa-people-carry"></i>
+                                Delivery Staff
                             </a>
                         </li>
                         <li>
@@ -250,11 +290,11 @@
                     <!-- End subtitiles -->
 
                 </li>
-                <!-- Orders end -->
+                <!-- Delivery end -->
 
 
 
-                                <!-- Orders start -->
+                                <!-- Offers start -->
                 <li>
                     <a href="#Offers" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <!--Major B with drop downs-->
@@ -265,13 +305,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Offers">
                         <li>
-                            <a href="#">
+                            <a href="insertOffer.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="retrieveOffer">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -296,19 +336,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Suppliers">
                         <li>
-                            <a href="#">
+                            <a href="SupplierInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewSupplier.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="SupplierReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -331,19 +371,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Staff">
                         <li>
-                            <a href="#">
+                            <a href="StaffInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="StaffList.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="SalaryDashBoard.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -368,7 +408,7 @@
                     <ul class="collapse list-unstyled" id="UserPayment">
                         
                         <li>
-                            <a href="#">
+                            <a href="retrieveUsPay">
                                <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -393,13 +433,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="SupplyPayment">
                         <li>
-                            <a href="#">
+                            <a href="SupplierPaymentInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewSupplierPayment.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -430,13 +470,13 @@
                             </a>
                         </li> -->
                         <li>
-                            <a href="#">
+                            <a href="retrieveInstall">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="installReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -459,8 +499,7 @@
 
             
         </nav>
-        <!--Side Bar end-->    
-
+        <!--Side Bar end-->   
         <!-- Page Content  Start-->
        
         <div id="content">
@@ -547,17 +586,7 @@
 
   </div>
 </nav>
-        <!-- <header>
-                <nav class="navbar navbar-expand-md navbar-dark" style="background-color: tomato">
-                    <div>
-                        <a href="#" class="navbar-brand">Book List</a>
-                    </div>
 
-                </nav>
-            </header> -->
-
-
-               <!-- navbar -->
  
     <!-- end of navbar -->
 <div class = "container">
@@ -579,7 +608,7 @@
                         <div class = "col-lg-3"></div>
                         <div class = "col-lg-6">
                                     <ul>
-				                        <li><a href="<%=request.getContextPath()%>/listStaff">
+				                        <li><a href="<%=request.getContextPath()%>/StaffListServlet">
 				                        <button type="" class="btn btn-secondary btn-block btn-sm">
 				                        View Staff List
 				                        <i class="fas fa-eye"></i> 
@@ -591,27 +620,15 @@
                         <div class = "col-lg-3"></div>
                     </div>
                 </div>
-            </div><!-- End of button VIEW -->
+       		</div>
+<!-- End of button VIEW -->
 
 <br>
 
 <!-- Start -->
 
 <div class = "container">
-<%-- 	<div class = "row">
-		<div class = "col-lg-8"></div>
-		<div class = "col-lg-4">
-					<ul>
-                        <li><a href="<%=request.getContextPath()%>/StaffListServlet">
-                        <button type="" class="btn btn-secondary btn-block btn-sm">
-                        View Staff List
-                        <i class="fas fa-eye"></i> 
-                        </a>
-                        </button>
-                        </li>
-                    </ul>
-		</div>
-	</div> --%>
+
 </div>
 <br>
 
@@ -619,7 +636,14 @@
 	<div class = "card special-card text-light">
 		<div class = "card-body">
 			<form action="insertStaff" method ="post" enctype="multipart/form-data">
-
+						
+							<div class = "row">  
+                                 <div class = "col-lg-6"></div>           
+                                     <div class = "col-lg-4">
+                                    <center><button type="submit" class="btn btn-secondary btn-block" style="width:150% ; height: 150%"><a href="#" onClick="autoFill(); return true;"> Demo
+                                        </a><i class="fa fa-handshake"></i></button></center>      
+                                      </div>      
+                            </div>  
 
 				<div class="form-group">
 				    <label for="staffFirstName">First Name</label>
@@ -632,20 +656,7 @@
 				    <input type="text" class="form-control" id="staffLastName"  placeholder="Enter First Name" name = "staffLastName" required>
 				 </div>
 				 
-				 
-				  
-				 
-				 <div class = "row">
-				 	<div class = "col-md-6">
-				 		<div class="form-group">
-						    <label for="staffID">Staff ID</label>
-						    <input type="text" class="form-control" id="staffID"  placeholder="Enter Staff ID" name = "staffID" required>
-					  	</div>
-				 	</div>
-				 	<div class = "col-md-6">
-					 	 
-				 	</div>
-				 </div>	
+
 				 
 				 <div class = "row">
 				 	<div class = "col-md-6">
@@ -730,10 +741,10 @@
 
 
 	
-<div class = "form-row">
-    <div class="form-group col-md-6">
+				<div class = "form-row">
+				    <div class="form-group col-md-6">
             
-  <style type="text/css">
+<style type="text/css">
     /*
 *
 * ==========================================
@@ -781,34 +792,34 @@
 /*
 </style>
 
- <label for="validationDefault03">Profile Image</label>
+ 			<label for="validationDefault03">Profile Image</label>
  <br>
             
             <div class="input-group rounded bg-white shadow-sm">
-               <!--  id="upload"  -->
+               			<!--  id="upload"  -->
+	
+	                <label id="upload-label" for="upload" class="font-weight-light text-muted" ></label> 
+	                <input  id="upload" type="file" onchange="readURL(this);" class="form-control border-0" name="filename" value="filename" required>
+	                
+	
+	
+	
+	
+					  <label id="upload-label" for="upload" class="font-weight-light text-muted" >Browse a profile image</label> 
+					  <input  id="upload" type="file" onchange="loadFile(event)" class="form-control border-0" class="form-control" name="filename" value="filename" >
+	
 
-                <label id="upload-label" for="upload" class="font-weight-light text-muted" ></label> 
-                <input  id="upload" type="file" onchange="readURL(this);" class="form-control border-0" name="filename" value="filename" required>
-                
 
 
-
-
-				  <label id="upload-label" for="upload" class="font-weight-light text-muted" >Browse a profile image</label> 
-				  <input  id="upload" type="file" onchange="loadFile(event)" class="form-control border-0" class="form-control" name="filename" value="filename" >
-
-
-
-
-                <div class="input-group-append">
-                    <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i class="fas fa-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted"></small></label>
-                </div>
-            </div>
-
-			<!-- Uploaded image area -->
-            <p class="font-italic text-center">The image uploaded will be rendered inside the box below.</p>
-            <div class="image-area mt-4"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
- 
+		                <div class="input-group-append">
+		                    <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i class="fas fa-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted"></small></label>
+		                </div>
+		            </div>
+		
+								<!-- Uploaded image area -->
+		            <p class="font-italic text-center">The image uploaded will be rendered inside the box below.</p>
+		            <div class="image-area mt-4"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+		 
 	
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
@@ -821,94 +832,95 @@
 	
 	
 	
-	</div>
-	<div class="form-group col-md-6">
+					</div>
+					<div class="form-group col-md-6">
    
-					  <label for="categoryRel">Religion</label>
-						<select name="categoryRel" class="form-control" required>
-						 <option value="" disabled selected hidden>Select a religion</option>
-						 <option>Bhudhist</option>
-						 <option>Christian</option>
-						 <option>Muslim</option>
-						 <option>Hindu</option>
-						 <option>Other</option>
-						 
-					    <%-- <c:forEach items="${listCategory}" var="category">
-					        <option value="${category.categoryNum}"> ${category.categoryNum}</option>
-					    </c:forEach> --%>
-					    
-						</select>
-	</div>
-</div>
+							  <label for="categoryRel">Religion</label>
+								<select name="categoryRel" id="categoryRel" class="form-control" required>
+								 <option value="" disabled selected hidden>Select a religion</option>
+								 <option value="Bhushist" >Bhudhist</option>
+								 <option>Christian</option>
+								 <option>Muslim</option>
+								 <option>Hindu</option>
+								 <option>Other</option>
+								 
+							    <%-- <c:forEach items="${listCategory}" var="category">
+							        <option value="${category.categoryNum}"> ${category.categoryNum}</option>
+							    </c:forEach> --%>
+							    
+								</select>
+						</div>
+					</div>
 
 
 
 
-			<div class = "row">
-				 	<div class = "col-md-6">
-				 		  <div class="form-group">
-						    <label for="joinedDate">Joined Date</label>
-     						<input type="date" class="form-control" id="joinedDate"  placeholder="Pick the joined date" name = "joinedDate" required> 
-				 		  </div>
-				 	</div>
-				 	<div class = "col-md-6">
-						    <label for="staffEPF">EPF number</label>
-						    <input type="text" class="form-control" id="staffEPF" name="staffEPF" placeholder="Enter the EPF number">
-				 	</div>
-			</div>	
+					<div class = "row">
+						 	<div class = "col-md-6">
+						 		  <div class="form-group">
+								    <label for="joinedDate">Joined Date</label>
+		     						<input type="date" class="form-control" id="joinedDate"  placeholder="Pick the joined date" name = "joinedDate" required> 
+						 		  </div>
+						 	</div>
+						 	<div class = "col-md-6">
+								    <label for="staffEPF">EPF number</label>
+								    <input type="text" class="form-control" id="staffEPF" name="staffEPF" placeholder="Enter the EPF number">
+						 	</div>
+					</div>	
 			
 			
 			
 			
 			
 			
-			<div class = "row">
-				 	<div class = "col-md-6">
-				 		  <div class="form-group">
-				 		  		   
-					  <label for="categoryJob">Job Title</label>
-						<select name="categoryJob" class="form-control" required>
-						 <option value="" disabled selected hidden>Select a job title</option>
-						 <option>Sales</option>
-						 <option>Cashier</option>
-						 <option>Stock Manager</option>
-						 <option>Center Manager</option>
-						 <option>Admin</option>
-						 
-					    <%-- <c:forEach items="${listCategory}" var="category">
-					        <option value="${category.categoryNum}"> ${category.categoryNum}</option>
-					    </c:forEach> --%>
-					    
-						</select>
-				 		  
-				 		  </div>
-				 	</div>
-				 	<div class = "col-md-6">
-						    <label for="staffBasicSalary">Basic Salary</label>
-						    <input type="text" class="form-control" id="staffBasicSalary" name="staffBasicSalary" placeholder="Enter the basic salary">
-				 	</div>
-			</div>	
+					<div class = "row">
+						 	<div class = "col-md-6">
+						 		  <div class="form-group">
+						 		  		   
+							  <label for="categoryJob">Job Title</label>
+								<select name="categoryJob" id="categoryJob" class="form-control" required>
+								 <option value="" disabled selected hidden>Select a job title</option>
+								 <option value = "Sales">Sales</option>
+								 <option value = "Cashier">Cashier</option>
+								 <option value = "Stock Manager"> Stock Manager</option>
+								 <option value = "Center Manager">Center Manager</option>
+								 <option value = "Admin">Admin</option>
+								 <option value = "Delivery Staff">Delivery Staff</option>
+								 
+							    <%-- <c:forEach items="${listCategory}" var="category">
+							        <option value="${category.categoryNum}"> ${category.categoryNum}</option>
+							    </c:forEach> --%>
+							    
+								</select>
+						 		  
+						 		  </div>
+						 	</div>
+						 	<div class = "col-md-6">
+								    <label for="staffBasicSalary">Basic Salary</label>
+								    <input type="text" class="form-control" id="staffBasicSalary" name="staffBasicSalary" placeholder="Enter the basic salary">
+						 	</div>
+					</div>	
 			
 			
 			
-			
-			<div class = "row">
-				 	<div class = "col-md-6">
-				 		  <div class="form-group">
-						    <label for="staffUserName"><i class="fa fa-user" aria-hidden="true"></i> User Name</label>
-						    <input type="text" class="form-control" id="staffUserName" name = "staffUserName" placeholder="Enter User Name" >
-				 		  </div>
-				 	</div>
-				 	
-				 	
-				 	<div class = "col-md-6">
-				 		  <div class="form-group">
-						    <label for="staffPassword"><i class="fa fa-key" aria-hidden="true"></i> Password</label>
-						    <input type="text" class="form-control" id="staffPassword" name = "staffPassword" placeholder="Enter the password" >
-				 		  </div>
-				 	</div>
-				 	
-			</div>	
+					
+					<div class = "row">
+						 	<div class = "col-md-6">
+						 		  <div class="form-group">
+								    <label for="staffUserName"><i class="fa fa-user" aria-hidden="true"></i> User Name</label>
+								    <input type="text" class="form-control" id="staffUserName" name = "staffUserName" placeholder="Enter User Name" >
+						 		  </div>
+						 	</div>
+						 	
+						 	
+						 	<div class = "col-md-6">
+						 		  <div class="form-group">
+								    <label for="staffPassword"><i class="fa fa-key" aria-hidden="true"></i> Password</label>
+								    <input type="text" class="form-control" id="staffPassword" name = "staffPassword" placeholder="Enter the password" >
+						 		  </div>
+						 	</div>
+						 	
+					</div>	
 
  
 
@@ -918,27 +930,25 @@
 	
 	
 
-			<div class = "row">				 
-					<div class = "form-group col-lg-4">
-					
-						<button type="submit" class="btn btn-primary btn-block">Submit</button>		
-					</div>
-					<div class = "form-group col-lg-4">
+					<div class = "row">				 
+							<div class = "form-group col-lg-4">
+							
+								<button type="submit" class="btn btn-primary btn-block">Submit</button>		
+							</div>
+							<div class = "form-group col-lg-4">
+								
+							</div>
+							<div class = "form-group col-lg-4">
+								<button type="reset" class="btn btn-warning btn-block">Reset</button>
+		
+							</div>
+							
+					<style>
 						
+								.btn-primary:hover{color:#fff;background-color:#0a0943;border-color:#009a9a}
+					</style>		
+								
 					</div>
-					<div class = "form-group col-lg-4">
-						<button type="reset" class="btn btn-warning btn-block">Reset</button>
-<!-- 						<button class="button button1" type="submit">Submit form</button> -->
-<!--   <button class="button button2" type="submit">Submit form</button> -->
-<!--   <button class="button button3" type="submit">Submit form</button> -->
-					</div>
-					
-			<style>
-				
-.btn-primary:hover{color:#fff;background-color:#0a0943;border-color:#009a9a}
-			</style>		
-						
-			</div>
 		
 
 
@@ -952,6 +962,48 @@
 
                                     <!--End Page main content / Tables and Forms -->
 </div>
+
+
+<script type="text/javascript">
+              function autoFill() {
+                document.getElementById('staffFirstName').value = "Nimal";
+                document.getElementById('staffLastName').value = "Gopal";
+                document.getElementById('staffAddress').value = "58/7,Batharamula";
+                document.getElementById('staffemailAddress').value = "nimal@gmail.com";
+                //0779999999
+                document.getElementById('mobNo').value = "0779999999";
+                //0819999999
+                document.getElementById('homNo').value = "0819999999";
+                
+                document.getElementById('dob').value = "10/14/2020";
+
+                document.getElementById('staffNIC').value = "999999999V";
+                //999999999V
+                document.getElementById('categoryRel').value = "Bhushist";
+                document.getElementById('joinedDate').value = "10/15/2020";
+                document.getElementById('staffEPF').value = "22";
+                document.getElementById('categoryJob').value = "Sales";
+                document.getElementById('staffBasicSalary').value = "30000";
+                document.getElementById('staffUserName').value = "nb";
+                document.getElementById('staffPassword').value = "nb";
+ 
+                     var radioElements = document.getElementsByName("staffGender");
+
+ 
+
+                    for (var i=0; i<radioElements.length; i++) {
+                      if (radioElements[i].getAttribute('value') == 'M') {
+                        radioElements[i].checked = true;
+                      }
+                } 
+              }
+              
+        </script>
+
+
+
+
+
 
         </div>
          <!-- Page Content  End-->

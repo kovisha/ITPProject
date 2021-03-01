@@ -33,14 +33,16 @@ public class deleteInstallmentTypeServlet extends HttpServlet {
 	
 		if (isTrue == true) {
 			List<installmentType> installTypeDet = installmentDButil.getInstallmentTypeDetails();
-	      	  request.setAttribute("installTypeDetail", installTypeDet);
-			
-			RequestDispatcher dis = request.getRequestDispatcher("DisplayInstallmentType.jsp");
+	      	request.setAttribute("installTypeDetail", installTypeDet);
+	      	session.setAttribute("result","successDeleteInstallType");
+	      	  
+			RequestDispatcher dis = request.getRequestDispatcher("adminAlertBoxes.jsp");
 			dis.forward(request, response);
 		}
 		else 
 		{	
-			RequestDispatcher dis2 = request.getRequestDispatcher("failRegistration.jsp");
+			session.setAttribute("result","failDeleteInstallType");
+			RequestDispatcher dis2 = request.getRequestDispatcher("adminAlertBoxes.jsp");
 			dis2.forward(request, response);
 		}
 	}

@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Staff OT</title>
+    <title>Staff OT Success</title>
 
     <!-- Bootstrap CSS CDN -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> 
@@ -31,7 +31,7 @@
      
 
     <div class="wrapper">
-        <!--Side Bar start-->  
+            <!--Side Bar start-->  
       <nav id="sidebar">
         <!--Side Bar header start-->  
           <div class="sidebar-header">
@@ -58,7 +58,7 @@
                 <li>
                     <!--Major A has no drop downs-->
                     <!--Link to page Major A-->
-                    <a href="">
+                    <a href="AdminDashBoard.jsp">
                         <!-- Font awsome icons -->
                         <i class="fas fa-tachometer-alt"></i>
                         Dash Board
@@ -76,20 +76,20 @@
                     <!-- Subtitles and links to those -->
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Customers">
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="#">
+                            <a href="viewUsers.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="customerReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -114,13 +114,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Category">
                         <li>
-                            <a href="#">
+                            <a href="insertCategory.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewCategory.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -150,19 +150,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Stock">
                         <li>
-                            <a href="#">
+                            <a href="insertNewStock.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewStock.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="StockReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -187,19 +187,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Item">
                         <li>
-                            <a href="#">
+                            <a href="InsertNewItem.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewItems.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ItemReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -223,16 +223,56 @@
                     <!-- Subtitles and links to those -->
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Orders">
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="#">
+                            <a href="orders_view.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Orderreport.jsp">
+                                <i class="fas fa-file-alt"></i>
+                                Reports
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End subtitiles -->
+
+                </li>
+                <!-- Orders end -->
+                
+                <!-- Delivery start -->
+                <li>
+                    <a href="#Delivery" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <!--Major B with drop downs-->
+                   <i class="fas fa-truck"></i>
+                       Delivery
+                    </a>
+                    <!-- Subtitles and links to those -->
+                    <!-- ID should be identical for each Submenu -->
+                    <ul class="collapse list-unstyled" id="Delivery">
+                        <li>
+                            <a href="ApointDeliveryStaff.jsp">
+                                <i class="fas fa-hands-helping"></i>
+                                Assign Delivery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminDeliveryType.jsp">
+                                <i class="fas fa-motorcycle"></i>
+                                Delivery Type
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminDeliveryStaff.jsp">
+                                <i class="fas fa-people-carry"></i>
+                                Delivery Staff
                             </a>
                         </li>
                         <li>
@@ -245,11 +285,11 @@
                     <!-- End subtitiles -->
 
                 </li>
-                <!-- Orders end -->
+                <!-- Delivery end -->
 
 
 
-                                <!-- Orders start -->
+                                <!-- Offers start -->
                 <li>
                     <a href="#Offers" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <!--Major B with drop downs-->
@@ -260,13 +300,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Offers">
                         <li>
-                            <a href="#">
+                            <a href="insertOffer.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="retrieveOffer">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -291,19 +331,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Suppliers">
                         <li>
-                            <a href="#">
+                            <a href="SupplierInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewSupplier.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="SupplierReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -326,19 +366,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Staff">
                         <li>
-                            <a href="#">
+                            <a href="StaffInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="StaffList.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="SalaryDashBoard.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -363,7 +403,7 @@
                     <ul class="collapse list-unstyled" id="UserPayment">
                         
                         <li>
-                            <a href="#">
+                            <a href="retrieveUsPay">
                                <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -388,13 +428,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="SupplyPayment">
                         <li>
-                            <a href="#">
+                            <a href="SupplierPaymentInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewSupplierPayment.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -425,13 +465,13 @@
                             </a>
                         </li> -->
                         <li>
-                            <a href="#">
+                            <a href="retrieveInstall">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="installReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -557,32 +597,47 @@
     <!-- end of navbar -->
 <div class = "container">
                                     <!--Start Page main content / Tables and Forms -->
-
- <table class="table table table-hover table-dark table-bordered table-sm text-center table-stripped">
-                        <thead>
+                
+         <!-- Apply Button to view -->
+            <div>
+                <div class = "container">
+                    <div class = "row">
+                        <div class = "col-lg-3"></div>
+                        <div class = "col-lg-6">
+                                    <ul>
+				                        <li><a href="StaffOTList.jsp">
+				                        <button type="" class="btn btn-secondary btn-block btn-sm">
+				                        View Staff OT
+				                        <i class="fas fa-eye"></i> 
+				                        </a>
+				                        </button>
+				                        </li>
+				                    </ul>
+                        </div>
+                        <div class = "col-lg-3"></div>
+                    </div>
+                </div>
+       		</div><!-- End of button VIEW -->       
+                    
+        <table class="table table table-hover table-dark table-bordered table-sm text-center table-stripped" id = "myTable">
+         
+         			 <thead>
                             <tr>
-                               
-                                <th>Staff ID</th>
                                 <th>First Name</th>
                                 <th>Last Name</th>
                                 <th>Job Title</th>
-                                
-                                
-                                
-                                
-                                
+                                <th>Staff ID</th>
+                                <th>OT Month(Date)</th>
+                                <th>OT Hours</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <!--   for (Todo todo: todos) {  -->
-                            <c:forEach var="staff" items="${listStaff}">
+
+					<tbody>
+					
+					
+					    <c:forEach var="staff" items="${listStaff}">
                             
-                            <c:set var = "id" value = "${staff.id}"/>
-                            
-                           
-  <!-- //staffID,staffFirstName,staffLastName,staffUserName,staffPassword,staffAddress,staffemailAddress,dob,staffNIC,categoryRel,staffGender,staffEPF,joinedDate,categoryJob,staffBasicSalary,mobNo,homNo
-				 -->                          
-                            
+                            <c:set var = "id" value = "${staff.id}"/>                            
 							<c:set var = "staffID" value = "${staff.staffID}"/>
 							<c:set var = "staffFirstName" value = "${staff.staffFirstName}"/>
 							<c:set var = "staffLastName" value = "${staff.staffLastName}"/>
@@ -594,76 +649,158 @@
 							<c:set var = "staffNIC" value = "${staff.staffNIC}"/>
 							<c:set var = "categoryRel" value = "${staff.categoryRel}"/>
 							<c:set var = "staffGender" value = "${staff.staffGender}"/>
-							
 							<c:set var = "staffEPF" value = "${staff.staffEPF}"/>
 							<c:set var = "joinedDate" value = "${staff.joinedDate}"/>
 							<c:set var = "categoryJob" value = "${staff.categoryJob}"/>
 							<c:set var = "staffBasicSalary" value = "${staff.staffBasicSalary}"/>
 							<c:set var = "mobNo" value = "${staff.mobNo}"/>
 							<c:set var = "homNo" value = "${staff.homNo}"/>
-				
-				
-				
-  		<c:url value = "StaffOTInduvidual.jsp" var = "staffOT">
-			<c:param name="id" value = "${id}"/>
-			<c:param name="staffID" value = "${staffID}"/>
-			<c:param name="staffFirstName" value = "${staffFirstName}"/>
-			<c:param name="staffLastName" value = "${staffLastName}"/>
-		
-			<c:param name="categoryJob" value = "${categoryJob}"/>
-			
-		</c:url>							
-	
-		
-
-
- 
-                                <tr class = "tableRow">
+							
+                            
+					
+					
+                               <tr class = "tableRow">
+                              <form action="insertOTStaff" method ="post" >
+                                 	<td>
+                                        <div class = "tableRowww">
+                                               ${staff.staffFirstName}
+                                        </div>    
+                                    </td>
+                                    <td>
+                                        <div class = "tableRowww">
+                                               ${staff.staffLastName}
+                                        </div>    
+                                    </td>
+                                    <td>
+                                        <div class = "tableRowww">
+                                               ${staff.categoryJob}
+                                        </div>    
+                                    </td>
+                                    <td>
+                                        <div class = "tableRowww">
+                                             <input type="text" class="form-control" id="staffID"  placeholder="Enter Staff ID" name = "staffID"  value = "${staff.staffID}">
+							                               
+                                        </div>    
+                                    </td>
+                                     <td>
+                                        <div class = "tableRowww">
+                                              <input type="date" class="form-control" id="ot" name = "ot"  placeholder="Pick OT date" name = "leaveDate" required> 
+                                        </div>    
+                                    </td>
+                                    <td>
+                                        <div class = "tableRowww">
+                                              <input class="form-control" type="number" id="otHours" name="otHours" min="0" max="31" required> 
+                                        </div>    
+                                    </td> 
                                     
                                     <td>
-                                    <div class = "tableRowww">
-										<c:out value="${staff.staffID}" /> 
-									</div>	
+                                        <div class = "tableRowww">
+                                           <!-- <button  type="submit" class="btn-sm btn-primary btn-block ">Add Leave</button> -->
+                                           
+                                           <button type="submit" class="btn-primary btn-sm btn-block ">
+	                                    		 <i class="fas fa-plus-circle"></i> Add OT
+                                    		</button>
+                                    		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                           
+                                        </div>    
                                     </td>
-                                    <td>
-                                    <div class = "tableRowww">
-										<c:out value="${staff.staffFirstName}" /> 
-									</div>	
-                                    </td>
-                                    <td>
-                                    <div class = "tableRowww">
-										<c:out value="${staff.staffLastName}" /> 
-									</div>	
-                                    </td>
-                                   
                                     
-                                    <td>
-                                    <div class = "tableRowww">
-										<c:out value="${staff.categoryJob}" /> 
-									</div>	
-                                    </td>
-                                  
+                                    
+                                    
                                  
-
-                                   <td class="tr1">
-                                   <div class = "tableRowww">
-                                   
-                                    	<button type="button" class="btn btn-outline-light btn-sm">
-                                    	<a href="${staffOT}">
-                           	          	<i class="fas fa-plus-circle"></i> Add OT
-                                    	</a> 
-                                    	</button>
-                                    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    </div>
-                                    </td>
+                                 
                            
-                                </tr>
-                                
-                            </c:forEach>
-                            <!-- } -->
-                        </tbody>
+				</form>
+				
+ 								</tr>
+ 					
+ 					</tbody>
+ 					</c:forEach>
+   			</table>
 
-                    </table> 
+         <style>
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: white;
+  background-color: #212529;
+  background-clip: padding-box;
+  border: 1px solid  #212529;
+  border-color: #595959;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .form-control1 {
+    transition: none;
+   
+    
+  }
+}
+
+.form-control1::-ms-expand {
+ background-color: #212529;
+  border: 0;
+}
+
+.form-control1:focus {
+  color: #495057;
+  background-color: #212529;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-control1::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.form-control1::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.form-control1:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.form-control1::-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.form-control1::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.form-control1:disabled, .form-control1[readonly] {
+ background-color:#212529;
+ color: white;
+  opacity: 0;
+}
+
+select.form-control1:focus::-ms-value {
+  color: white;
+  background-color: #212529;
+}
+
+.form-control-file,
+.form-control-range {
+  display: block;
+  width: 100%;
+}
+             
+                  
+                  </style>       
+
 
                                     <!--End Page main content / Tables and Forms -->
 </div>

@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class SupplierPayInsertServlet
@@ -21,6 +22,7 @@ public class SupplierPayInsertServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		HttpSession session = request.getSession();
 		
 		String suppPayID = request.getParameter("suppPayID");
 		String lastPayDate = request.getParameter("payingdate");
@@ -28,18 +30,18 @@ public class SupplierPayInsertServlet extends HttpServlet {
 		double paidAmount = Double.parseDouble(request.getParameter("payamount"));
 		String invoiceNo = request.getParameter("invoicenumber");
 		
-		
-		
 		boolean isTrue;
 		
 		isTrue = SupplierPaymentDBUtil.insertsupplierpaynow(suppPayID, lastPayDate, chequeNo, paidAmount, invoiceNo);
 		
 		if(isTrue == true) {
-			RequestDispatcher dis = request.getRequestDispatcher("ViewSupplierPayment.jsp");
+			session.setAttribute("result","successUpdateSupplierPayment");
+			RequestDispatcher dis = request.getRequestDispatcher("AlertBoxSupplier.jsp");
 			dis.forward(request,response);
 			
 		}else {
-			RequestDispatcher dis2 = request.getRequestDispatcher("Unsuccess.jsp");
+			session.setAttribute("result","failedUpdateSupplierPayment");
+			RequestDispatcher dis2 = request.getRequestDispatcher("AlertBoxSupplier.jsp");
 			dis2.forward(request,response);
 		}
 		

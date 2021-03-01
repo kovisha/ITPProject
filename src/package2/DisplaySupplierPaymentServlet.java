@@ -27,7 +27,7 @@ public class DisplaySupplierPaymentServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		try {
-			List <SupplierPayment> supplierPaymentDetails = SupplierPaymentDBUtil.displaysupplierpayment();
+			List <SupplierPayment> supplierPaymentDetails = SupplierPaymentDBUtil.displaysupplierpayment1();
 			request.setAttribute("supplierPaymentDetails" , supplierPaymentDetails);
 		}
 		catch(Exception e)

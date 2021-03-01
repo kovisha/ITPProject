@@ -1,152 +1,49 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-    <%@page import = "java.sql.*" %>
+     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>UDS Super</title>
-  <!--  <meta charset="utf-8">-->
-  <meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel = "stylesheet" href ="css/userHeaderFooter.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/search_sample.css">
-
-  <!--Javascript-->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-     <!--  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"> -->
-      <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet"> -->
-
-<style>
-
-
-th, td {
-  padding: 15px;
-}
-
-</style>
+<title>Order Summary</title>
+	<link rel = "stylesheet" type = "text/css" href = "css/login.css">
+	<link rel="stylesheet" href="css/search_sample.css">
+	 <link rel="stylesheet" href="new_sample.css">
+	 
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    
 </head>
 <body>
 
-  
-  <img src = "images/bgg.jpg"class = "pic1">
-  
-  
-  
-  <div class="header">
-    <nav class="navbar navbar-expand-lg" >
-      <img src="images/UDS_3.png" width="4%" height="4%"> 
-      
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto" >
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-                      </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
-                      </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Shop With Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-dark" type="submit" style="color: #ffffff">Search</button>
-        </form>
-        <div class="userImage">
-          <a href=""><img src="images/profile.png" style="width:50px" height="50px"></a>
-        </div>
-        <button type="button" class="btn btn-dark" style="margin-left: 2%;">Logout</button>
-      </div>
-    </nav>
-  </div> 
-  
-
-  
-<div class = "container ">
+        <header>
+			<%@include file="/ItemHeader2.jsp" %>
+		</header>
+		
+		<img src = "images/bgg.jpg" class = "pic">
+		<br><br><br><br><br>
+		
+		<div class = "container ">
 
       <div class = "row">
-        <div class = "col-sm-10"></div>
-        
-          <div class= "col" align = "right">
-            <button type="button" class="btn btn-success"><p style="width: 85px; font-size: 15px;">Order History </p></button>
-        </div>
+        <div class="col-sm-3"> 
+          </div>         
+          <div class="col-sm-6"> <p class = "welcome_msg">Cart Summary</p></div>
+          <div class = "col-sm-3">
+           <%-- <center>
+           <a href = "displayuserorders">
+           <input  style = "width : 150px ; height : 50px" type="submit"  value="ORDER HISTORY"  class="btn btn-success btn-lg btn-block">
+           </a>
+           </center>   --%>
+          </div>
        
       </div> <br>
-        <div class = "p-4 border border-info ">
-
-<div class="row">
-    <div class="col-md-4 order-md-2 mb-4">
-      <h4 class="d-flex justify-content-between align-items-center mb-3">
-        <span style = "font-weight: bold; font-size: 20px; font-family: georgia;">Your cart</span>
-        <span class="badge badge-secondary badge-pill">3</span>
-      </h4>
-      <ul class="list-group mb-3">
-        <li class="list-group-item d-flex justify-content-between lh-condensed">
-          <div>
-            <h6 class="my-0">Product name</h6>
-            <small class="text-muted">Brief description</small>
-          </div>
-          <span class="text-muted">$12</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between lh-condensed">
-          <div>
-            <h6 class="my-0">Second product</h6>
-            <small class="text-muted">Brief description</small>
-          </div>
-          <span class="text-muted">$8</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between lh-condensed">
-          <div>
-            <h6 class="my-0">Third item</h6>
-            <small class="text-muted">Brief description</small>
-          </div>
-          <span class="text-muted">$5</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between bg-light">
-          <div class="text-success">
-            <h6 class="my-0">Promo code</h6>
-            <small>EXAMPLECODE</small>
-          </div>
-          <span class="text-success">-$5</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between">
-          <span>Total (USD)</span>
-          <strong>$20</strong>
-        </li>
-      </ul>
-
-      <form class="card p-2">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Promo code">
-          <div class="input-group-append">
-            <button type="submit" class="btn btn-secondary">Redeem</button>
-          </div>
-        </div>
-      </form>
-    </div>
-    
-    <%
+      
+    <%--    <%
    
     String name = request.getParameter("itemName");
     double size = Double.parseDouble(request.getParameter("size"));
@@ -154,128 +51,266 @@ th, td {
 	String category = request.getParameter("categoryName");
 	String offer = request.getParameter("offerName");
    
-   %>
-    <div class="col-md-8 order-md-1">
-      <center> <h4 class="mb-3" style="font-weight: bold; font-size: 20px; font-family: Georgia;">Your Basket</h4></center> 
-        <form >
-            <table class="table  table-striped table-hover text-center  " style="font-size: 15px;" >
+   %> --%>
+    <div class = "p-8 border border-info " style = "background-color:#f5f5f5;"> 
+       <br>
+
+<div class="row">
+    <div class="col-md-3 order-md-2 mb-4" style = "font-size: 15px;">
+    <center>   <h4 class="d-flex justify-content-between align-items-center mb-3">
+      
+      
+       <span style = "font-weight: bold; font-size: 20px; font-family: georgia; color: black;">Your cart</span>
+        <span class="badge badge-secondary badge-pill"></span>
+       
+      </h4></center>
+      <ul class="list-group mb-3">
+     
+       <c:forEach var="cart" items= "${cartDetails}">
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+       
+          <div>
+            <h5 class="my-0">${cart.itemName}</h5>
+            
+          </div>
+          <span class="text-muted">RS.${cart.netAmount}</span>
+          
+        </li>
+       </c:forEach>
+      <br>
+        <li class="list-group-item d-flex justify-content-between">
+
+        <c:forEach var="total" items="${total}">
+         <strong> <span>Total Amount (RS)</span></strong>
+          <strong>RS.${total.total}</strong>
+       </c:forEach>
+        </li>
+        
+        
+      </ul>
+
+     <!--   <form class="card p-2">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Promo code">
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-secondary">Redeem</button>
+          </div>
+        </div>
+      </form>-->
+      <br><br> <br><br> <br><br> 
+       <div class= "col" align = "right">
+                <button onclick = "location.href='cashPayType.jsp' " type="button"class="btn btn-secondary btn-block" disabled><center><p style="width: 80px; height : 15px ;font-size: 15px; font-family: Georgia;"><i class="fas fa-shopping-cart"></i>Check out</p></center></button>
+            </div>
+    </div>
+    
+   
+    <div class="col-md-9 order-md-1">
+      <center> <h4 class="mb-3" style="font-weight: bold; font-size: 20px; font-family: Georgia; color: black;">Your Basket</h4></center> 
+       <!--   <form name = "signINform" method = "post" action = "updatecart" >-->
+           <center> <table class="table  table-striped table-hover text-center  " style="font-size: 15px;" >
                 <thead>
-                 <tr class="table-dark">
-                   <th scope="col" class="col-xs-2"><p class="h5">Item</p></th>
-                   <th scope="col" class="col-xs-2"></th>
-                   <th scope="col"class="col-xs-2"><p class="h5">Size</p></th>
-                   <th scope="col" class="col-xs-4"><p class="h5">Price(Rs.)</p></th>
-                   <th scope="col" class="col-xs-4"><p class="h5">Offer</p></th>
+                 <tr class="table-secondary">
+                 <th scope="col" class="col-xs-1"><p class="h5"></p></th>
+                   <th scope="col" class="col-xs-4"><p class="h5">Item</p></th>
+                   <th scope="col" class="col-xs-1"><p class="h5">Quantity</p></th>
+                   <th scope="col"class="col-xs-2"><p class="h5">Price(Rs.)</p></th>
+                   <th scope="col" class="col-xs-1"><p class="h5">Discount</p></th>
                    <th scope="col"class="col-xs-2"><p class="h5">Subtotal</p></th>
+                   <th scope="col"class="col-xs-2"><p class="h5"></p></th>
+                   <th scope="col"class="col-xs-2"><p class="h5"></p></th>
+                  
                  </tr>
                </thead>
                <tbody>
-                 <tr class="table-light" style="font-weight: bold; font-size: 20px;">
-                   <td><p class="h5" align = "left"><%=  name  %></p></td>
-                   <td>
-                    <script src = "increment.js"></script>
-                    <div class="input-group">
-                        <span class="input-group-btn">
-                      <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                          <span class="glyphicon glyphicon-minus"></span>
-                        </button>
-                        </span>
-                        <input style = "width: 20px;" type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-                        <span class="input-group-btn">
-                      <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-                          <span class="glyphicon glyphicon-plus"></span>
-                        </button>
-                        </span>
-                    </div>
-                
-                </td>
-                   <td><p class="h5"><%=  size %></p></td>
-                   <td><p class="h5"><%=price %></p></td>
-                   <td><p class="h5"><%=offer %></p></td>
-                   <td><p class="h5"></p></td>
-                 </tr>
-       
-               </tbody>
+               <c:set var="Total" value="{0}"/>
+               <c:forEach var="cart" items= "${cartDetails}">
+             <!--     <c:set var="netTotal" value="{0}"/>-->
                
-             </table>
-
-        </form>
-
+               <c:set var = "id" value ="${cart.id}"/>
+        	   <c:set var = "name" value ="${cart.itemName}"/>
+         	   <c:set var = "qty" value =" ${cart.qty}"/>
+         	   <c:set var = "price" value ="${cart.price}"/>
+         	   <c:set var = "discount" value ="${cart.discount}"/>
+               
+               
+                 <tr class="table-light" style="font-weight: bold; font-size: 20px;">
+                 
+                  <td><p class="h5" align = "center" name = "id">${cart.id}</p></td>
+                   <td><p class="h5" align = "left" name = "itemname">${cart.itemName}</p></td>
+                   <td><p class="h5" name = "qty">${cart.qty}</p></td>
+                    
+                   <!-- <div class = "incret">
+                      <input  type="button" onclick="decrementValue()" value="-" />
+                      <input  type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
+                      <input  type="button" onclick="incrementValue()" value="+" />
+                      </div>-->
+                
+                
+                   <td><p class="h5" name ="price">${cart.price}</p></td>
+                   <td><p class="h5" name = "discount">${cart.discount}</p></td>
+                   <c:set var="Total" value="{Total+cart.netAmount}"/>
+                   <td><p class="h5" >RS.${cart.netAmount}</p></td>
+                   <td><p class="h5">
+                  <c:url value = "updateCartItem.jsp" var = "cartupdate">
+           			<c:param name="id" value = "${id}"/>
+           			<c:param name="name" value = "${name}"/>
+           			<c:param name="qty" value = "${qty}"/>
+           			<c:param name="price" value = "${price}"/>
+           			<c:param name="discount" value = "${discount}"/>
+           			</c:url>
+          
+                       <a href = "${cartupdate}" >
+                   
+                   
+                   <div class= "col" align = "right"> 
+               		<!-- <input type="button" class="btn btn-outline-warning" style = "font-size: 12px; width : 100px"value = "change quantity"/>
+               --><button type = "submit" class="btn btn-outline-warning" style = "font-size: 12px; width : 120px"> <i class="fa fa-edit"></i>&nbsp;change quantity</button>
+               <!-- <center><p style="width: 80px; height : 15px ;font-size: 15px; font-family: Georgia;"><i class="fas fa-shopping-cart"></i>Update</p></center> -->
+         		   </div>
+         		   
+         		   </a>
+                   
+                   </p>
+                  <!--<div>
+                   
+                    <input  type="submit" onclick="decrementValue()" value="-" />
+                      <input  style = "text-align:center" type="text" name="quantity" value ="1"  max="10" size="1" id="number" />
+                      <input  type="submit" onclick="incrementValue()" value="+" />
+                     </p>
+                   
+                </div>-->
+                   
+                   <td><p class="h5" align = "center">
+                   
+                   <script>
+						    function myFunction() {
+ 							 alert("Do you want to Delete Item?");
+								}
+					</script>
+                   
+                   <div class= "col" align = "right">
+                   <a href = "deletetempitem?&id=${cart.id}&qty=${cart.qty}&itemid=${cart.itemid}">
+                 <!-- <div><i class="fas fa-eye"></i><input type="button" onclick="myFunction()" class="btn btn-outline-danger" style = "font-size: 12px; width : 80px"value = "Delete Item"/></div> -->
+                  <button type = "submit" onclick="myFunction()" class="btn btn-outline-danger" style = "font-size: 12px; width : 100px"><i class="fa fa-trash-alt"></i>&nbsp;Delete Item</button>
+                  </a>
+                   </div>
+                   </p></td>
+                   
+                 </tr>
+                 
+                 
+                  
+             </c:forEach>
+             
+             <c:forEach var="total" items="${total}">
+             <tr  class="table-secondary" style="font-weight: bold; font-size: 20px;">
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                  <td></td>
+               <center><td colspan="2"><p  class="h4"  ><strong>Total Amount : </strong>
+                 <strong>RS.${total.total}</strong></p></td></center>
+                 </tr>
+         
         
-  
+
+       <!-- </form>-->
+       
+       <tr class="table-light" style="font-weight: bold; font-size: 13px;">
+       <td>
+       
+        </td>
+         <td></td>
+          <td></td>
+          <td colspan="3">
+          
+          <script>
+           function confirmOrder(){
+        	  alert("Are you sure you want to place order ?");
+        	  
+          }
+          
+            /* document.querySelector(".first").addEventListener('click', function(){
+        	  swal("Our First Alert", "With some body text and success icon!", "success");
+        	}); */
+          
+          </script>
+          
+           <a href = "orderinsert?&total=${total.total}">
+    <%-- <center><input type="button" id = "mybtn" onclick="confirmOrder()" class="btn btn-outline-primary" style = "font-size: 15px; width : 150px"value = "PLACE ORDER"/></center> --%>
+           <center><button type = "submit" id = "mybtn" onclick="confirmOrder()" class="btn btn-outline-primary" style = "font-size: 15px; width : 150px" ><i class="fa fa-check-circle"></i>&nbsp;PLACE ORDER</button></center>
+        </a>
+          
+          </td>
+          
+          
+          <td></td>
+           <td></td>
+        
+        </tr>
+    </c:forEach>
+    
+    
+    
+                <tr   class="table-light" style="font-weight: bold; font-size: 13px;">
+                 <td> 
+                 <a href = "displayItem?category=MilkPowder">
+                 <!-- <input type="button" class="btn btn-secondary btn-block" style = "font-size: 12px; width : 120px"value = "Add Items"/> -->
+                 <center><button type = "submit" id = "mybtn" class="btn btn-outline-success" style = "font-size: 15px; width : 150px" ><i class="fas fa-plus"></i>&nbsp;Add Items</button></center>
+                 </a>
+                 
+                 </td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                  <td></td>
+                 <td></td>
+                 <td></td>
+                 </tr>
+         
+           
+      
+              
+             
+             
+    
+     </tbody>
+               
+     </table></center>
     </div>
   </div>
+</div>
 
-  </div><br><br>
+  <br><br>
   
-   <div class = "container">
+  <!--  <div class = "container">
         <div class = "row">
             <div class= "col">
-                <button type="button" onclick = "location.href='ItemDisplay].jsp'" class="btn btn-success"><p style="width: 80px; font-size: 15px;">Continue </p></button>
+                <button type="button" onclick = "location.href='ItemDisplay.jsp'" class="btn btn-success"><p style="width: 160px; font-size: 15px;"><i class="fas fa-shopping-basket"></i>Continue Shopping </p></button>
+            </div>
+            <div class= "col" align = "right">
+                <button type="button" onclick = "location.href='OrderHistory.jsp'" class="btn btn-success"><p style="width: 160px; font-size: 15px;"><i class="fas fa-shopping-basket"></i> Place Order</p></button>
             </div>
             <div class= "col" align = "right">
                 <button type="button" class="btn btn-success"><p style="width: 80px; font-size: 15px;">Check out </p></button>
-            </div>
+            </div> 
         </div>
-    </div>'
+    </div>' -->
     <br>'
 
 
   </div><br>
 
-
-<br><br><br>
-      <footer class="container-fluid bg-grey py-5">
-        <div class="container">
-           <div class="row">
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-6 ">
-                           <div class="logo-part">
-                              <img src="images/UDS_3.png" class="w-50 logo-footer" >
-                              <p>20/1 A, Wattegama Road,, Madawala 20260.</p>
-                              <p>For more information contact 077-7828512.</p>
-                              <p>(Daily operating hours 8.00a.m to 9.00p.m)</p>
-                           </div>
-                        </div>
-                        <div class="col-md-6 px-4">
-                           <h6> About Company</h6>
-                           <p>Now you can order online and get a delivery to your doorstep.</p>
-                           <a href="#" class="btn-footer"> More Info </a><br>
-                           <a href="#" class="btn-footer"> Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-6 px-4">
-                               <h6> Help us</h6>
-                               <div class="row ">
-                                  <div class="col-md-6">
-                                     <ul>
-                                        <li> <a href="#"> Home</a> </li>
-                                        <li> <a href="#"> About</a> </li>
-                                        <li> <a href="#"> Shop With Us</a> </li>
-                                        <li> <a href="#"> Contact</a> </li>
-                                        <li> <a href="#"> Logout</a> </li>
-                                     </ul>
-                                  </div>
-                               </div>
-                        </div>
-                        <div class="col-md-6 ">
-                               <h6> Social Media Links</h6>
-                               <div class="social">
-                                <a href="#" class="fa fa-facebook"></a>
-                                <a href="#" class="fa fa-whatsapp"></a> 
-                                <a href="#" class="fa fa-instagram"></a>
-                               </div>
-                               <p>Copyright © 2020 UDS Super (Pvt) Ltd. All Rights Reserved</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+		
+		
+		
+		
+	</br></br></br></br></br></br>
+		<%@include file="/footer.jsp" %>
+	
 
 </body>
 </html>

@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/deliveryTypeRetrieveServlet")
 public class deliveryTypeRetrieveServlet extends HttpServlet {
@@ -17,6 +18,8 @@ public class deliveryTypeRetrieveServlet extends HttpServlet {
    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
+		
+		
 		try {
 			List<DeliveryType> deliveryDetail = DeliveryDBUtil.getDeliveryTypeDetails();
 			request.setAttribute("deliveryDetail", deliveryDetail);	

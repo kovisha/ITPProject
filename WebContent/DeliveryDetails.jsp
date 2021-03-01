@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -14,6 +15,7 @@
     	
     	<!-- Custom CSS -->
     	<link rel = "stylesheet" type = "text/css" href = "css/login.css">
+    	<link rel = "stylesheet" type = "text/css" href = "css/delivery.css">
     	
     	<!-- Java Script -->
     	<script type="text/javascript" src = "JS/delivery.js" async></script>
@@ -32,22 +34,44 @@
 				<div class = "card-body">					
 					<div class="card text-white bg-dark mb-3 card-header text-center">Delivery Details</div>
 					
-					<form name ="deliveryDetails" method="post" action="">
+					<form name ="deliveryDetails" method="post" action="insertCusDelDetails">
 						
 						<br>
 						<div class="form-group">
 					 		<label>Delivery Type</label>
 							<select class="form-control" name="dtype">
-								<option>Normal</option>
-						     	<option>Express</option>
-						      	<option>Store Pickup</option>
+								<%
+						      	try{ 		
+						      		String Query= "select * from deliverytype";
+						      		
+						      		Class.forName("com.mysql.jdbc.Driver").newInstance();
+						      		Connection conn =DriverManager.getConnection( "jdbc:mysql://localhost:3306/udssuper","root","M@ng@th@9093");
+						      		Statement stm = conn.createStatement();
+						      		ResultSet rs = stm.executeQuery(Query);
+						      		
+						      		while(rs.next()){
+						      			
+						      			%> 
+						      			<option value="<%=rs.getString("typeName")%>"><%=rs.getString("typeName") %></option>
+						      			<%
+						      		}
+						      	}catch(Exception ex){
+						      		ex.printStackTrace();
+						      		out.println("Error" + ex.getMessage());
+						      	}
+						      	
+						     %>
+						      	
 			      			</select>
+			      			
+			      			
+			      			
 					 	</div>
 						
-		      			<div class="form-group">
+		      			<!-- <div class="form-group">
 			      			<label>Delivery Charges</label>
 			      			<input class="form-control" type ="text" name="charges">
-		      			</div>
+		      			</div> -->
 		      			
 		      			<div class="form-check"> 
 						 	<input class="form-check-input" type="checkbox" id="addressCheck" onclick="EnableDisableTextBox(this)">
@@ -68,7 +92,7 @@
 		      				<label> *Delivery charges may vary according to the distance</label>
 		      			</div>
 		      		
-		      			<h4 class="card-price text-center">Order Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rs 540.00</h4>
+		      			<!-- <h4 class="card-price text-center">Order Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rs 540.00</h4> -->
 		      			
 		      			<div class="text-center">
 		      				<button type="submit" class="btn btn-success">Place Order</button>

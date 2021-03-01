@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 /**
@@ -30,11 +31,15 @@ public class insertInstallTypeServlet extends HttpServlet {
 			isTrue = installmentDButil.insertInstallType(desc,months);
 			
 			if (isTrue == true) {
-				RequestDispatcher dis = request.getRequestDispatcher("insertInstallmentType.jsp");
+				HttpSession session = request.getSession();
+				session.setAttribute("result","successInsertInstallType");
+				RequestDispatcher dis = request.getRequestDispatcher("adminAlertBoxes.jsp");
 				dis.forward(request, response);
 			}
 			else{
-				RequestDispatcher dis2 = request.getRequestDispatcher("failRegistration.jsp");
+				HttpSession session = request.getSession();
+				session.setAttribute("result","failInsertInstallType");
+				RequestDispatcher dis2 = request.getRequestDispatcher("adminAlertBoxes.jsp");
 				dis2.forward(request, response);
 			}
 	}

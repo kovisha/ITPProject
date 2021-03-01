@@ -2,11 +2,15 @@ package Delivery;
 
 public class DeliveryType {
 
+	private int id;
 	private String typeName;
 	private double charges;
 	
-	public DeliveryType(String typeName, double charges) {
+	
+
+	public DeliveryType(int id, String typeName, double charges) {
 		super();
+		this.id = id;
 		this.typeName = typeName;
 		this.charges = charges;
 	}
@@ -18,6 +22,11 @@ public class DeliveryType {
 	public double getCharges() {
 		return charges;
 	}
+	
+	public int getId() {
+		return id;
+	}
+
 
 	
 }

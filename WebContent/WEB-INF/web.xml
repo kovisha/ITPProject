@@ -10,9 +10,8 @@
 <!--     <welcome-file>default.jsp</welcome-file> -->
 <!--   </welcome-file-list> -->
 
-<!-- 	Joachim -->
-	
-	<servlet>
+<!-- /************************************************Joachim Webxml********************************************/ -->
+    <servlet>
 		<servlet-name>supplierinsert</servlet-name>
 		<servlet-class>package1.SupplierInsertServlet</servlet-class>
 	</servlet>
@@ -48,7 +47,6 @@
          	<url-pattern>/deletesupplier</url-pattern>
     </servlet-mapping>
          
-         
     <servlet>
 		<servlet-name>supplierpaymentinsert</servlet-name>
 		<servlet-class>package2.SupplierPaymentInsertServlet</servlet-class>
@@ -83,6 +81,33 @@
     <servlet-mapping>
          	<servlet-name>supplierpaymentdelete</servlet-name>
          	<url-pattern>/deletesupplierpayment</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+         <servlet-name>supplierstocks</servlet-name>
+         <servlet-class>package1.SuppliedStocksServlet</servlet-class>
+   	</servlet>
+    <servlet-mapping>
+         	<servlet-name>supplierstocks</servlet-name>
+         	<url-pattern>/viewStocks</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+         <servlet-name>displaydeletesupplier</servlet-name>
+         <servlet-class>package1.DisplayDeletedSupplierServlet</servlet-class>
+   	</servlet>
+    <servlet-mapping>
+         	<servlet-name>displaydeletesupplier</servlet-name>
+         	<url-pattern>/supplierdeletedisplay</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+         <servlet-name>reinsertsupplier</servlet-name>
+         <servlet-class>package1.SupplierReinsertServlet</servlet-class>
+   	</servlet>
+    <servlet-mapping>
+         	<servlet-name>reinsertsupplier</servlet-name>
+         	<url-pattern>/consupplierRe</url-pattern>
     </servlet-mapping>
     
 <!-- #################################	Vithyashagar#################################### -->
@@ -142,7 +167,78 @@
 		<servlet-name>DeliveryStaffView</servlet-name>
 		<url-pattern>/viewDeliveryStaffs</url-pattern>
 	</servlet-mapping>
+	
+<!-- 	Delivery Type Update Form -->
 
+	<servlet> 
+		<servlet-name>DeliveryTypeUpdateForm</servlet-name>
+		<servlet-class>Delivery.DeliveryTypeUpdateServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DeliveryTypeUpdateForm</servlet-name>
+		<url-pattern>/DeliveryTypeUpdate</url-pattern>
+	</servlet-mapping>
+
+
+<!-- 	Delivery Type Update Details-->
+
+	<servlet> 
+		<servlet-name>DeliveryTypeUpdateDetails</servlet-name>
+		<servlet-class>Delivery.DeliveryTypeDetailsUpdateServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DeliveryTypeUpdateDetails</servlet-name>
+		<url-pattern>/updateDeliveryType</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Insert New Customer Delivery Details -->
+	
+	<servlet> 
+		<servlet-name>insertCustomerDeliveryDetails</servlet-name>
+		<servlet-class>Delivery.CusDeliveryDetailsInsertServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>insertCustomerDeliveryDetails</servlet-name>
+		<url-pattern>/insertCusDelDetails</url-pattern>
+	</servlet-mapping>
+	
+	<!--User Profile Delivery Details Retrieve  -->
+	<servlet> 
+		<servlet-name>UProfileDeliveryDetails</servlet-name>
+		<servlet-class>Delivery.UProfileDeliveryDet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>UProfileDeliveryDetails</servlet-name>
+		<url-pattern>/UserProfileDeliveryDetails</url-pattern>
+	</servlet-mapping>
+	
+	<!--User Profile Delivery Details Ratin Insert-->
+	<servlet> 
+		<servlet-name>DeliveryRatingInsert</servlet-name>
+		<servlet-class>Delivery.DeliveryRatingInsertServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DeliveryRatingInsert</servlet-name>
+		<url-pattern>/DelRatingInsert</url-pattern>
+	</servlet-mapping>
+	
+	<!--Admin Sugestions Details Retrieve-->
+	<servlet> 
+		<servlet-name>Suggestions</servlet-name>
+		<servlet-class>Delivery.ViewSuggestions</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Suggestions</servlet-name>
+		<url-pattern>/viewSuggest</url-pattern>
+	</servlet-mapping>
+	
+	
 <!-- #################################	AGIL#################################### -->
 
 <servlet>
@@ -155,12 +251,49 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>yourPaymentDetail</servlet-name>
+		<servlet-class>userPayment.yourPaymentDetailsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>yourPaymentDetail</servlet-name>
+		<url-pattern>/retreiveYourPay</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>monthlyInstall</servlet-name>
+		<servlet-class>Installment.monthlyInstallServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>monthlyInstall</servlet-name>
+		<url-pattern>/monthInstall</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>useInputInstallmente</servlet-name>
+		<servlet-class>Installment.userInputInstallmentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>useInputInstallmente</servlet-name>
+		<url-pattern>/enterInstall</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>cardEnter</servlet-name>
 		<servlet-class>userPayment.cardServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>cardEnter</servlet-name>
 		<url-pattern>/cardDet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet> 
+		<servlet-name>insertUserPay</servlet-name>
+		<servlet-class>userPayment.insertPaymentServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>insertUserPay</servlet-name>
+		<url-pattern>/insertUsPay</url-pattern>
 	</servlet-mapping>
 	
 	<servlet> 
@@ -184,6 +317,16 @@
 	</servlet-mapping>
 	
 	<servlet> 
+		<servlet-name>caluculateOffer</servlet-name>
+		<servlet-class>userPayment.calculatePaymentServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>caluculateOffer</servlet-name>
+		<url-pattern>/calOffer</url-pattern>
+	</servlet-mapping>
+	
+	<servlet> 
 		<servlet-name>DisplayInstallment</servlet-name>
 		<servlet-class>Installment.retrieveInstallmentServlet</servlet-class>
 	</servlet>
@@ -192,6 +335,16 @@
 		<servlet-name>DisplayInstallment</servlet-name>
 		<url-pattern>/retrieveInstall</url-pattern>
 	</servlet-mapping>
+	
+	<servlet> 
+		<servlet-name>updateInstallment</servlet-name>
+		<servlet-class>Installment.updateInstallmentServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>updateInstallment</servlet-name>
+		<url-pattern>/updateInstall</url-pattern>
+	</servlet-mapping>  
 	
     <servlet> 
 		<servlet-name>deleteInstallment</servlet-name>
@@ -224,6 +377,16 @@
 	</servlet-mapping>
 	
 	<servlet> 
+		<servlet-name>updateInstallmentType</servlet-name>
+		<servlet-class>Installment.updateInstallmentTypeServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>updateInstallmentType</servlet-name>
+		<url-pattern>/updateInstallType</url-pattern>
+	</servlet-mapping>
+	
+	<servlet> 
 		<servlet-name>deleteInstallmentType</servlet-name>
 		<servlet-class>Installment.deleteInstallmentTypeServlet</servlet-class>
 	</servlet>
@@ -231,6 +394,26 @@
 	<servlet-mapping>
 		<servlet-name>deleteInstallmentType</servlet-name>
 		<url-pattern>/deleteInstallType</url-pattern>
+	</servlet-mapping>
+	
+	<servlet> 
+		<servlet-name>backupRetrieveInstallmentType</servlet-name>
+		<servlet-class>Installment.backupInstallmentTypeServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>backupRetrieveInstallmentType</servlet-name>
+		<url-pattern>/retrieveBackupInstallType</url-pattern>
+	</servlet-mapping>
+	
+	<servlet> 
+		<servlet-name>reInsertInstallmentType</servlet-name>
+		<servlet-class>Installment.reInsertInstallTypeServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>reInsertInstallmentType</servlet-name>
+		<url-pattern>/reInsertInstallType</url-pattern>
 	</servlet-mapping>
 	
 	<servlet> 
@@ -254,6 +437,16 @@
 	</servlet-mapping>
 	
 	<servlet> 
+		<servlet-name>updateOffer</servlet-name>
+		<servlet-class>Offer.updateOfferServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>updateOffer</servlet-name>
+		<url-pattern>/updateOffer</url-pattern>
+	</servlet-mapping>
+	
+	<servlet> 
 		<servlet-name>deleteOffer</servlet-name>
 		<servlet-class>Offer.deleteOfferServlet</servlet-class>
 	</servlet>
@@ -263,18 +456,361 @@
 		<url-pattern>/deleteOffer</url-pattern>
 	</servlet-mapping>
 
-
-<!-- #################################	KOVISHA#################################### -->
-
-		
-
-<!-- #################################	MARYAM#################################### --> 
-
-<!-- #################################	KRUSHI#################################### -->
+<!--############################Maryam ################### -->
 <servlet>
+		<servlet-name>loginServlet</servlet-name>
+		<servlet-class>Customer.loginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>loginServlet</servlet-name>
+		<url-pattern>/customerLogin</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>registerServlet</servlet-name>
+		<servlet-class>Customer.registerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>registerServlet</servlet-name>
+		<url-pattern>/customerRegister</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>userProfileServlet</servlet-name>
+		<servlet-class>Customer.userProfileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userProfileServlet</servlet-name>
+		<url-pattern>/UserProfile</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>userUpdateServlet</servlet-name>
+		<servlet-class>Customer.userUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userUpdateServlet</servlet-name>
+		<url-pattern>/UpdateUserProfile</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>changePasswordServlet</servlet-name>
+		<servlet-class>Customer.changePasswordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>changePasswordServlet</servlet-name>
+		<url-pattern>/changePassword</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>adminloginServlet</servlet-name>
+		<servlet-class>Customer.adminloginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminloginServlet</servlet-name>
+		<url-pattern>/adminLogin</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>adminLogoutServlet</servlet-name>
+		<servlet-class>Customer.adminLogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminLogoutServlet</servlet-name>
+		<url-pattern>/adminLogout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CustomerDeleteServlet</servlet-name>
+		<servlet-class>Customer.CustomerDeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CustomerDeleteServlet</servlet-name>
+		<url-pattern>/deleteCustomer</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>CustomerRestoreServlet</servlet-name>
+		<servlet-class>Customer.CustomerRestoreServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CustomerRestoreServlet</servlet-name>
+		<url-pattern>/restoreCustomer</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>getLoyalityPointsServlet</servlet-name>
+		<servlet-class>Customer.getLoyalityPointsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>getLoyalityPointsServlet</servlet-name>
+		<url-pattern>/getLoyaltyPoints</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>logoutServlet</servlet-name>
+		<servlet-class>Customer.logoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logoutServlet</servlet-name>
+		<url-pattern>/userLogout</url-pattern>
+	</servlet-mapping>
+         
+         
+    <servlet>
+		<servlet-name>loyaltyDeductServlet</servlet-name>
+		<servlet-class>Customer.loyaltyDeductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>loyaltyDeductServlet</servlet-name>
+		<url-pattern>/deductLoyalty</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>loyaltyPointsAddServlet</servlet-name>
+		<servlet-class>Customer.loyaltyPointsAddServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>loyaltyPointsAddServlet</servlet-name>
+		<url-pattern>/addLoyalty</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>resetPasswordServlet</servlet-name>
+		<servlet-class>Customer.resetPasswordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>resetPasswordServlet</servlet-name>
+		<url-pattern>/resetPassword</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>viewActiveUserServlet</servlet-name>
+		<servlet-class>Customer.viewActiveUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>viewActiveUserServlet</servlet-name>
+		<url-pattern>/viewUser</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>viewDeletedUserServlet</servlet-name>
+		<servlet-class>Customer.viewDeletedUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>viewDeletedUserServlet</servlet-name>
+		<url-pattern>/viewDeletedUser</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>viewLoyaltyServlet</servlet-name>
+		<servlet-class>Customer.viewLoyaltyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>viewLoyaltyServlet</servlet-name>
+		<url-pattern>/viewLoyalty</url-pattern>
+	</servlet-mapping>
+	
+	<!-- ***********************************************Kovisha :) Category , Stock, Item Management **********************************************************-->
+		
+		<servlet>
+		<servlet-name>UpdateStockWithoutReorder</servlet-name>
+		<servlet-class>Stock.UpdateStockWithoutReorder</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+		<servlet-name>UpdateStockWithoutReorder</servlet-name>
+		<url-pattern>/updateWithoutReorder</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
+		<servlet-name>CategoryList</servlet-name>
+		<servlet-class>Category.CategoryList</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+		<servlet-name>CategoryList</servlet-name>
+		<url-pattern>/ViewCategory</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
+		<servlet-name>CategoryInsert</servlet-name>
+		<servlet-class>Category.CategoryInsert</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+		<servlet-name>CategoryInsert</servlet-name>
+		<url-pattern>/insertCategory</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
+		<servlet-name>ItemInsert</servlet-name>
+		<servlet-class>Item.ItemInsert</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+		<servlet-name>ItemInsert</servlet-name>
+		<url-pattern>/insertItem</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
+		<servlet-name>ItemListDetails</servlet-name>
+		<servlet-class>Item.ItemList</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+		<servlet-name>ItemListDetails</servlet-name>
+		<url-pattern>/viewItem</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
+		<servlet-name>StockInsert</servlet-name>
+		<servlet-class>Stock.StockInsert</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+		<servlet-name>StockInsert</servlet-name>
+		<url-pattern>/insertStock</url-pattern>
+		</servlet-mapping>
+		
+		
+		<servlet>
+		<servlet-name>StockListDetails</servlet-name>
+		<servlet-class>Stock.StockList</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+		<servlet-name>StockListDetails</servlet-name>
+		<url-pattern>/viewStockDetails</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
+		<servlet-name>CategoryDelete</servlet-name>
+		<servlet-class>Category.CategoryDelete</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+		<servlet-name>CategoryDelete</servlet-name>
+		<url-pattern>/deleteCategory</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
+		<servlet-name>ItemDelete</servlet-name>
+		<servlet-class>Item.ItemDelete</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+		<servlet-name>ItemDelete</servlet-name>
+		<url-pattern>/deleteItem</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
+		<servlet-name>ActivateItems</servlet-name>
+		<servlet-class>Item.ActivateItems</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+		<servlet-name>ActivateItems</servlet-name>
+		<url-pattern>/itemActivate</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
+		<servlet-name>stockDelete</servlet-name>
+		<servlet-class>Stock.stockDelete</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+		<servlet-name>stockDelete</servlet-name>
+		<url-pattern>/deleteStock</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
+		<servlet-name>CategoryUpdate</servlet-name>
+		<servlet-class>Category.CategoryUpdate</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+		<servlet-name>CategoryUpdate</servlet-name>
+		<url-pattern>/updateCategory</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
+		<servlet-name>ItemUpdate</servlet-name>
+		<servlet-class>Item.ItemUpdate</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+		<servlet-name>ItemUpdate</servlet-name>
+		<url-pattern>/updateItem</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
+		<servlet-name>StockUpdate</servlet-name>
+		<servlet-class>Stock.StockUpdate</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+		<servlet-name>StockUpdate</servlet-name>
+		<url-pattern>/updateStock</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
+		<servlet-name>NotificationsList</servlet-name>
+		<servlet-class>Stock.NotificationsList</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+		<servlet-name>NotificationsList</servlet-name>
+		<url-pattern>/viewNotiications</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
+		<servlet-name>DeactivatedItemsList</servlet-name>
+		<servlet-class>Item.DeactivatedItemsList</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+		<servlet-name>DeactivatedItemsList</servlet-name>
+		<url-pattern>/viewDeactivatedItems</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
+		<servlet-name>notifyDelete</servlet-name>
+		<servlet-class>Stock.notifyDelete</servlet-class>
+		</servlet>
+		
+		<servlet-mapping>
+		<servlet-name>notifyDelete</servlet-name>
+		<url-pattern>/deleteNotifications</url-pattern>
+		</servlet-mapping>
+		<!-- ***********************************************End of Category , Stock, Item Management **********************************************************-->
+ 
+	<!--################################KRUSHI########################  -->
+	<servlet>
+		<servlet-name>OrderHistoryForDispatchServlet</servlet-name>
+		<servlet-class>Order_Management.OrderHistoryForDispatchServlet</servlet-class>
+	    </servlet>
+	    
+	    <servlet-mapping>
+		<servlet-name>OrderHistoryForDispatchServlet</servlet-name>
+		<url-pattern>/dishis</url-pattern>
+	  </servlet-mapping>
+	
+	<servlet>
 		<servlet-name>onProgressAdminServlet</servlet-name>
-		<servlet-class>Admin.OnProgressAdminServlet</servlet-class>
-	 </servlet>
+		<servlet-class>Order_Management.OnProgressAdminServlet</servlet-class>
+	    </servlet>
 	    
 	    <servlet-mapping>
 		<servlet-name>onProgressAdminServlet</servlet-name>
@@ -283,7 +819,7 @@
 
       <servlet>
 		<servlet-name>DispatchedAdminServlet</servlet-name>
-		<servlet-class>Admin.DispatchedAdminServlet</servlet-class>
+		<servlet-class>Order_Management.DispatchedAdminServlet</servlet-class>
 	    </servlet>
 	    
 	    <servlet-mapping>
@@ -294,7 +830,7 @@
 	  
 	     <servlet>
 		<servlet-name>offerDisplayServlet</servlet-name>
-		<servlet-class>User.offerDisplayServlet</servlet-class>
+		<servlet-class>Order_Management.offerDisplayServlet</servlet-class>
 	    </servlet>
 	    
 	    <servlet-mapping>
@@ -304,7 +840,7 @@
      
           <servlet>
 		<servlet-name>ItemDisplayServlet</servlet-name>
-		<servlet-class>User.ItemDisplayServlet</servlet-class>
+		<servlet-class>Order_Management.ItemDisplayServlet</servlet-class>
 	    </servlet>
 	    
 	    <servlet-mapping>
@@ -314,7 +850,7 @@
 	  
 	    <servlet>
 		<servlet-name>DeleteOrderServlet</servlet-name>
-		<servlet-class>Admin.DeleteOrderServlet</servlet-class>
+		<servlet-class>Order_Management.DeleteOrderServlet</servlet-class>
 	    </servlet>
 	    
 	    <servlet-mapping>
@@ -324,19 +860,178 @@
 	  
 	   <servlet>
 		<servlet-name>OrderHistoryDisplayServlet</servlet-name>
-		<servlet-class>User.OrderHistoryDisplayServlet</servlet-class>
+		<servlet-class>Order_Management.OrderHistoryDisplayServlet</servlet-class>
 	    </servlet>
 	    
 	    <servlet-mapping>
 		<servlet-name>OrderHistoryDisplayServlet</servlet-name>
 		<url-pattern>/orderHistory</url-pattern>
 	  </servlet-mapping>
- 
-<!-- #################################	HILLARY#################################### -->  
-    
-    <servlet>
+	  
+	   <servlet>
+		<servlet-name>displayCategoryServlet</servlet-name>
+		<servlet-class>Order_Management.displayCategoryServlet</servlet-class>
+	    </servlet>
+	    
+	    <servlet-mapping>
+		<servlet-name>displayCategoryServlet</servlet-name>
+		<url-pattern>/displayCat</url-pattern>
+	  </servlet-mapping>
+	  
+	   <servlet>
+		<servlet-name>NewItemDisplayServlet</servlet-name>
+		<servlet-class>Order_Management.NewItemDisplayServlet</servlet-class>
+	    </servlet>
+	    
+	    <servlet-mapping>
+		<servlet-name>NewItemDisplayServlet</servlet-name>
+		<url-pattern>/displayItem</url-pattern>
+	  </servlet-mapping>
+	  
+	  
+	 
+	   <servlet>
+		<servlet-name>NewOfferDisplayServlet</servlet-name>
+		<servlet-class>Order_Management.NewOfferDisplayServlet</servlet-class>
+	    </servlet>
+	    
+	    <servlet-mapping>
+		<servlet-name>NewOfferDisplayServlet</servlet-name>
+		<url-pattern>/displayOffer</url-pattern>
+	  </servlet-mapping>
+	  
+	  
+      <servlet>
+		<servlet-name>tempCartCreateServlet1</servlet-name>
+		<servlet-class>Order_Management.tempCartCreateServlet</servlet-class>
+	  </servlet>
+	    
+	  <servlet-mapping>
+		<servlet-name>tempCartCreateServlet1</servlet-name>
+		<url-pattern>/tempcart</url-pattern>
+	  </servlet-mapping>
+	  
+	   <servlet>
+		<servlet-name>tempCartInsertServlet</servlet-name>
+		<servlet-class>Order_Management.tempCartInsertServlet</servlet-class>
+	    </servlet>
+	    
+	    <servlet-mapping>
+		<servlet-name>tempCartInsertServlet</servlet-name>
+		<url-pattern>/tempcartinsert</url-pattern>
+	  </servlet-mapping>
+	  
+	   <servlet>
+		<servlet-name>tempCartRetrieveServlet</servlet-name>
+		<servlet-class>Order_Management.tempCartRetrieveServlet</servlet-class>
+	    </servlet>
+	    
+	    <servlet-mapping>
+		<servlet-name>tempCartRetrieveServlet</servlet-name>
+		<url-pattern>/tempcartRetrieve</url-pattern>
+	  </servlet-mapping>
+     
+     <servlet>
+		<servlet-name>cartInsertServlet</servlet-name>
+		<servlet-class>Order_Management.cartInsertServlet</servlet-class>
+	    </servlet>
+	    
+	    <servlet-mapping>
+		<servlet-name>cartInsertServlet</servlet-name>
+		<url-pattern>/insertcart</url-pattern>
+	  </servlet-mapping>
+	  
+	   <servlet>
+		<servlet-name>insertQtyServlet</servlet-name>
+		<servlet-class>Order_Management.insertQtyServlet</servlet-class>
+	    </servlet>
+	    
+	    <servlet-mapping>
+		<servlet-name>insertQtyServlet</servlet-name>
+		<url-pattern>/insertqty</url-pattern>
+	  </servlet-mapping>
+	  
+	  
+	   <servlet>
+		<servlet-name>tempCartUpdateServlet</servlet-name>
+		<servlet-class>Order_Management.tempCartUpdateServlet</servlet-class>
+	    </servlet>
+	    
+	    <servlet-mapping>
+		<servlet-name>tempCartUpdateServlet</servlet-name>
+		<url-pattern>/updatecart</url-pattern>
+	  </servlet-mapping>
+	  
+	  <servlet>
+		<servlet-name>orderInsertServlet</servlet-name>
+		<servlet-class>Order_Management.orderInsertServlet</servlet-class>
+	    </servlet>
+	    
+	    <servlet-mapping>
+		<servlet-name>orderInsertServlet</servlet-name>
+		<url-pattern>/orderinsert</url-pattern>
+	  </servlet-mapping>
+	  
+	   <servlet>
+		<servlet-name>tempCartItemDeleteServlet</servlet-name>
+		<servlet-class>Order_Management.tempCartItemDeleteServlet</servlet-class>
+	    </servlet>
+	    
+	    <servlet-mapping>
+		<servlet-name>tempCartItemDeleteServlet</servlet-name>
+		<url-pattern>/deletetempitem</url-pattern>
+	  </servlet-mapping>
+	  
+	  <servlet>
+		<servlet-name>Header2CategoryDisplayServlet</servlet-name>
+		<servlet-class>Order_Management.Header2CategoryDisplayServlet</servlet-class>
+	    </servlet>
+	    
+	    <servlet-mapping>
+		<servlet-name>Header2CategoryDisplayServlet</servlet-name>
+		<url-pattern>/displaycat2</url-pattern>
+	  </servlet-mapping>
+	  
+	    <servlet>
+		<servlet-name>OrderHistoryDisplayServletNew</servlet-name>
+		<servlet-class>Order_Management.OrderHistoryDisplayServletNew</servlet-class>
+	    </servlet>
+	    
+	    <servlet-mapping>
+		<servlet-name>OrderHistoryDisplayServletNew</servlet-name>
+		<url-pattern>/displayuserorders</url-pattern>
+	  </servlet-mapping>
+	  
+     
+     
+      <servlet>
+		<servlet-name>tempcartAfterOrder</servlet-name>
+		<servlet-class>Order_Management.tempcartAfterOrder</servlet-class>
+	    </servlet>
+	    
+	    <servlet-mapping>
+		<servlet-name>tempcartAfterOrder</servlet-name>
+		<url-pattern>/finalcartretrieve</url-pattern>
+	  </servlet-mapping> 
+	  
+      <servlet>
+		<servlet-name>UserOrderDeleteServlet</servlet-name>
+		<servlet-class>Order_Management.UserOrderDeleteServlet</servlet-class>
+	    </servlet>
+	    
+	    <servlet-mapping>
+		<servlet-name>UserOrderDeleteServlet</servlet-name>
+		<url-pattern>/userorderDelete</url-pattern>
+	  </servlet-mapping>
+
+		<!--#########################Hillary############################  -->
+		
+		<!-- Hillary -->         
+         
+         
+<servlet>
 	<servlet-name>staffInsert</servlet-name>
-	<servlet-class>Servlet.StaffInsertServlet</servlet-class>
+	<servlet-class>Staff.StaffInsertServlet</servlet-class>
 </servlet>
 <servlet-mapping>
 	<servlet-name>staffInsert</servlet-name>
@@ -345,7 +1040,7 @@
          
 <servlet>
 	<servlet-name>staffList</servlet-name>
-	<servlet-class>Servlet.StaffListServlet</servlet-class>
+	<servlet-class>Staff.StaffListServlet</servlet-class>
 </servlet>
 <servlet-mapping>
 	<servlet-name>staffList</servlet-name>
@@ -355,7 +1050,7 @@
 
 <servlet>
 	<servlet-name>staffDelete</servlet-name>
-	<servlet-class>Servlet.StaffDeleteServlet</servlet-class>
+	<servlet-class>Staff.StaffDeleteServlet</servlet-class>
 </servlet>
 <servlet-mapping>
 	<servlet-name>staffDelete</servlet-name>
@@ -366,7 +1061,7 @@
          
 <servlet>
 	<servlet-name>staffUpdate</servlet-name>
-	<servlet-class>Servlet.StaffUpdateServlet</servlet-class>
+	<servlet-class>Staff.StaffUpdateServlet</servlet-class>
 </servlet>
 <servlet-mapping>
 	<servlet-name>staffUpdate</servlet-name>
@@ -377,7 +1072,7 @@
 
 <servlet>
 	<servlet-name>staffInsertOT</servlet-name>
-	<servlet-class>Servlet.StaffOTInsertServlet</servlet-class>
+	<servlet-class>Staff.StaffOTInsertServlet</servlet-class>
 </servlet>
 <servlet-mapping>
 	<servlet-name>staffInsertOT</servlet-name>
@@ -387,11 +1082,50 @@
 
 <servlet>
 	<servlet-name>staffInsertLeave</servlet-name>
-	<servlet-class>Servlet.StaffLeaveInsertServlet</servlet-class>
+	<servlet-class>Staff.StaffLeaveInsertServlet</servlet-class>
 </servlet>
 <servlet-mapping>
 	<servlet-name>staffInsertLeave</servlet-name>
 	<url-pattern>/insertLeaveStaff</url-pattern>
+</servlet-mapping>      
+
+
+<servlet>
+	<servlet-name>staffSalaryRetrieve</servlet-name>
+	<servlet-class>Staff.StaffSalaryListServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>staffSalaryRetrieve</servlet-name>
+	<url-pattern>/salaryRetrieve</url-pattern>
+</servlet-mapping>  
+
+
+<servlet>
+	<servlet-name>staffLeaveRetrieve</servlet-name>
+	<servlet-class>Staff.StaffLeaveListServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>staffLeaveRetrieve</servlet-name>
+	<url-pattern>/leaveRetrieve</url-pattern>
+</servlet-mapping>      
+
+<servlet>
+	<servlet-name>staffOTRetrieve</servlet-name>
+	<servlet-class>Staff.StaffOTListServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>staffOTRetrieve</servlet-name>
+	<url-pattern>/otRetrieve</url-pattern>
+</servlet-mapping>      
+
+
+<servlet>
+	<servlet-name>staffReinsert</servlet-name>
+	<servlet-class>Staff.StaffReinsertServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>staffReinsert</servlet-name>
+	<url-pattern>/reinsertStaff</url-pattern>
 </servlet-mapping>
 
 </web-app>

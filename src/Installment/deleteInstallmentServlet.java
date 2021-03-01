@@ -34,13 +34,15 @@ public class deleteInstallmentServlet extends HttpServlet {
 		if (isTrue == true) {
 			List<installment> installDet = installmentDButil.getInstallmentDetails();
 			request.setAttribute("installDetail", installDet);
+			session.setAttribute("result","successDeleteInstallDet");
 			
-			RequestDispatcher dis = request.getRequestDispatcher("DisplayInstallment.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("adminAlertBoxes.jsp");
 			dis.forward(request, response);
 		}
 		else 
 		{	
-			RequestDispatcher dis2 = request.getRequestDispatcher("failRegistration.jsp");
+			session.setAttribute("result","failDeleteInstallDet");
+			RequestDispatcher dis2 = request.getRequestDispatcher("adminAlertBoxes.jsp");
 			dis2.forward(request, response);
 		}
 	}

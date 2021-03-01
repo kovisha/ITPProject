@@ -1,0 +1,140 @@
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.size_select{
+
+  font-weight: bold;
+  font-size: 16px;
+  font-family: georgia;
+  color: rgb(0, 0, 0);
+  text-align: center;
+
+
+}
+
+table.lastalign {
+  margin-left: auto; 
+  margin-right: auto;
+  width : 100px;
+}
+
+
+.welcome_msg{
+
+  font-weight: bold;
+  font-size: 30px;
+  font-family: georgia;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.welcome_msg1{
+
+  font-weight: bold;
+  font-size: 20px;
+  font-family: georgia;
+  color: whitesmoke;
+  text-align: center;
+}
+
+
+.prom_msg{
+
+  font-weight: bold;
+  font-size: 20px;
+  font-family: georgia;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.pic1{
+
+  z-index : -1 ;
+  position : fixed;
+  width : 100%;
+  /*margin-left : 3%;*/
+  opacity : 0.6 ;
+
+}
+
+.img_item_size{
+  z-index : -1 ;
+  position : fixed;
+  width : 100%;
+  /*margin-left : 3%;*/
+  opacity : 0.9 ;
+
+
+}
+
+.Img1{
+
+    height: 172px;
+    width : 215px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.Img2{
+
+  height: 170px;
+  width : 240px; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.Img3{
+
+    height: 170px;
+    width : 200px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flip-box {
+    background-color: transparent;
+    width: 100%;
+    height: 200px;
+  /*  border: 1px solid #f1f1f1;*/
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-box-front {
+    background-color: #F7F9F9;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-box-back {
+    background-color:#E5E7E9 ;
+    color: rgb(12, 12, 12);
+    transform: rotateY(180deg);
+  }

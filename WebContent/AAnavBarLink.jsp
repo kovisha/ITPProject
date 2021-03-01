@@ -272,7 +272,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="DeliveryReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>

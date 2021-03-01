@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import package1.SupplierDBUtil;
 import package1.Supplier;
@@ -25,6 +26,7 @@ public class SupplierUpdateServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		HttpSession session = request.getSession();
 		
 		String supplierID = request.getParameter("supplierID");
 		String name = request.getParameter("name");
@@ -35,26 +37,24 @@ public class SupplierUpdateServlet extends HttpServlet {
 		String phone2 = request.getParameter("phone2");
 		String description = request.getParameter("description");
 		
-		
 		boolean isTrue;
-		
 		
 		isTrue = SupplierDBUtil.updateSupplier(supplierID, name, status, address , email , phone1, phone2, description);
 		
 		if(isTrue == true) {
-			
 			List<Supplier> supplierDetails = SupplierDBUtil.displaysupplier1();
 			request.setAttribute("supplierDetails" , supplierDetails);
 			
-			RequestDispatcher dis = request.getRequestDispatcher("ViewSupplier.jsp");
+			session.setAttribute("result","successUpdateSupplier");
+			RequestDispatcher dis = request.getRequestDispatcher("AlertBoxSupplier.jsp");
 			dis.forward(request , response);
 		}
 		else {
 			List<Supplier> supplierDetails = SupplierDBUtil.displaysupplier1();
 			request.setAttribute("supplierDetails" , supplierDetails);
 			
-			
-			RequestDispatcher dis = request.getRequestDispatcher("ViewSupplier.jsp");
+			session.setAttribute("result","failedUpdateSupplier");
+			RequestDispatcher dis = request.getRequestDispatcher("AlertBoxSupplier.jsp");
 			dis.forward(request , response);
 		}
 		

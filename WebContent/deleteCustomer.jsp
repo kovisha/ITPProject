@@ -8,13 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Insert New Category</title>
+    <title>Delete Customer</title>
 
     <!-- Bootstrap CSS CDN -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> 
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="admin_css/style.css">
 
@@ -526,11 +524,13 @@
                                         <i class="fas fa-bell text-primary fa-lg"></i>
                                 </a>
                     </li>
+                    <form action="adminLogout" method="get">
                     <li class="nav-item ml-md-auto">
-                                <a href="#" class="nav-link" data-toggle="modal" data-target="#sign-out">
-                                            <i class="fas fa-sign-out-alt text-danger fa-lg"></i>
-                                </a>
+<!--                                 <a href="#" class="nav-link" data-toggle="modal" data-target="#sign-out"> -->
+                                            <button class="nav-link"><i class="fas fa-sign-out-alt text-danger fa-lg"></button></i>
+<!--                                 </a> -->
                     </li>
+                    </form>
     </ul>
 
   </div>
@@ -585,7 +585,7 @@
 <div class = "container">
 		<div class = "card text-light special-card mb-3">  <!--Outer form grid -->
 			<div class = "card-body">
-			<form action="CustomerDeleteServlet" method ="post" >
+			<form action="deleteCustomer" method ="post" >
 
 	
 <div class="form-group "> 

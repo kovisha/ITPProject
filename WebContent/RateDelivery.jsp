@@ -39,7 +39,7 @@
 				<div class = "card-body">					
 					<div class="card text-white bg-dark mb-3 card-header text-center">We appreciate your Suggestions !!!</div>
 					
-					<form name ="RateDelivery" method="post" action="">
+					<form name ="RateDelivery" method="post" action="home.jsp">
 						
 						<!-- Rating -->
 						<div class="form-group">
@@ -55,7 +55,7 @@
 						
 		      			
 		      			<div class="form-group">
-			      			<label>Suggestion</label>
+			      			<label>Suggestions</label>
 			      			<textarea class="form-control" rows="2" id="address" name ="address"></textarea>
 		      			</div>
 		      			

@@ -10,11 +10,26 @@
 
 }
 
+table.lastalign {
+  margin-left: auto; 
+  margin-right: auto;
+  width : 100px;
+}
+
 
 .welcome_msg{
 
   font-weight: bold;
   font-size: 30px;
+  font-family: georgia;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.welcome_msg1{
+
+  font-weight: bold;
+  font-size: 20px;
   font-family: georgia;
   color: whitesmoke;
   text-align: center;
@@ -73,7 +88,7 @@
 .Img3{
 
     height: 170px;
-    width : 270px; 
+    width : 200px; 
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -113,13 +128,17 @@
   
   /* Style the front side (fallback if image is missing) */
   .flip-box-front {
-    background-color: #bbb;
+    background-color: #F7F9F9;
     color: black;
   }
   
   /* Style the back side */
   .flip-box-back {
-    background-color: #DCDCDC;
+    background-color:#E5E7E9 ;
     color: rgb(12, 12, 12);
     transform: rotateY(180deg);
   }
+  
+  ul{
+	list-style-type: none;
+}

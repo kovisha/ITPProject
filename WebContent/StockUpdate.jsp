@@ -23,7 +23,7 @@
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-
+    <script src="js/validations.js" /></script> <!-- custom validation -->
 </head>
 
 <body>
@@ -48,7 +48,7 @@
                 <strong><img src="images/UDS_2.jpg" alt="..."  class="rounded-circle" width="50px" height="50px" ></strong>
                  
            </div>
-        <!--Side Bar header end-->
+      <!--Side Bar header end-->
             <!-- Main start list unstyled componenets -->
             <ul class="list-unstyled components">
                 <li>
@@ -74,20 +74,20 @@
                     <!-- Subtitles and links to those -->
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Customers">
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="#">
+                            <a href="viewUsers.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="customerReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -112,13 +112,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Category">
                         <li>
-                            <a href="#">
+                            <a href="insertCategory.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewCategory.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -148,19 +148,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Stock">
                         <li>
-                            <a href="#">
+                            <a href="insertNewStock.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewStock.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="StockReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -185,19 +185,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Item">
                         <li>
-                            <a href="#">
+                            <a href="InsertNewItem.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewItems.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ItemReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -221,16 +221,56 @@
                     <!-- Subtitles and links to those -->
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Orders">
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="#">
+                            <a href="orders_view.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Orderreport.jsp">
+                                <i class="fas fa-file-alt"></i>
+                                Reports
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End subtitiles -->
+
+                </li>
+                <!-- Orders end -->
+                
+                <!-- Delivery start -->
+                <li>
+                    <a href="#Delivery" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <!--Major B with drop downs-->
+                   <i class="fas fa-truck"></i>
+                       Delivery
+                    </a>
+                    <!-- Subtitles and links to those -->
+                    <!-- ID should be identical for each Submenu -->
+                    <ul class="collapse list-unstyled" id="Delivery">
+                        <li>
+                            <a href="ApointDeliveryStaff.jsp">
+                                <i class="fas fa-hands-helping"></i>
+                                Assign Delivery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminDeliveryType.jsp">
+                                <i class="fas fa-motorcycle"></i>
+                                Delivery Type
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminDeliveryStaff.jsp">
+                                <i class="fas fa-people-carry"></i>
+                                Delivery Staff
                             </a>
                         </li>
                         <li>
@@ -243,11 +283,11 @@
                     <!-- End subtitiles -->
 
                 </li>
-                <!-- Orders end -->
+                <!-- Delivery end -->
 
 
 
-                                <!-- Orders start -->
+                                <!-- Offers start -->
                 <li>
                     <a href="#Offers" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <!--Major B with drop downs-->
@@ -258,13 +298,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Offers">
                         <li>
-                            <a href="#">
+                            <a href="insertOffer.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="retrieveOffer">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -289,19 +329,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Suppliers">
                         <li>
-                            <a href="#">
+                            <a href="SupplierInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewSupplier.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="SupplierReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -324,19 +364,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Staff">
                         <li>
-                            <a href="#">
+                            <a href="StaffInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="StaffList.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="SalaryDashBoard.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -361,7 +401,7 @@
                     <ul class="collapse list-unstyled" id="UserPayment">
                         
                         <li>
-                            <a href="#">
+                            <a href="retrieveUsPay">
                                <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -386,13 +426,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="SupplyPayment">
                         <li>
-                            <a href="#">
+                            <a href="SupplierPaymentInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewSupplierPayment.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -423,13 +463,13 @@
                             </a>
                         </li> -->
                         <li>
-                            <a href="#">
+                            <a href="retrieveInstall">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="installReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -441,7 +481,7 @@
                 <!-- Installment end -->
                   
 
-               
+                </li>
 
 
 
@@ -452,7 +492,7 @@
 
             
         </nav>
-        <!--Side Bar end-->    
+        <!--Side Bar end-->       
 
         <!-- Page Content  Start-->
        
@@ -526,7 +566,7 @@
                                 </a>
                     </li>
                     <li class="nav-item icon-parent">
-                                <a href="#" class="nav-link icon-bullet">
+                                <a href="StockNotify.jsp" class="nav-link icon-bullet">
                                         <i class="fas fa-bell text-primary fa-lg"></i>
                                 </a>
                     </li>
@@ -590,12 +630,75 @@
 		<div class = "container">
 		<div class = "card text-light special-card mb-3">  <!--Outer form grid -->
 			<div class = "card-body">
-					<form action="StockUpdate" method ="post" >
+			
+			
+			 <!-- a new part invisible form -->
+    
+    <form action="updateWithoutReorder" method ="post" >
+    
+    
+     
+     <input type="hidden" class="form-control" id="categoryName"  placeholder="Name" name = "catname" value = "<%= categoryName %>" >
+ 
+    <input type="hidden" class="form-control" id="stockID"  placeholder="Name" name = "id" value = "<%= id %>" >
+
+   
+    <input type="hidden" class="form-control" id="stockName"  placeholder="Name" name = "stockName"  value = "<%= stockName %>" >
+ 
+  
+     <input type="hidden" class="form-control" id="qtyAvail"  placeholder="Name" name = "qtyAvaialbale"  value = "<%= qtyAvailable %>" > 
+
+   
+    <input type="hidden" class="form-control" id="sSize"  placeholder="Size" name = "sSize" value = "<%= stockSize %>" >
+ 
+   
+    <input type="hidden" class="form-control" id="sSize"  placeholder="reO" name = "rOrder" value = "<%= reOrderLevel %>" >
+ 
+   
+    <input type="hidden" class="form-control" id="supQty"  placeholder="Quantitye" name = "supQty" value = "<%= qtySupplied %>" >
+
+   
+    <input type="hidden" class="form-control datepicker-here" data-language = 'en' data-date-format = "yyyy M dd" id="supDate"  placeholder="SuppliedDate" name = "supDate" value = "<%= suppliedDate %>" >
+ 
+   
+    <input type="hidden" class="form-control" id="qtySent"  placeholder="Quantity" name = "qtySent" value = "<%= storeQty %>" >
+ 
+     
+      <input type="hidden" class="form-control" id="supplierrName"  placeholder="Name" name = "supname" value = "<%= supplierName %>" >
+   
+    	<!--  <div class="form-group col-md-4">  </div>
+			<div class = "row">				 
+					<div class = "form-group col-12">
+					
+						<button type="submit" class="btn btn-success btn-block "id="changingBtn" style="visibility:visible;">Update Data Without Reorder Level</button>	
+					</div>
+			</div>-->
+
+
+	<div class = "row">	
+ 	<div class = "col-lg-6"></div>	
+ 					<div class = "col-lg-6">
+					<center><button type="submit" class="btn btn-success btn-block" id="changingBtn" style="visibility:visible;">Update Data Without Reorder Level
+					</button></center>		
+	</div>
+	 	
+	 				
+</div>	
+    </form>
+    
+   
+    
+    <!-- end of  new part invisible form -->
+			
+			
+			
+			
+<form action="StockUpdate" method ="post" name = "UpdateStock">
 
 
 <div class="form-group"> <!-- Drop downs -->
       <label for="category">CategoryName</label>
-     <input type="text" class="form-control" id="categoryName"  placeholder="Name" name = "catname" value = "<%= categoryName %>" >
+     <input type="text" class="form-control" id="categoryName"  placeholder="Name" name = "catname" value = "<%= categoryName %>" readonly >
     </div>
     
  <div class="form-group">
@@ -605,7 +708,7 @@
  
  <div class="form-group">
     <label for="stockName"> Stock Name</label>
-    <input type="text" class="form-control" id="stockName"  placeholder="Name" name = "stockName"  value = "<%= stockName %>" >
+    <input type="text" class="form-control" id="stockName"  placeholder="Name" name = "stockName"  onblur = "onlyStockNameUpdateletter()" value = "<%= stockName %>" >
  </div>
  
  <div class="form-group"> 
@@ -620,7 +723,7 @@
  
  <div class="form-group">
     <label for="stockSize">ReOrder Level</label>
-    <input type="text" class="form-control" id="sSize"  placeholder="reO" name = "rOrder" value = "<%= reOrderLevel %>" >
+    <input type="text" class="form-control" id="sSize"  placeholder="reO" name = "rOrder" value = "<%= reOrderLevel %>" readonly>
  </div>
  
  
@@ -641,17 +744,97 @@
  
    <div class="form-group">
       <label for="supName"> Supplier Name</label>
-      <input type="text" class="form-control" id="supplierrName"  placeholder="Name" name = "supname" value = "<%= supplierName %>" >
+      <input type="text" class="form-control" id="supplierrName"  placeholder="Name" name = "supname" value = "<%= supplierName %>" readonly>
     </div>
     
+    
+   
+    
+    
+   <!--  <div class="form-group col-md-4">  </div>
+			<div class = "row">				 
+					<div class = "form-group col-lg-4">
+					
+						<button type="submit" class="btn btn-success btn-block "id="changingBtn" style="visibility:visible;">Update Data</button>	
+					</div>
+			</div> -->
+   <!---------------------- creating a reorder level form div --------------------------------------->
+   
+    
+    <div class="card-body" id = "confirm">  
+        <input type="checkbox" name="checker" onclick="checkboxValidation()">Set Stock Reorder Level
+                    
+    </div>
+    
+    
+    <div> <!-- big second container -->
+    <div class = "card-body" id="newAdDiv" style="display:none"> <!-- 1st small part of second big container -->
+    
+     <div class = "row">	
+ 	<div class = "col-lg-6"></div>			 
+					<div class = "col-lg-4">
+					<center><button type="submit" class="btn btn-info btn-block" style="width:150% ; height: 150%"><a href="#" onClick="autoFill(); return true;">   Demo 
+					</a><i class="fa fa-handshake"></i></button></center>		
+	</div>
+	 	
+	 				
+</div>	
 
-  <div class="form-group col-md-4">  </div>
+<BR><BR>
+    <div class="formHeading">
+	<center>
+		<h4 >Set Stock ReOrder Level </h2>
+	</center>
+	</div>
+    <div class="form-group">
+    <label for="maxUnits">Maximum Units Sold</label>
+    <input type="text" class="form-control" id="maxUnits"  placeholder="maximum" name = "maxUnits" >
+ 	</div>
+ 	
+ 	<div class="form-group">
+    <label for="leadTime">Lead Time</label>
+    <input type="text" class="form-control" id="leadTime"  placeholder="leadTime in Days" name = "leadTime" >
+ 	</div>
+ 	
+ 	<div class="form-group">
+    <label for="avgSold">Average Units Sold</label>
+    <input type="text" class="form-control" id="avgUnits"  placeholder="average" name = "avgUnits" >
+ 	</div>
+ 	
+ 	
+ 	<div class="formHeading">
+	<center>
+		<h4 >Calculate ReOrder Quantity </h2>
+	</center>
+	</div>
+    
+ 	
+ 	<div class="form-group">
+    <label for="avgleadTime"> Average Lead Time</label>
+    <input type="text" class="form-control" id="avgleadTime"  placeholder="Average leadTime in Days" name = "avgleadTime" >
+ 	</div>
+ 	
+ 	 <div class="form-group col-md-4">  </div>
 			<div class = "row">				 
 					<div class = "form-group col-lg-4">
 					
 						<button type="submit" class="btn btn-success btn-block ">Update Stock</button>		
 					</div>
 			</div>
+		    
+    </div><!-- end of 1st small part of second big container -->
+  
+    
+ 
+</div><!-- end of large container -->
+
+  <!-- <div class="form-group col-md-4">  </div>
+			<div class = "row">				 
+					<div class = "form-group col-lg-4">
+					
+						<button type="submit" class="btn btn-success btn-block ">Update Stock</button>		
+					</div>
+			</div> -->
 
  </form>
  </div>
@@ -686,6 +869,42 @@
             });
         });
     </script>
+    
+    <script>
+    function checkboxValidation() {
+        var newAdDiv = document.getElementById("newAdDiv");
+        var newBtn = document.getElementById("changingBtn");
+        
+    	if (newAdDiv.style.display === "block")
+    	{
+
+    		newAdDiv.style.display = "none" ;
+    		newBtn.style.visibility = "visible";
+    	}
+
+    	else
+    	{
+
+    		newAdDiv.style.display = "block" ;
+			newBtn.style.visibility = "hidden";
+    	}
+    }
+    </script>
+    
+     <script type="text/javascript">
+  			function autoFill() {
+    			document.getElementById('maxUnits').value = "1000";
+    			document.getElementById('leadTime').value = "20";
+    			document.getElementById('avgUnits').value = "200";
+    			document.getElementById('avgleadTime').value = "50";
+    			
+    			
+  			}
+  			
+			
+  			
+  			
+</script>
 
 </body>
 

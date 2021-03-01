@@ -1,5 +1,13 @@
 function confPayMonthInstall() {
-    confirm("Are you sure you want pay monthly installment?");
+	Swal.fire({
+    			title: 'Confirm paying Monthly Installment?',
+    			showCancelButton: true,
+			  	confirmButtonText: `Yes`,
+			}).then((result) => {
+			  	if (result.isConfirmed) {
+			    	window.location = "monthInstall";
+			  	} 
+			})
 }
 
 function validateCardDetails() {
@@ -11,23 +19,83 @@ function validateCardDetails() {
     
     if(cardType === "VISA"){
     	if(!cardNo.match(visaNo)){
-    		alert("Invalid Card Number!!!");
-    		window.location ='userCardInput.jsp';
-    		return false;
+    		Swal.fire({
+    			title: 'Invalid Card Number!!!',
+				text:'Enter the correct VISA Card Number',
+    			icon: 'error',
+			}).then(function() {
+    			window.location = "userCardInput.jsp";
+				});
+			return false;
     	}
     }
     else if(cardType === "MCard"){
     	if(!cardNo.match(mastCard)){
-    		alert("Invalid Card Number!!!");
-    		window.location='userCardInput.jsp';
-    		return false;
+    		Swal.fire({
+    			title: 'Invalid Card Number!!!',
+				text:'Enter the correct Master Card Number',
+    			icon: 'error',
+			}).then(function() {
+    			window.location = "userCardInput.jsp";
+				});
+			return false;
     	}
     }
     else if(cardType === "AmericanExp"){
     	if(!cardNo.match(amerEx)){
-    		alert("Invalid Card Number!!!");
-    		window.location='userCardInput.jsp';
-    		return false;
+    		Swal.fire({
+    			title: 'Invalid Card Number!!!',
+				text:'Enter the correct Amex Card Number',
+    			icon: 'error',
+			}).then(function() {
+    			window.location = "userCardInput.jsp";
+				});
+			return false;	
     	}
     }
 }
+
+/*  ==========================================
+    SHOW UPLOADED IMAGE
+* ========================================== */
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#imageResult')
+                .attr('src', e.target.result)
+                .height(300);
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+/*$(function () {
+    $('#upload').on('change', function () {
+        readURL(input);
+    });
+});*/
+
+/*  ==========================================
+    SHOW UPLOADED IMAGE NAME
+* ========================================== */
+/*var input = document.getElementById( 'upload' );
+var infoArea = document.getElementById( 'upload-label' );
+
+input.addEventListener( 'change', showFileName );
+function showFileName( event ) {
+  var input = event.srcElement;
+  var fileName = input.files[0].name;
+  infoArea.textContent = 'File name: ' + fileName;
+}*/
+
+/*  ==========================================
+SHOW UPLOADED IMAGE NAME
+* ========================================== */
+
+/*$(document).ready(function () {
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+});*/

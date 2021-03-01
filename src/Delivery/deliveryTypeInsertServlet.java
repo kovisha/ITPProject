@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class deliveryTypeInsertServlet
@@ -21,6 +22,8 @@ public class deliveryTypeInsertServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		HttpSession session = request.getSession();
+		
 		String dType = request.getParameter("dType");
  		Double dCharges = Double.parseDouble(request.getParameter("dCharge"));
 		
@@ -29,12 +32,14 @@ public class deliveryTypeInsertServlet extends HttpServlet {
 		isTrue = DeliveryDBUtil.insertDeliveryTypeDetails(dType, dCharges);
 
 		if(isTrue == true){
-			RequestDispatcher dis = request.getRequestDispatcher("AdminDeliveryType.jsp");
+			session.setAttribute("result","successInsertdeliveryType");
+			RequestDispatcher dis = request.getRequestDispatcher("DeliveryAlertBox.jsp");
 			dis.forward(request, response);
 		}
 		
 		else {
-			RequestDispatcher dis = request.getRequestDispatcher("unsuccess.jsp");
+			session.setAttribute("result","failedInsertdeliveryType");
+			RequestDispatcher dis = request.getRequestDispatcher("DeliveryAlertBox.jsp");
 			dis.forward(request, response);
 		}
 		

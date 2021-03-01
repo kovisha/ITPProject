@@ -3,74 +3,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link rel = "stylesheet" href ="css/headerFooter.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-		
-		<!--Javascript-->
-		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-	
- 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-	   
-	    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
-	    
-	    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
-	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	    
-	    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-       <!--  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"> -->
-        <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet"> -->
-    </head>
-    
-    
-   <body>
-        <div class="header">
-			<nav class="navbar navbar-expand-lg" style="position: fixed;">
-				<img src="images/UDS_3.png" width="4%" height="4%"> 
-				
+<meta charset="ISO-8859-1">
 
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav mr-auto" >
-						<li class="nav-item">
-							<a class="nav-link" href="#">Home</a>
-                        </li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">About Us</a>
-                        </li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Shop With Us</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Contact Us</a>
-						</li>
-					</ul>
-					<form class="form-inline my-2 my-lg-0">
-						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-						<button class="btn btn-dark" type="submit" style="color: #ffffff">Search</button>
-					</form>
-					<div class="userImage">
-					<%if(session.getAttribute("LoggedUser") != null){ %>
-						<a href="userProfileServlet"><img src="images/profile.png" style="width:50px" height="50px"></a>
-						<%}else{ %>
-						<a href=""><img src="images/profile.png" style="width:50px" height="50px"></a>
-						<%} %>
-					</div>
-					
-					<%if(session.getAttribute("LoggedUser") == null){ %>
-					<a href="login.jsp"><button type="button" class="btn btn-dark" style="margin-left: 2%;">Login</button></a>
-					 <%}else{ %>
-					<a href="logoutServlet"><button type="button" class="btn btn-dark" style="margin-left: 2%;">Logout</button></a> 
-					 <%} %>
-					
-					
-				</div>
-			</nav>
-		</div></br></br>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+		<!-- Google Fonts -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+		<!-- Bootstrap core CSS -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Material Design Bootstrap -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+		
+		<!-- JQuery -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!-- Bootstrap tooltips -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+		<!-- Bootstrap core JavaScript -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+		<!-- MDB core JavaScript -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+	</head>
+	<body>
+		<nav class="mb-1 navbar navbar-expand-lg navbar-dark lighten-1" style="background-color: #cf0000;font-family:Georgia;position: fixed;">
+		  <img src="images/UDS_5.png" height="35" style="padding-right:1%;">
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+		    aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="Home.jsp"><i class="fas fa-home"></i>Home
+		          <span class="sr-only">(current)</span>
+		        </a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#"><i class="fas fa-info-circle"></i>About Us</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="tempcart"><i class="fas fa-shopping-cart"></i>Shop With Us</a>
+		      </li>
+		      <li class="nav-item dropdown">
+		        <a class="nav-link" href="#"><i class="fas fa-envelope"></i>Contact Us</a>
+		      </li>
+		      <li class="nav-item dropdown">
+		      	<%if(session.getAttribute("LoggedUser") == null){ %>
+		        <a class="nav-link" href="login.jsp"><i class="fas fa-sign-in-alt"></i>Login</a>
+		         <%}else{ %>
+		         <a class="nav-link" href="userLogout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+		         <%} %>
+		      </li>
+		       <li class="nav-item dropdown">
+		      	<%if(session.getAttribute("LoggedUser") != null){ %>
+		        <a class="nav-link" href="UserProfile"><i class="fas fa-user-alt"></i>User Profile</a>
+		         <%} %>
+		      </li>
+		    </ul>
+		    <ul class="navbar-nav ml-auto nav-flex-icons">
+		    	<!-- only for login page -->
+		      <!-- <li class="nav-item">
+		          <button type="button" class="btn btn-sm btn-grey"><i class="fas fa-sign-in-alt"></i> LOGIN</button>
+		      </li> -->
+		      <!--  <li class="nav-item avatar dropdown">
+		        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+		          aria-haspopup="true" aria-expanded="false">
+		          <img src="images/chris.jfif" height="33" class="rounded-circle"
+		            alt="">
+		        </a>-->
+		        <!-- <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+		          aria-labelledby="navbarDropdownMenuLink-55">
+		          <a class="dropdown-item linkhover" href="#">User Profile</a>
+		          <a class="dropdown-item linkhover" href="#">Logout</a>
+		          <style>
+		          	.linkhover:hover{
+		          		background-color:#cf0000;
+		          	}
+		          </style>
+		        </div>-->
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
+		</br></br>
 
 </body>
 </html>

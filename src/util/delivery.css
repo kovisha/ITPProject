@@ -1,0 +1,12 @@
+@charset "ISO-8859-1";
+
+body{
+	background-image: url("../images/bgg1.jpg");
+	background-repeat: no-repeat;
+  	background-size: cover;
+  	-moz-background-size: cover;
+  	-webkit-background-size: cover;
+  	-o-background-size: cover;
+  	-ms-background-size: cover;
+  	background-position: center center;
+}

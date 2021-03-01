@@ -1,158 +1,105 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@include file="/header.jsp" %>
+    
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
 
-		
-		<meta charset="ISO-8859-1">
-		<title>Login | Register</title>
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/user.css">
+    
+     <!-- Javascripts -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script src="js/validations.js"></script>
+    
 
-		<!-- styling login and sign up form -->
-		<link rel = "stylesheet" type = "text/css" href = "css/login.css">
-		<link rel = "stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel = "stylesheet" href ="css/userHeaderFooter.css">
-		<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">  -->
-		
-		<!--Javascript-->
-		<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
- 		<script src="js/validate.js"></script> -->
- 		
- 		<!-- validating form fields -->
-		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
-		<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
-		<!-- <script src="js/validate.js"></script> -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    
 </head>
-
-
-
 <body>
 
-<img src = "images/bgg.jpg" class = "pic">
+	<div>
+        <div id="content">
 
-<br></br>
-<!-- The content of your page would go here. -->
+        	<div id="topBar">
+            
+			<nav class="navbar navbar-expand navbar-dark lighten-1" style="background-color: #cf0000;font-family:Georgia;">
+		  	<img src="images/UDS_5.png" width="90px" style="float: left ; margin-left: 50%">
+        	</nav>
+        	</div>
+        </div>
+       </div>
+    </header>
+            
 
-<div class="login-wrap">
-<div class="login-html">
-    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-    <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-    <div class="login-form">
-        <div class="sign-in-htm">
-        <form name = "signINform" method = "post" action = "loginServlet" onsubmit="return signinValidate()">
-           
-            <div class="group">
-                <label for="user" class="label">User Name</label>
-                <input id="user" type="text" class="input" name = "uname" required >
-            </div>
-            
-            <div class="group">
-                <label for="pass" class="label">Password</label>
-                <input id="pwd" type="password" class="input" data-type="password" name = "password" required>
-            </div> 
-            
-            <div class="group">
-                <input id="check" type="checkbox" class="check" >
-                <label for="check"><span class="icon"></span> Keep me Signed in</label>
-            </div>
-            
-            <div class="group">
-                <input type="submit" class="button" value="Sign In">
-            </div>
-            
-            <div class="hr"></div>
-            <div class="foot-lnk">
-                <a href="#">Forgot Password?</a>
-            </div>
+    <div class="main">
+
+        <div class="container" style="box-shadow: 5px 5px 5px grey;">
+         <!-- Form Start -->
+            <form method="POST" action="customerLogin" class="appointment-form" id="appointment-form" onsubmit="return signinValidate()">
+                <h2>Login Here</h2>
+                <div class="form-group-1">
+                
+                    <input type="text" name="uname" id="title" placeholder="User Name" required />
+                    
+                    <input type="password" name="password" id="name" placeholder="Password" required />
+                    
+                     <!-- Show Password -->
+                    <span style=" position: absolute; color: #7a797e; right:30%; transform: translate(0,-50%); top: 42%; cursor: pointer;">
+				        <i class="fa fa-eye" id="eye" onclick="toggle()"> </i>
+				    </span>
+				    
+				     <!-- Script for show password -->
+				    <script>
+					    var state= false;
+					    function toggle(){
+					        if(state){
+					    	document.getElementById("name").setAttribute("type","password");
+					    	document.getElementById("eye").style.color='#7a797e';
+					    	state = false;
+					         }
+					         else{
+					    	document.getElementById("name").setAttribute("type","text");
+					    	document.getElementById("eye").style.color='green';
+					    	state = true;
+					         }
+					    }
+				    </script>
+                    
+                <div class="form-submit">
+                    <input type="submit" name="submit" id="submit" class="submit" value="Sign In" />
+                </div>
+                
+                 
+	            <div class="foot-lnk">
+	                <a href="forgotPassword.jsp">Forgot Password?</a>
+	            </div>
+	            
+	            <br>
+	            <center><label style="color:#000000;">Not A Member?</label></center>
+	            <div class="foot-lnk">
+	                <a href="Register.jsp">Sign Up</a>
+	            </div>
             </form>
+             <!-- End of Form -->
+             
         </div>
-        
-        
-        
-            <div class="sign-up-htm">
-                <form name="signUPform" method="post" action="registerServlet" onsubmit="return validation()">
-                    <div class="group">
-                        <label for="pass" class="label">First Name</label> <input id="pass"
-                            type="text" class="input" name="fname" onblur="onlyletter()" required>
-                    </div>
 
-                    <div class="group">
-                        <label for="pass" class="label">Last Name</label> <input id="pass"
-                            type="text" class="input" name="lname" onblur="onlyletter1()" required>
-                    </div>
-                    
-                    <div class="group">
-                        <label for="pass" class="label">User Name</label> <input id="pass"
-                            type="text" class="input" name="uname" required>
-                    </div>
-                    <div class="group">
-                        <label for="pass" class="label">Email Address</label> <input
-                            id="pass" type="text" class="input" name="email" required>
-                    </div>
+    </div>
 
-                    <div class="group">
-                        <label for="pass" class="label">Address</label> <textarea
-                            id="pass" type="text" class="input" name="address" required></textarea>
-                    </div>
-
-                    <div class="group">
-                        <label for="pass" class="label">Contact Number</label> <input
-                            id="pass" type="text" class="input" name="phone" onblur="phoneNumber()" required>
-                    </div>
-
-                    <div class="group">
-                        <label for="pass" class="label">Date Of Birth</label> <input
-                            id="pass" type="date" class="input" name="dob" data-language='en' data-date-format="yyyy M dd" >
-                    </div>
-
-                    <div class="group">
-                        <label for="pass" class="label">Anniversary Date</label> <input
-                            id="pass" type="date" class="input" name="doa" data-language='en' data-date-format="yyyy M dd" >
-                    </div>
-
-                    <div class="group">
-                        <label for="pass" class="label">Occupation</label> <input
-                            id="pass" type="text" class="input" name="job" >
-                    </div>
-
-                    <div class="group">
-                        <label for="pass" class="label">Password</label> <input
-                            id="txtPassword" type="password" class="input"
-                            data-type="password" name="pass" onblur = "CheckPassword()" required>
-                    </div>
-                    <div class="group">
-                        <label for="pass" class="label">Repeat Password</label> <input
-                            id="txtConfirmPassword" type="password" class="input"
-                            data-type="password" name="conpass" required>
-                    </div>
-
-
-                    <div class="group">
-                        <input type="submit" class="button" value="Sign Up"
-                            id="btnSubmit">
-                    </div>
-                    <div class="group">
-                        <input type="submit" class="button2" value="CANCEL"
-                            id="btnSubmit">
-                    </div>
-                    <div class="hr"></div>
-                    
-                </form>
-            </div>
-        </div>
-</div>
-</div>
-<br><br><br>
-<%@ include file = "/footer.jsp" %> 
+    <!-- Java Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>

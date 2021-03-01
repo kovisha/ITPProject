@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import package1.SupplierDBUtil;
 
@@ -23,8 +24,8 @@ public class SupplierInsertServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		HttpSession session = request.getSession();
 		
-		String supplierID = request.getParameter("supplierid");
 		String name = request.getParameter("suppliername");
 		String status = request.getParameter("status");
 		String address = request.getParameter("supplieraddress");
@@ -33,17 +34,18 @@ public class SupplierInsertServlet extends HttpServlet {
 		String phone2 = request.getParameter("supplierphone2");
 		String description = request.getParameter("description");
 		
-		
 		boolean isTrue;
 		
-		isTrue = SupplierDBUtil.insertsupplier(supplierID, name, status, address, email, phone1, phone2, description);
-		
+		isTrue = SupplierDBUtil.insertsupplier(name, status, address, email, phone1, phone2, description);
+ 
 		if(isTrue == true) {
-			RequestDispatcher dis = request.getRequestDispatcher("Success.jsp");
+			session.setAttribute("result","successInsertSupplier");
+			RequestDispatcher dis = request.getRequestDispatcher("AlertBoxSupplier.jsp");
 			dis.forward(request,response);
 			
 		}else {
-			RequestDispatcher dis2 = request.getRequestDispatcher("Unsuccess.jsp");
+			session.setAttribute("result","failedInsertSupplier");
+			RequestDispatcher dis2 = request.getRequestDispatcher("AlertBoxSupplier.jsp");
 			dis2.forward(request,response);
 		}
 		

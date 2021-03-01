@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Dispatched Orders</title>
+     <link rel = "icon" href = "images/UDS_2.jpg"   class="rounded-circle" width="100px" height="100px">
 
     <!-- Bootstrap CSS CDN -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> 
@@ -221,20 +222,21 @@
                     <!-- Subtitles and links to those -->
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Orders">
+                       
                         <li>
-                            <a href="#">
-                                <i class="fas fa-plus-circle"></i>
-                                Add
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
+                            <a href="OnProgressAdmin.jsp">
                                 <i class="fas fa-eye"></i>
-                                View
+                                 Orders On Progress
+                            </a>
+                        </li>
+                         <li>
+                            <a href="DispatchAdmin.jsp">
+                                <i class="fas fa-eye"></i>
+                                Dispatched Orders
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="OrderReportEx.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -575,7 +577,9 @@
 <div class = "h3"><div class = "welcome_msg">Orders Dispatched</div></div><br>
 
 <form action="adminDispatch" method="POST"  >
-<center><input type="submit"  value="DISPATCHED ORDERS " class="btn btn-success btn-lg btn-block"></center>
+<%-- <center><input type="submit"  value="DISPATCHED ORDERS " class="btn btn-success btn-lg btn-block"></center> --%>
+<center><button type="submit" class="btn btn-primary btn-lg "><i class="fas fa-eye"> </i>&nbsp;View Dispatched Orders</button></center>
+
 </form> <br>
 
 
@@ -604,7 +608,7 @@
                                     </td>
                                     <td>
                                     <div class = "tableRowww">
-                                        ${order.total}
+                                       RS. ${order.total}
                                     </div>    
                                     </td>
                                     <td>

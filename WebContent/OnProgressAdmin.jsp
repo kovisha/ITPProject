@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>ADMIN Table</title>
+     <link rel = "icon" href = "images/UDS_2.jpg"   class="rounded-circle" width="100px" height="100px">
 
     <!-- Bootstrap CSS CDN -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> 
@@ -221,20 +222,21 @@
                     <!-- Subtitles and links to those -->
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Orders">
+                        
                         <li>
-                            <a href="#">
-                                <i class="fas fa-plus-circle"></i>
-                                Add
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
+                            <a href="OnProgressAdmin.jsp">
                                 <i class="fas fa-eye"></i>
-                                View
+                                 Orders On Progress
+                            </a>
+                        </li>
+                         <li>
+                            <a href="DispatchAdmin.jsp">
+                                <i class="fas fa-eye"></i>
+                                Dispatched Orders
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="OrderReportEx.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -514,8 +516,8 @@
 
 
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" type="text" id = "myInput" onkeyup="myFunction()" placeholder="Search" aria-label="Search">
+     <!--  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
 
     </form>
 
@@ -575,13 +577,14 @@
 <div class = "h3"><div class = "welcome_msg">Orders On Progress</div></div><br>
 
 <form action="adminProgress" method="POST"  >
-<center>	 <input type="submit"  value="ORDERS IN PROGRESS"  class="btn btn-success btn-lg btn-block"></center>
+<%-- <center>	 <input type="submit"  value="ORDERS IN PROGRESS"  class="btn btn-success btn-lg btn-block"></center> --%>
+<center><button type="submit" class="btn btn-primary btn-lg "><i class="fas fa-eye"> </i>&nbsp;View Orders In Progress</button></center>
 
 </form> <br>
 
 
 
- <table class="table table table-hover table-dark table-bordered table-sm text-center table-stripped">
+ <table class="table table table-hover table-dark table-bordered table-sm text-center table-stripped" id="myTable">
                         <thead>
                             <tr>
                                 <th>Order_ID</th>
@@ -590,8 +593,6 @@
                                 <th>UID</th>
                                 <th>OFFER_ID</th>
                                 <th></th>
-                                
-                                
                             </tr>
                         </thead>
                          <tbody>
@@ -608,7 +609,7 @@
                                     </td>
                                     <td>
                                     <div class = "tableRowww">
-                                        ${order.total}
+                                       RS. ${order.total}
                                     </div>    
                                     </td>
                                     <td>
@@ -636,9 +637,13 @@
                                     <c:param name="id" value = "${id}"/></c:url>
          
                                     <a href="${orderDel}">
-                                    <center>
+                                    <%-- <center>
                                     <input type = "button" name = "delete" value ="Delete"   class="btn btn-outline-danger btn-sm">
-                                    </input></center></a>
+                                    </input></center> --%>
+                                    
+                                    <center><button type="submit" class="btn btn-outline-danger btn-sm"><i class="fa fa-trash-alt"></i>&nbsp;Delete</button></center>
+                                    
+                                    </a>
                           
                                    
                                     
@@ -689,6 +694,30 @@
             });
         });
     </script>
+    
+    
+     <script type="text/javascript">
+       
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }      
+          }
+        }
+        </script>
+	
 
 </body>
 

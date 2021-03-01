@@ -587,11 +587,14 @@
 
 			<br>
 
+			<!-- Auto fill form -->
+			
 			<div class = "container">
 				<div class = "card text-light special-card mb-3">  <!--Outer form grid -->
 					<div class = "card-body">
+						
 						<form action="insertNewDelivery" method ="post" name="insertNewDelivery">
-
+							<a href="#" onClick="autoFill(); return true;" style="margin-top:5%; margin-left:10%; text-decoration:none; color:blue; font-size:15px;">Click to Auto Fill</a>
 							<div class="form-group">
 							   <label> Delivery Type</label>
 							   <input type="text" class="form-control" id="dType"  placeholder="Type" name = "dType" required>
@@ -643,6 +646,24 @@
             });
         });
     </script>
+    
+    <script type="text/javascript">
+  			function autoFill() {
+
+    			document.getElementById('dType').value = "Sample1";
+    			document.getElementById('dCharge').value = "200";
+    			
+ 
+   				/*  var radioElements = document.getElementsByName("input3");
+
+   				 for (var i=0; i<radioElements.length; i++) {
+      				if (radioElements[i].getAttribute('value') == 'Radio3') {
+        				radioElements[i].checked = true;
+      				}
+    			} */
+  			}
+  			
+		</script>
 
 
 

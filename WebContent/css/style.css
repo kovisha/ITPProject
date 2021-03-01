@@ -67,7 +67,8 @@ span {
     background: black;
     color: #fff;
     transition: all 0.3s;
-    background-image: url("../images/img13.jpg");
+    background-image: url("../images/img12.jpg");
+    background-repeat: no-repeat;
 
 /*background-color: white;*/
        

@@ -47,7 +47,7 @@
                 <strong><img src="images/UDS_2.jpg" alt="..."  class="rounded-circle" width="50px" height="50px" ></strong>
                  
            </div>
-        <!--Side Bar header end-->
+      <!--Side Bar header end-->
             <!-- Main start list unstyled componenets -->
             <ul class="list-unstyled components">
                 <li>
@@ -73,20 +73,20 @@
                     <!-- Subtitles and links to those -->
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Customers">
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="#">
+                            <a href="viewUsers.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="customerReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -111,13 +111,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Category">
                         <li>
-                            <a href="#">
+                            <a href="insertCategory.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewCategory.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -147,19 +147,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Stock">
                         <li>
-                            <a href="#">
+                            <a href="insertNewStock.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewStock.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="StockReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -184,19 +184,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Item">
                         <li>
-                            <a href="#">
+                            <a href="InsertNewItem.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewItems.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ItemReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -220,16 +220,56 @@
                     <!-- Subtitles and links to those -->
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Orders">
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="#">
+                            <a href="orders_view.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Orderreport.jsp">
+                                <i class="fas fa-file-alt"></i>
+                                Reports
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End subtitiles -->
+
+                </li>
+                <!-- Orders end -->
+                
+                <!-- Delivery start -->
+                <li>
+                    <a href="#Delivery" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <!--Major B with drop downs-->
+                   <i class="fas fa-truck"></i>
+                       Delivery
+                    </a>
+                    <!-- Subtitles and links to those -->
+                    <!-- ID should be identical for each Submenu -->
+                    <ul class="collapse list-unstyled" id="Delivery">
+                        <li>
+                            <a href="ApointDeliveryStaff.jsp">
+                                <i class="fas fa-hands-helping"></i>
+                                Assign Delivery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminDeliveryType.jsp">
+                                <i class="fas fa-motorcycle"></i>
+                                Delivery Type
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AdminDeliveryStaff.jsp">
+                                <i class="fas fa-people-carry"></i>
+                                Delivery Staff
                             </a>
                         </li>
                         <li>
@@ -242,11 +282,11 @@
                     <!-- End subtitiles -->
 
                 </li>
-                <!-- Orders end -->
+                <!-- Delivery end -->
 
 
 
-                                <!-- Orders start -->
+                                <!-- Offers start -->
                 <li>
                     <a href="#Offers" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <!--Major B with drop downs-->
@@ -257,13 +297,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Offers">
                         <li>
-                            <a href="#">
+                            <a href="insertOffer.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="retrieveOffer">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -288,19 +328,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Suppliers">
                         <li>
-                            <a href="#">
+                            <a href="SupplierInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewSupplier.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="SupplierReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -323,19 +363,19 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="Staff">
                         <li>
-                            <a href="#">
+                            <a href="StaffInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="StaffList.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="SalaryDashBoard.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -360,7 +400,7 @@
                     <ul class="collapse list-unstyled" id="UserPayment">
                         
                         <li>
-                            <a href="#">
+                            <a href="retrieveUsPay">
                                <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -385,13 +425,13 @@
                     <!-- ID should be identical for each Submenu -->
                     <ul class="collapse list-unstyled" id="SupplyPayment">
                         <li>
-                            <a href="#">
+                            <a href="SupplierPaymentInsert.jsp">
                                 <i class="fas fa-plus-circle"></i>
                                 Add
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewSupplierPayment.jsp">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
@@ -422,13 +462,13 @@
                             </a>
                         </li> -->
                         <li>
-                            <a href="#">
+                            <a href="retrieveInstall">
                                 <i class="fas fa-eye"></i>
                                 View
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="installReport.jsp">
                                 <i class="fas fa-file-alt"></i>
                                 Reports
                             </a>
@@ -525,7 +565,7 @@
                                 </a>
                     </li>
                     <li class="nav-item icon-parent">
-                                <a href="#" class="nav-link icon-bullet">
+                                <a href="StockNotify.jsp" class="nav-link icon-bullet">
                                         <i class="fas fa-bell text-primary fa-lg"></i>
                                 </a>
                     </li>
@@ -570,127 +610,298 @@
 }
  </style>
  
- <form action="#" method="post"> 
-<center><button type="submit" class="btn btn-primary btn-lg "><i class="fas fa-eye"> </i>View Stock Report</button></center>
-<!--  <input type="submit"  value="Click here to view the Categories" >-->
- </form> 
- <br><br>
+<!--  <form action="#" method="post">  -->
+<%-- <center><button type="submit" class="btn btn-primary btn-lg "><i class="fas fa-eye"> </i>Maximum sold stock</button></center> --%>
+<!-- <!--  <input type="submit"  value="Click here to view the Categories" >--> -->
+<!--  </form>  -->
+ 
+ <!--Form Heading -->
+<div class="formHeading">
+	<center>
+		<h2>MAXIMUM SUPPLIED STOCK</h2>
+	</center>
+</div>
+
  
  
  
- <div class = "container">
- 	<div class = "row">
- 		<div class = "col-lg-3">
- 			<button type="submit" class="btn btn-primary  "><i class="fas fa-eye"> </i>Enter Starting Date</button>
- 		</div>
- 		<div class = "col-lg-3">
- 			 <div class="form-group">   
-			 	<input type="text" class="form-control" class = "col-sm" id="categoryName"  placeholder="Starting Date" name = "Starting Date" required>
-			 </div>
- 		</div>
- 		<div class = "col-lg-3">	
- 				 <div class="form-group">   
-				   <button type="submit" class="btn btn-primary  "><i class="fas fa-eye"> </i>Enter Ending Date Date</button>
+<!--  <div class = "container"> -->
+<!--  	<div class = "row"> -->
+<!--  		<div class = "col-lg-3"> -->
+<!--  			<button type="submit" class="btn btn-primary  "><i class="fas fa-eye"> </i>Enter Starting Date</button> -->
+<!--  		</div> -->
+<!--  		<div class = "col-lg-3"> -->
+<!--  			 <div class="form-group">    -->
+<!-- 			 	<input type="text" class="form-control" class = "col-sm" id="categoryName"  placeholder="Starting Date" name = "Starting Date" required> -->
+<!-- 			 </div> -->
+<!--  		</div> -->
+<!--  		<div class = "col-lg-3">	 -->
+<!--  				 <div class="form-group">    -->
+<!-- 				   <button type="submit" class="btn btn-primary  "><i class="fas fa-eye"> </i>Enter Ending Date Date</button> -->
 				 
-				 </div>
- 		</div>
- 		<div class = "col-lg-3">
- 		<input type="text" class="form-control" class = "col-sm" id="categoryName"  placeholder="Ending Date" name = "Ending Date" required>
- 		</div>
- 	</div>
+<!-- 				 </div> -->
+<!--  		</div> -->
+<!--  		<div class = "col-lg-3"> -->
+<!--  		<input type="text" class="form-control" class = "col-sm" id="categoryName"  placeholder="Ending Date" name = "Ending Date" required> -->
+<!--  		</div> -->
+<!--  	</div> -->
  
+<!--  </div> -->
+ <br>
+
+ <div class = "container">
+		<div class = "card text-light special-card mb-3">  <!--Outer form grid -->
+			<div class = "card-body">
+					<form action="pdfGen.jsp" method ="post" >
+
+<div class = "row-lg-4">				 
+					<div class = "form-group ">
+					<p class="text-center">Lets Analyze the	stock supplied to the warehouse based on the 
+					<p class = "text-center">QUANTITY OF STOCK SUPPLIED	
+					</div>
+	 				
+			</div>
+			
+
+<div class="form-group">
+    <label for="Start Date"> Starting Date</label>
+   <input type="date" class="form-control datepicker-here" data-language = 'en' data-date-format = "yyyy M dd" id="sDate"  placeholder="StartingDate" name = "sDate" required>
  </div>
- <br><br>
-
-
  
+ <div class="form-group">
+    <label for="End Date">Ending Date</label>
+   <input type="date" class="form-control datepicker-here" data-language = 'en' data-date-format = "yyyy M dd" id="eDate"  placeholder="EndingDate" name = "eDate" required>
+ </div>
+ <br>
+   
 
+   <div class="form-group col-md-4">  </div>
+			<div class = "row">				 
+					<div class = "form-group col-lg-4">
+					
+						<button type="submit" class="btn btn-success btn-block ">Submit</button>		
+					</div>
+					<div class = "form-group col-lg-4">
+						
+					</div>
+					<div class = "form-group col-lg-4">
+						<button type="reset" class="btn btn-info btn-block ">Reset</button>
 
- <table class="table table table-hover table-dark table-bordered table-sm text-center table-stripped">
+					</div>
+					
+			<style>
+				
+.btn-primary:hover{color:#fff;background-color:#0a0943;border-color:#009a9a};
+
+			</style>		
+						
+					</div>
+</form>
+</div>
+</div>
+</div>
+<br><br>
+
+<!-- <table class="table table table-hover table-dark table-bordered table-sm text-center table-stripped">
+ 
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th>Rating</th>
+                                <th>Stock ID</th>
                                 <th>Stock Name</th>
-                                <th>Quantity Supplied</th>
                                 <th>Stock Quantity</th>
-                                
-                  
+                                <th>Supplier Name</th>
+                                   
                             </tr>
                         </thead>
+                        <tbody>
                         
-                        
-                 
-								<c:forEach var="stock" items="${listStock}">
-								
-							<c:set var = "id" value = "${stock.id}"/>
-      						<c:set var = "stockName" value = "${stock.stockName}"/>
-      						<c:set var = "qtySupplied" value = "${stock.qtySupplied}"/>
-      						<c:set var = "suppliedDate" value = "${stock.suppliedDate}"/>
-      						<c:set var = "stockSize" value = "${stock.stockSize}"/>
-      						<c:set var = "reOrderLevel" value = "${stock.reOrderLevel}"/>
-      						<c:set var = "storeQty" value = "${stock.storeQty}"/>
-      						<c:set var = "supplierName" value = "${stock.supplierName}"/>
-      						<c:set var = "categoryName" value = "${stock.categoryName}"/>
-      						<c:set var = "qtyAvailable" value = "${stock.qtyAvailable}"/>
-      						
-      					
-      						
-				
-								
+                       
+
                                 <tr class = "tableRow">
                                     <td>
                                     <div class = "tableRowww">
-										value1
+										1  
 									</div>	
                                     </td>
                                     
                                     <td>
                                     <div class = "tableRowww">
-                                       value2
+                                        STK002
                                     </div>    
-                                    </td>
-                                    
-                                     <td> 
-                                    <div class = "tableRowww"> 
-                                        value3
-                                     </div>    
                                     </td>
                                     
                                     <td>
                                     <div class = "tableRowww">
-                                      value4
-                                     </div>   
+                                        Raththi
+                                    </div>    
                                     </td>
                                     
+                                    <td>
+                                    <div class = "tableRowww">
+                                        6589
+                                    </div>    
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+                                        Maliban
+                                    </div>    
+                                    </td>
+                                    
+                                    
+                                </tr>  
+                                
+                                
+                                 <tr class = "tableRow">
+                                    <td>
+                                    <div class = "tableRowww">
+										2  
+									</div>	
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+                                        STK001
+                                    </div>    
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+                                        Fortune
+                                    </div>    
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+                                        5488
+                                    </div>    
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+                                       Delma
+                                    </div>    
+                                    </td>
+                                    
+                                    
+                                </tr>  
+                                
+                                
+                                 <tr class = "tableRow">
+                                    <td>
+                                    <div class = "tableRowww">
+										3  
+									</div>	
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+                                        STK008
+                                    </div>    
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+                                        Wheat Flour
+                                    </div>    
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+                                        5300
+                                    </div>    
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+                                       Cargills
+                                    </div>    
+                                    </td>
+                                    
+                                    
+                                </tr>  
+                                
+                                
+                                <tr class = "tableRow">
+                                    <td>
+                                    <div class = "tableRowww">
+										4 
+									</div>	
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+                                        STK109
+                                    </div>    
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+                                        Mayonnaise
+                                    </div>    
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+                                       4600
+                                    </div>    
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+                                       Winsley
+                                    </div>    
+                                    </td>
+                                    
+                                    
+                                </tr>  
+                                
+                                <tr class = "tableRow">
+                                    <td>
+                                    <div class = "tableRowww">
+										5 
+									</div>	
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+                                        STK134
+                                    </div>    
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+                                       Gold Marie
+                                    </div>    
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+                                      3506
+                                    </div>    
+                                    </td>
+                                    
+                                    <td>
+                                    <div class = "tableRowww">
+                                      Maliban
+                                    </div>    
+                                    </td>
+                                    
+                                    
+                                </tr>  
+                                   
+                        </tbody>
+         </table> 
+
+  -->
+
+
+ 
                                   	
                                     
                                     
-                                    <td class="tr1">
-                                   <div class = "tableRowww">
-                                   
-                                    	<button type="button" class="btn btn-outline-warning btn-sm">
-                                    	<a href="${stockupdate}">
-                                     	<i class="fas fa-edit"></i> Edit
-                                    	</a> 
-                                    	</button>
-                                    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    </div>
-                                    </td>
-                                    
-                                    <td class="tr1"	>	
-                                    <div class = "tableRowww">
-                                    	<button type="button" class="btn btn-outline-danger btn-sm"> 
-                                    	<a href="${stockdelete}">
-                                    	<i class="fas fa-trash-alt"></i> Delete
-                                    	</a>
-                                    	</button>
-                                    </div>	
-                                    </td>	
-                                    
-                                </tr> 
-                                </c:forEach>         
-                        
-         </table> 
+                                  
 
 
                     <br><br>

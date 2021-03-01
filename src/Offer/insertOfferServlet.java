@@ -1,8 +1,8 @@
 package Offer;
 
 
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
 
@@ -19,55 +20,50 @@ import javax.servlet.http.Part;
  * Servlet implementation class insertOfferServlet
  */
 @WebServlet("/insertServ")
-@MultipartConfig(fileSizeThreshold = 1024 * 1024 * 2,
-maxFileSize = 1024 *1024 * 10,
-maxRequestSize = 1024 * 1024 * 50)
+@MultipartConfig(maxFileSize = 16177215)
 
 public class insertOfferServlet extends HttpServlet {
-	
+	PrintWriter out; 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html;charset-UTF-5");
-		PrintWriter out = response.getWriter();
+		out=response.getWriter();
 		
 		// TODO Auto-generated method stub
 		String name = request.getParameter("name");
 		String desc = request.getParameter("desc");
-		String dPerc = request.getParameter("dPerc");
+		String dPerc = request.getParameter("dPerc") ;
 		String status = request.getParameter("status");
-		Part part = request.getPart("img");
+		double min = Double.parseDouble(request.getParameter("min"));
+		double max = Double.parseDouble(request.getParameter("max"));
+		Part part = request.getPart("filename");
 		
-		String fileName = extractFileName(part);
-		String savepath = "C:\\Users\\SAWMIYA\\eclipse-workspace\\User_Payment\\WebContent\\img\\"+File.separator + fileName;
-		File fileSave = new File(savepath);
-		
-		part.write(savepath + File.separator); 
 		
 			boolean isTrue;
 			
-			isTrue = offerDButil.insertOfferDetail(name, desc, dPerc, status, fileName,savepath);
+			isTrue = offerDButil.insertOfferDetail(name, desc, dPerc, status, min, max, part);
 			
 			if (isTrue == true) {
-				RequestDispatcher dis = request.getRequestDispatcher("insertOffer.jsp");
+				HttpSession session = request.getSession();
+				session.setAttribute("result","successInsertOffer");
+				RequestDispatcher dis = request.getRequestDispatcher("adminAlertBoxes.jsp");
 				dis.forward(request, response);
 			}
 			else{
-				RequestDispatcher dis2 = request.getRequestDispatcher("failRegistration.jsp");
+				HttpSession session = request.getSession();
+				session.setAttribute("result","failInsertOffer");
+				RequestDispatcher dis2 = request.getRequestDispatcher("adminAlertBoxes.jsp");
 				dis2.forward(request, response);
 			}
 		}
 
-	private String extractFileName(Part part) {
-		String contentDisp = part.getHeader("content-disposition");
-		String[] items = contentDisp.split(";"); 
-		for (String s : items) {
-			if(s.trim().startsWith("filename")) {
-				return s.substring(s.indexOf("=") + 2, s.length() - 1);
-			}
-		}
-		return "";
-	}
+		/*
+		 * private String extractFileName(Part part) { String contentDisp =
+		 * part.getHeader("content-disposition"); String[] items =
+		 * contentDisp.split(";"); for (String s : items) {
+		 * if(s.trim().startsWith("filename")) { return s.substring(s.indexOf("=") + 2,
+		 * s.length() - 1); } } return ""; }
+		 */
 
 }

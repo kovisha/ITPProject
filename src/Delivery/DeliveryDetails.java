@@ -11,11 +11,14 @@ public class DeliveryDetails {
 	private String status;
 	private Date dateTime;
 	private double amount;
-	
+	private String address;
+	private String delType;
 	
 
+
+
 	public DeliveryDetails(String id, String uID, String deliveryID, String orderID, String status, Date dateTime,
-			double amount) {
+			double amount, String address, String delType) {
 		super();
 		this.id = id;
 		this.uID = uID;
@@ -24,6 +27,8 @@ public class DeliveryDetails {
 		this.status = status;
 		this.dateTime = dateTime;
 		this.amount = amount;
+		this.address = address;
+		this.delType = delType;
 	}
 
 	public String getId() {
@@ -81,6 +86,23 @@ public class DeliveryDetails {
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
-	
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getDelType() {
+		return delType;
+	}
+
+	public void setDelType(String delType) {
+		this.delType = delType;
+	}
+
+
 	
 }

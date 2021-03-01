@@ -23,7 +23,7 @@ public class retrieveOfferServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		try {
-	      	  List<Offer> offerDet = offerDButil.getOfferDetails();
+	      	  List<Offer> offerDet = offerDButil.getOfferDetails(response);
 	      	  request.setAttribute("offerDetail", offerDet);
 		    }
 		    catch (Exception e) {

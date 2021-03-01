@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import package1.SupplierDBUtil;
 
@@ -23,29 +24,22 @@ public class SupplierDeleteServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		HttpSession session = request.getSession();
 		
 		String supplierID = request.getParameter("supplierID");
-		String name = request.getParameter("name");
-		String status = request.getParameter("status");
-		
+
 		boolean isTrue;
 		
-		isTrue = SupplierDBUtil.deleteSupplier(supplierID,name,status);
+		isTrue = SupplierDBUtil.deleteSupplier(supplierID);
 		
 		if(isTrue == true) {
-			
-			//List<Event> eventDetails = AddEventDBUtil.displayUpdateEvent(id);
-			//request.setAttribute("eventDetails" , eventDetails);
-			
-			RequestDispatcher dis = request.getRequestDispatcher("ViewSupplier.jsp");
+			session.setAttribute("result","successDeleteSupplier");
+			RequestDispatcher dis = request.getRequestDispatcher("AlertBoxSupplier.jsp");
 			dis.forward(request , response);
 		}
 		else {
-			//List<Event> eventDetails = AddEventDBUtil.displayUpdateEvent(id);
-			//request.setAttribute("eventDetails" , eventDetails);
-			
-			
-			RequestDispatcher dis = request.getRequestDispatcher("ViewSupplier.jsp");
+			session.setAttribute("result","failedDeleteSupplier");
+			RequestDispatcher dis = request.getRequestDispatcher("AlertBoxSupplier.jsp");
 			dis.forward(request , response);
 		}
 	}
