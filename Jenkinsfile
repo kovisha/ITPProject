@@ -7,6 +7,11 @@ pipeline{
         echo "building the application..."
       }
     }
+    stage("re-build"){
+      steps{
+        echo "re building the application..."
+      }
+    }
     stage("test"){
       steps{
         echo "testing the application..."
