@@ -7,7 +7,7 @@ pipeline{
         echo "building the application..."
       }
     }
-    stage("re-build"){
+    stage("re-building"){
       steps{
         echo "re building the application..."
       }
